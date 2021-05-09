@@ -7,8 +7,11 @@ Rails.application.routes.draw do
     sessions: 'customers/sessions'
   }
 
-  scope module: :customer do
+  # devise_scope :customer do
+  #   get '/customers/sign_out'=>'devise/sessions#destroy'
+  # end
 
+  scope module: :customer do
     get 'homes/top'
     get 'homes/about'
     resources :blogs

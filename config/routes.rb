@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :customers
+  root to: 'homes#top'
   namespace :customer do
     get 'blogs/new'
     get 'blogs/index'

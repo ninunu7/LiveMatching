@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_09_074217) do
+ActiveRecord::Schema.define(version: 2021_05_10_084258) do
 
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 2021_05_09_074217) do
   create_table "blogs", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "blog_title"
+    t.text "blog_text"
   end
 
   create_table "customers", force: :cascade do |t|
@@ -46,6 +48,8 @@ ActiveRecord::Schema.define(version: 2021_05_09_074217) do
     t.integer "gender"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "user_status"
+    t.text "introduction"
     t.index ["email"], name: "index_customers_on_email", unique: true
     t.index ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true
   end

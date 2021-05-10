@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
+
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
   }
 
   devise_for :customers, controllers: {
-    sessions: 'customers/sessions'
+    sessions: 'customers/sessions',
+    registrations: 'customers/registrations' #パスワード無しで編集可能にする・編集後の遷移先指定の為
   }
 
-  # devise_scope :customer do
-  #   get '/customers/sign_out'=>'devise/sessions#destroy'
-  # end
+  namespace :admin do
+    resources :customers
+  end
 
   scope module: :customer do
     get 'homes/top'

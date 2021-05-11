@@ -43,4 +43,4 @@ https://docs.google.com/spreadsheets/d/1eGhI3HBideuCybgW1rKg8_RKIYBy6qsG1dp22I7r
 - IDE：Cloud9
 
 ## 使用素材
-当サイトでの使用画像は、<a href="https://www.photo-ac.com/">photo.ac</a>様より引用致しました。
+当サイトでの使用画像は、<a href="https://www.photo-ac.com/">photo.ac</a>様・<a href="https://icooon-mono.com/">icooon mono</a>様より引用致しました。

@@ -1,2 +1,30 @@
-<h1>Customer::Blogs#index</h1>
-<p>Find me in app/views/customer/blogs/index.html.erb</p>
+<h1>ブログ</h1>
+<%= form_with model:@blog, local:true do |f| %>
+  <div class="field">
+    <%= f.label :'タイトル' %><br />
+    <%= f.text_field :blog_title, autofocus: true, :size =>'50' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'本文' %><br />
+    <%= f.text_area :blog_text, :size =>'70x20' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "投稿" %>
+  </div>
+  <% end %>
+
+  <h1>これまでの投稿</h1>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= blog.created_at %></td>
+        <td><%= blog.blog_title %></td>
+        <td>
+          <%= blog.blog_text %>
+        </td>
+
+        <td><%= link_to '削除する', blog_path(blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{blog.id}"%></td>
+      </tr>
+    <% end %>
+

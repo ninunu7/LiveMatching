@@ -1,2 +1,23 @@
-<h1>Customer::Events#new</h1>
-<p>Find me in app/views/customer/events/new.html.erb</p>
+<h1>参加するイベントを登録</h1>
+<%= form_with model:@event, local:true do |f| %>
+  <div class="field">
+    <%= f.label :'アーティスト名' %><br />
+    <%= f.text_field :artist_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'メッセージ' %><br />
+    <%= f.text_area :message, autofocus: true, :size =>'80x15' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :'日付' %><br />
+    <%= f.date_field :join_day %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "登録" %>
+  </div>
+<% end %>
+<%= link_to "戻る", :back %>
+

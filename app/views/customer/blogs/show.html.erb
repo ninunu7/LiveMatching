@@ -1,2 +1,6 @@
-<h1>Customer::Blogs#show</h1>
-<p>Find me in app/views/customer/blogs/show.html.erb</p>
+<h1>ブログ詳細</h1>
+    <%= @blog.created_at %>
+    <%= @blog.blog_title %>
+    <%= @blog.blog_text %>
+    <%= link_to '削除する', blog_path(@blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{@blog.id}"%>
+

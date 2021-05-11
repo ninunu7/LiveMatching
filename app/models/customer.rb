@@ -8,6 +8,7 @@ class Customer < ApplicationRecord
   validates :email, uniqueness: true
   validates :password, presence: true, on: :create
 
+  attachment :profile_image
   enum gender: {man: 0, woman: 1}
 
   #パスワード入力無しでマイページ編集する為
@@ -23,4 +24,5 @@ class Customer < ApplicationRecord
     clean_up_passwords
     result
   end
+mount_uploader :profile_image, ProfileimageUploader
 end

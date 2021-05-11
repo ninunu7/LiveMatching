@@ -1,21 +1,9 @@
 <h2>マイページ編集</h2>
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div>
-    <% if current_customer.persisted? && current_customer.profile_image? %>
-      <%= image_tag current_customer.profile_image.to_s, :size =>'80x80' %>
-    <% else %>
-      <%= image_tag 'default.png', :size =>'80x80' %>
-      <%= f.hidden_field :profile_image_cache %>
-    <% end %>
-      <%= f.file_field :profile_image %>
-  </div>
-
+<%= form_with model:@user, local:true do |f| %>
 
   <div class="field">
     <%= f.label :'メールアドレス' %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="field">
@@ -32,12 +20,12 @@
 
   <div class="field">
     <%= f.label :'現在のパスワードを入力してください' %><i>(変更しない場合は記入不要)</i><br />
-    <%= f.password_field :current_password %>
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
   </div>
 
   <div class="field">
     <%= f.label :'新しいパスワード' %> <i>(変更しない場合は記入不要)</i><br />
-    <%= f.password_field :password %>
+    <%= f.password_field :password, autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
       <em><%= @minimum_password_length %> characters minimum</em>
@@ -46,12 +34,7 @@
 
   <div class="field">
     <%= f.label :'パスワード確認' %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'自己紹介' %><br />
-    <%= f.text_area :introduction, autofocus: true, :size =>'80x15' %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
   <div class="actions">

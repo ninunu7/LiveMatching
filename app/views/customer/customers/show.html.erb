@@ -2,6 +2,9 @@
 <table>
   <tbody>
     <tr>
+      <td><%= image_tag current_customer.profile_image.to_s, :size =>'80x80' %></td>
+    </tr>
+    <tr>
       <td>名前</td>
       <td><%= current_customer.name %></td>
     </tr>
@@ -19,7 +22,7 @@
     </tr>
     <tr>
       <td>自己紹介</td>
-      <td></td>
+      <td><%= current_customer.introduction %></td>
     </tr>
   </tbody>
 </table>

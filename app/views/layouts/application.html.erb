@@ -4,45 +4,44 @@
     <title>LiveMatching</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
     <header>
-      <ul>
-        <% if customer_signed_in? %>
-          <span>ようこそ、<%= current_customer.name %>さん！</span>
-          <li>
-            <%= link_to "トップページ",root_path %>
-          </li>
-          <li>
-            <%= link_to "今後の予定",events_path %>
-          </li>
-          <li>
-            <%= link_to "マイページ",customer_path(current_customer.id) %>
-          </li>
-          <li>
-            <%= link_to "ログアウト",destroy_customer_session_path, method: :delete %>
-          </li>
-        <% elsif admin_signed_in? %>
-          <li>
-            <%= link_to "管理者ログアウト",destroy_admin_session_path, method: :delete %>
-          </li>
-        <% else %>
-          <li>
-            <%= link_to "トップページ",root_path %>
-          </li>
-          <li>
-            <%= link_to "About",homes_about_path %>
-          </li>
-          <li>
-            <%= link_to "新規登録",new_customer_registration_path %>
-          </li>
-          <li>
-            <%= link_to "ログイン",new_customer_session_path %>
-          </li>
-        <% end %>
-      </ul>
+      <% if customer_signed_in? %>
+        <span class="welcome">ようこそ、<%= current_customer.name %>さん！</span>
+        <button class="headerbutton">
+          <%= link_to "トップページ",root_path %>
+        </button>
+        <button class="headerbutton">
+          <%= link_to "今後の予定",events_path %>
+        </button>
+        <button class="headerbutton">
+          <%= link_to "マイページ",customer_path(current_customer.id) %>
+        </button>
+        <button class="headerbutton">
+          <%= link_to "ログアウト",destroy_customer_session_path, method: :delete %>
+        </button>
+      <% elsif admin_signed_in? %>
+        <button class="headerbutton">
+          <%= link_to "管理者ログアウト",destroy_admin_session_path, method: :delete %>
+        </li>
+      <% else %>
+        <button class="headerbutton">
+          <%= link_to "トップページ",root_path %>
+        </button>
+        <button class="headerbutton">
+          <%= link_to "About",homes_about_path %>
+        </button>
+        <button class="headerbutton">
+          <%= link_to "新規登録",new_customer_registration_path %>
+        </button>
+        <button class="headerbutton">
+          <%= link_to "ログイン",new_customer_session_path %>
+        </button>
+      <% end %>
     </header>
     <main>
       <%= yield %>

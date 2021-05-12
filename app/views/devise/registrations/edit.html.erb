@@ -14,7 +14,7 @@
 
 
   <div class="field">
-    <%= f.label :'メールアドレス' %><br />
+    <%= f.label :'メールアドレス' %><br>
     <%= f.email_field :email, autofocus: true %>
   </div>
 
@@ -40,17 +40,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :'現在のパスワードを入力してください' %><i>(変更しない場合は記入不要)</i><br />
+    <%= f.label :'現在のパスワードを入力してください' %><br>
+    <i>(変更しない場合は記入不要)</i><br>
     <%= f.password_field :current_password %>
   </div>
 
   <div class="field">
-    <%= f.label :'新しいパスワード' %> <i>(変更しない場合は記入不要)</i><br />
-    <%= f.password_field :password %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+    <%= f.label :'新しいパスワード' %><br>
+    <i>(変更しない場合は記入不要)</i><br>
+    <%= f.password_field :password, placeholder: "6文字以上" %>
   </div>
 
   <div class="field">

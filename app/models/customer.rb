@@ -11,6 +11,11 @@ class Customer < ApplicationRecord
   attachment :profile_image
   enum gender: {man: 0, woman: 1}
 
+  has_many :blogs, dependent: :destroy
+  has_many :blog_comments, dependent: :destroy
+  has_many :blog_images, dependent: :destroy
+  has_many :events, dependent: :destroy
+
   #パスワード入力無しでマイページ編集する為
   def update_without_current_password(params,*options)
     params.delete(:current_password)

@@ -19,6 +19,9 @@
           <%= link_to "今後の予定",events_path %>
         </button>
         <button class="headerbutton">
+          <%= link_to "検索する",searches_path %>
+        </button>
+        <button class="headerbutton">
           <%= link_to "マイページ",customer_path(current_customer.id) %>
         </button>
         <button class="headerbutton">
@@ -31,6 +34,9 @@
       <% else %>
         <button class="headerbutton">
           <%= link_to "トップページ",root_path %>
+        </button>
+        <button class="headerbutton">
+          <%= link_to "検索する",searches_path %>
         </button>
         <button class="headerbutton">
           <%= link_to "About",homes_about_path %>

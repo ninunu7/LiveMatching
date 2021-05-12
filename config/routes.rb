@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :events
     resources :searches
     get 'searches/top'
+
     root to: 'homes#top'
   end
 

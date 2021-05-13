@@ -21,6 +21,8 @@ Rails.application.routes.draw do
     get 'customers/quit'
     resources :events
     resources :searches
+    get 'searches/top'
+
     root to: 'homes#top'
   end
 

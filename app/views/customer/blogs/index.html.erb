@@ -23,8 +23,7 @@
         <td>
           <%= blog.blog_text %>
         </td>
-
-        <td><%= link_to '削除する', blog_path(blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{blog.id}"%></td>
+        <td><button><%= link_to '削除する', blog_path(blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{blog.id}"%></button></td>
       </tr>
     <% end %>
 

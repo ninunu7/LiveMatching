@@ -1,7 +1,7 @@
 class Customer::SearchesController < ApplicationController
-  def top
+  def index
   end
 
-  def index
+  def search
   end
 end

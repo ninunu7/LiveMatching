@@ -26,7 +26,15 @@
     </tr>
   </tbody>
 </table>
-<%= link_to "ブログ",blogs_path %>
-<%= link_to "参加するイベント",events_path %>
-<%= link_to "編集する",edit_customer_registration_path %>
-<%= link_to "退会する",customers_quit_path(current_customer.id) %>
+<button>
+  <%= link_to "ブログ",blogs_path %>
+</button>
+<button>
+  <%= link_to "参加するイベント",events_path %>
+</button>
+<button>
+  <%= link_to "編集する",edit_customer_registration_path %>
+</button>
+<button>
+  <%= link_to "退会する",customers_quit_path(current_customer.id) %>
+</button>

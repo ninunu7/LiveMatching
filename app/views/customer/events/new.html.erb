@@ -1,17 +1,17 @@
 <h1>参加するイベントを登録</h1>
-<%= form_with model:@event, local:true do |f| %>
+<%= form_with model:@event, url:'/events', local:true do |f| %>
   <div class="field">
-    <%= f.label :'アーティスト名' %><br />
+    <%= f.label :'アーティスト名' %><br>
     <%= f.text_field :artist_name, autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :'メッセージ' %><br />
+    <%= f.label :'メッセージ' %><br>
     <%= f.text_area :message, autofocus: true, :size =>'80x15' %>
   </div>
 
   <div class="field">
-    <%= f.label :'日付' %><br />
+    <%= f.label :'日付' %><br>
     <%= f.date_field :join_day %>
   </div>
 

@@ -1,17 +1,12 @@
 class Customer::EventsController < ApplicationController
   def new
     @event = Event.new
-
   end
 
   def create
     @event = Event.new(event_params)
-    if @event.save
+    @event.save
       redirect_to customer_path(current_customer), notice: "投稿を保存しました"
-    else
-      @events = Event.all
-      render 'index'
-    end
   end
 
   def index

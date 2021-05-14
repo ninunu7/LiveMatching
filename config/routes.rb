@@ -19,13 +19,15 @@ Rails.application.routes.draw do
   scope module: :customer do
     get 'homes/top'
     get 'homes/about'
-    resources :blogs
     resources :customers
     get 'customers/quit'
     resources :events
     resources :searches
     get 'search' => 'events#search'
     get 'search' => 'customers#search'
+    resources :blogs, only:[:new, :create, :index, :show, :destroy] do
+      resources :blog_comments
+    end
     resources :blog_images, only: [:new, :create, :index, :show, :destroy]
     root to: 'homes#top'
   end

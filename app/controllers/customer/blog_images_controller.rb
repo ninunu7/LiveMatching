@@ -3,6 +3,7 @@ class Customer::BlogImagesController < ApplicationController
   end
 
   def create
+
   end
 
   def index
@@ -13,4 +14,6 @@ class Customer::BlogImagesController < ApplicationController
 
   def destroy
   end
+
+
 end

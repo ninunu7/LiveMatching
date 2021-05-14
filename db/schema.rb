@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_12_082720) do
+ActiveRecord::Schema.define(version: 2021_05_14_152554) do
 
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -27,11 +27,16 @@ ActiveRecord::Schema.define(version: 2021_05_12_082720) do
   create_table "blog_comments", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "blog_comment"
+    t.integer "blog_id"
+    t.integer "customer_id"
   end
 
   create_table "blog_images", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_id"
+    t.integer "blog_id"
   end
 
   create_table "blogs", force: :cascade do |t|
@@ -39,6 +44,8 @@ ActiveRecord::Schema.define(version: 2021_05_12_082720) do
     t.datetime "updated_at", null: false
     t.string "blog_title"
     t.text "blog_text"
+    t.string "blog_images"
+    t.integer "customer_id"
   end
 
   create_table "customers", force: :cascade do |t|

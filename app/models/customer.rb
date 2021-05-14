@@ -9,7 +9,7 @@ class Customer < ApplicationRecord
   validates :password, presence: true, on: :create
 
   attachment :profile_image
-  enum gender: {man: 0, woman: 1}
+  enum gender: {man: 0, woman: 1,unknown: 2}
 
   has_many :blogs, dependent: :destroy
   has_many :blog_comments, dependent: :destroy

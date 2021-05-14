@@ -13,6 +13,10 @@ class Customer::EventsController < ApplicationController
     @events = Event.all
   end
 
+  def search
+    @events = Event.search(params[:keyword])
+  end
+
   def show
     @event = Event.find(params[:id])
   end

@@ -1,0 +1,2 @@
+module Customer::BlogImagesHelper
+end

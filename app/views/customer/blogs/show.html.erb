@@ -1,22 +1,37 @@
-<h1>ブログ詳細</h1>
-<button><%= link_to '一覧に戻る', blogs_path %></button>
-    <%= @blog.created_at %>
-    <%= @blog.blog_title %>
-    <%= @blog.blog_text %>
-    <%= link_to '削除する', blog_path(@blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{@blog.id}"%>
-    <div class="comments">
-      <p>コメント数:<%= @blog.blog_comments.count %></p>
-      <% @blog.blog_comments.each do |blog_comment| %>
+<div class="container">
+  <div class="row">
+    <h1>ブログ詳細</h1>
+    <span><%= link_to '一覧に戻る', blogs_path, class: "btn btn-sm btn-success" %></span>
+  </div>
+  <!--<div class="row">-->
+    <div class="field">
 
-      <%= blog_comment.customer.name %>
-      <%= blog_comment.created_at.strftime('%Y/%m/%d') %><%= blog_comment.comment %>
-      <% end %>
-    </div>
-    <div class="new-comment">
-      <%= form_with(model:[@blog, @blog_comment], local: true) do |f| %>
-      <%= f.text_area :comment, rows:'5',placeholder: "コメントを入力" %>
-      <%= f.submit "送信する" %>
-      <% end %>
-    </div>
-    </div>
+        <%= @blog.created_at %><br>
+      </div>
+
+      <div>
+        <%= @blog.blog_title %>
+      </div>
+      <div>
+      <%= @blog.blog_text %>
+      </div>
+      <div>
+      <%= link_to '削除する', blog_path(@blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{@blog.id}"%>
+      </div>
+      <div class="comments">
+        <p>コメント数:<%= @blog.blog_comments.count %></p>
+        <% @blog.blog_comments.each do |blog_comment| %>
+        <%= blog_comment.customer.name %>
+        <%= blog_comment.comment %>
+        <%= blog_comment.created_at.strftime('%Y/%m/%d') %>
+        <% end %>
+      </div>
+      <div class="new-comment">
+        <%= form_with(model:[@blog,@blog_comment], local: true) do |f| %>
+        <%= f.text_area :comment, rows:'5',placeholder: "コメントを入力" %>
+        <%= f.submit "送信する" %>
+        <% end %>
+      </div>
+  <!--</div>-->
+</div>
 

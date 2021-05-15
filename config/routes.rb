@@ -25,8 +25,8 @@ Rails.application.routes.draw do
     resources :searches
     get 'search' => 'events#search'
     get 'search' => 'customers#search'
-    resources :blogs, only:[:new, :create, :index, :show, :destroy] do
-      resources :blog_comments
+    resources :blogs, only: [:new, :create, :index, :show, :destroy] do
+      resources :blog_comments, only: [:create, :destroy]
     end
     resources :blog_images, only: [:new, :create, :index, :show, :destroy]
     root to: 'homes#top'

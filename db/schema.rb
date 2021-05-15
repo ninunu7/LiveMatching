@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_14_152554) do
+ActiveRecord::Schema.define(version: 2021_05_15_050254) do
 
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2021_05_14_152554) do
   create_table "blog_comments", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text "blog_comment"
+    t.text "comment"
     t.integer "blog_id"
     t.integer "customer_id"
   end

@@ -9,45 +9,51 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header>
+    <header class="header">
+
+
+        <a href="/" class="headertitle">LiveMatching</a>
+
+      <ul class="nav">
       <% if customer_signed_in? %>
         <span class="welcome">ようこそ、<%= current_customer.name %>さん！</span>
-        <button class="headerbutton">
-          <%= link_to "トップページ",root_path %>
-        </button>
-        <button class="headerbutton">
-          <%= link_to "今後の予定",events_path %>
-        </button>
-        <button class="headerbutton">
-          <%= link_to "検索する",searches_path %>
-        </button>
-        <button class="headerbutton">
-          <%= link_to "マイページ",customer_path(current_customer.id) %>
-        </button>
-        <button class="headerbutton">
-          <%= link_to "ログアウト",destroy_customer_session_path, method: :delete %>
-        </button>
+        <li>
+          <%= link_to "TOP",root_path, class: 'headericon' %>
+        </li>
+        <li>
+          <%= link_to "今後の予定",events_path, class: 'headericon' %>
+        </li>
+        <li>
+          <%= link_to "検索する",searches_path, class: 'headericon' %>
+        </li>
+        <li>
+          <%= link_to "マイページ",customer_path(current_customer.id), class: 'headericon' %>
+        </li>
+        <li>
+          <%= link_to "ログアウト",destroy_customer_session_path, method: :delete, class: 'headericon' %>
+        </li>
       <% elsif admin_signed_in? %>
-        <button class="headerbutton">
-          <%= link_to "管理者ログアウト",destroy_admin_session_path, method: :delete %>
+        <li>
+          <%= link_to "管理者ログアウト",destroy_admin_session_path, method: :delete, class: 'headericon' %>
         </li>
       <% else %>
-        <button class="headerbutton">
-          <%= link_to "トップページ",root_path %>
-        </button>
-        <button class="headerbutton">
-          <%= link_to "検索する",searches_path %>
-        </button>
-        <button class="headerbutton">
-          <%= link_to "About",homes_about_path %>
-        </button>
-        <button class="headerbutton">
-          <%= link_to "新規登録",new_customer_registration_path %>
-        </button>
-        <button class="headerbutton">
-          <%= link_to "ログイン",new_customer_session_path %>
-        </button>
+        <li>
+          <%= link_to "トップページ",root_path, class: 'headericon' %>
+        </li>
+        <li>
+          <%= link_to "検索する",searches_path, class: 'headericon' %>
+        </li>
+        <li>
+          <%= link_to "About",homes_about_path, class: 'headericon' %>
+        </li>
+        <li>
+          <%= link_to "新規登録",new_customer_registration_path, class: 'headericon' %>
+        </li>
+        <li>
+          <%= link_to "ログイン",new_customer_session_path, class: 'headericon' %>
+        </li>
       <% end %>
+      </ul>
     </header>
     <main>
       <%= yield %>

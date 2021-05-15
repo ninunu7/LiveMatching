@@ -24,6 +24,7 @@
         <%= blog_comment.customer.name %>
         <%= blog_comment.comment %>
         <%= blog_comment.created_at.strftime('%Y/%m/%d') %>
+        <%= link_to "コメントを削除", blog_blog_comment_path(blog_comment.blog, blog_comment), method: :delete %>
         <% end %>
       </div>
       <div class="new-comment">

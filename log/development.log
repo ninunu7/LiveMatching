@@ -9181,3 +9181,1663 @@ Processing by Customer::BlogsController#show as HTML
 Completed 200 OK in 88ms (Views: 84.9ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for 106.154.6.90 at 2021-05-15 05:17:41 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Customer::HomesController#top as HTML
+  Rendering customer/homes/top.html.erb within layouts/application
+  Rendered customer/homes/top.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 302ms (Views: 295.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 106.154.6.90 at 2021-05-15 05:17:42 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::HomesController#top as HTML
+  Rendering customer/homes/top.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/homes/top.html.erb:2
+  Rendered customer/homes/top.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 72ms (Views: 70.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers/2" for 106.154.6.90 at 2021-05-15 05:17:43 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::CustomersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customer/customers_controller.rb:3
+  Rendering customer/customers/show.html.erb within layouts/application
+  Rendered customer/customers/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/blogs" for 106.154.6.90 at 2021-05-15 05:17:44 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#index as HTML
+  Rendering customer/blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/customer/blogs/index.html.erb:34
+  Rendered customer/blogs/index.html.erb within layouts/application (108.4ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 193ms (Views: 182.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:17:46 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.2ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (47.9ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 148ms (Views: 131.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/blogs/3/blog_comments" for 106.154.6.90 at 2021-05-15 05:17:49 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AiVQlCswpvBRV7H6anGxZQ7xdBw5PMRUplazZ5OQEadufyjMGAolI+z5+bmAHFS1P4NKfwChePV4DSShC4pCLw==", "blog_comment"=>{"comment"=>"rrrr"}, "commit"=>"送信する", "blog_id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:3
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:5
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:6
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:8
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:8
+  [1m[36mBlogComment Create (1.0ms)[0m  [1m[32mINSERT INTO "blog_comments" ("created_at", "updated_at", "comment", "blog_id", "customer_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2021-05-15 05:17:49.527360"], ["updated_at", "2021-05-15 05:17:49.527360"], ["comment", "rrrr"], ["blog_id", 3], ["customer_id", 2]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:8
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:8
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 26ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:17:49 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (34.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 142ms (Views: 138.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 106.154.6.90 at 2021-05-15 05:25:51 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Customer::HomesController#top as HTML
+  Rendering customer/homes/top.html.erb within layouts/application
+  Rendered customer/homes/top.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 285ms (Views: 278.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 106.154.6.90 at 2021-05-15 05:25:51 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::HomesController#top as HTML
+  Rendering customer/homes/top.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/homes/top.html.erb:2
+  Rendered customer/homes/top.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 71ms (Views: 69.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/customers/2" for 106.154.6.90 at 2021-05-15 05:25:52 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::CustomersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customer/customers_controller.rb:3
+  Rendering customer/customers/show.html.erb within layouts/application
+  Rendered customer/customers/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/blogs" for 106.154.6.90 at 2021-05-15 05:25:54 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#index as HTML
+  Rendering customer/blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  ↳ app/views/customer/blogs/index.html.erb:34
+  Rendered customer/blogs/index.html.erb within layouts/application (108.7ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 193ms (Views: 182.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:25:56 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.2ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (42.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 141ms (Views: 126.0ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/blogs/3/blog_comments/5" for 106.154.6.90 at 2021-05-15 05:25:58 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"MVrbevytk0RIGcq3WQr66HinVKieUm/6lgcVqjRChIR4m3Oayh56YAEVCr9EQAW7dbEV7UlXarW3TFddVwtudg==", "blog_id"=>"3", "id"=>"5"}
+  [1m[36mBlogComment Load (0.2ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 5], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.4ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 16ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:25:58 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (37.4ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 144ms (Views: 140.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/blogs/3/blog_comments/6" for 106.154.6.90 at 2021-05-15 05:25:59 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"f9nJ+N84rQ7GpTO0xak4YAqqJ7mh6eVRHvIhwhhNGko2GGEY6YtEKo+p87zY48czB7xm/Hbs4B4/uWM1ewTwuA==", "blog_id"=>"3", "id"=>"6"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 6], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (4.8ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 13ms (ActiveRecord: 9.3ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:00 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (24.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 82ms (Views: 79.8ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/blogs/3/blog_comments/7" for 106.154.6.90 at 2021-05-15 05:26:01 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"CoEGGH+2Ym1cGvDN+Qu2VX6LBWdEzLRWfTAV0DCWK5xDQK74SQWLSRUWMMXkQUkGc51EIpPJsRlce1cnU9/Bbg==", "blog_id"=>"3", "id"=>"7"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 7], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (0.9ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 10ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:01 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (47.8ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 128ms (Views: 125.0ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/blogs/3/blog_comments/8" for 106.154.6.90 at 2021-05-15 05:26:02 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EXrmnQ4+Tlblaf8JcjHb2cWAOHQeKc4dJpJUypOsIBlYu059OI2ncqxlPwFveySKyJZ5Mcksy1IH2RY98OXK6w==", "blog_id"=>"3", "id"=>"8"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 8], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 32ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:02 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.2ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (90.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 227ms (Views: 207.2ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/blogs/3/blog_comments/8" for 106.154.6.90 at 2021-05-15 05:26:03 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"EXrmnQ4+Tlblaf8JcjHb2cWAOHQeKc4dJpJUypOsIBlYu059OI2ncqxlPwFveySKyJZ5Mcksy1IH2RY98OXK6w==", "blog_id"=>"3", "id"=>"8"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 8], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/customer/blog_comments_controller.rb:12:in `destroy'
+Started DELETE "/blogs/3/blog_comments/26" for 106.154.6.90 at 2021-05-15 05:26:12 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"6IiF48WmMivwBv1wlt2nPkxl01h6nyceMqXImBXjDPOhSS0D8xXbD7kKPXiLl1htQXOSHa2aIlET7opvdqrmAQ==", "blog_id"=>"3", "id"=>"26"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 26], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 26]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 13ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:12 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (26.9ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 87ms (Views: 83.8ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/blogs/3/blog_comments/22" for 106.154.6.90 at 2021-05-15 05:26:14 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UlYUxfAh2OdlIsqcLuVzQK4gExdsZGAFUmBGjATANHgbl7wlxpIxwywuCpQzr4wTozZSUrthZUpzKwR7Z4neig==", "blog_id"=>"3", "id"=>"22"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 22], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 22]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 13ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:14 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (23.6ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 102ms (Views: 99.6ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/blogs/3/blog_comments/24" for 106.154.6.90 at 2021-05-15 05:26:15 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TIwW5/H/C+VRUT0BDEZIjiUJq4tRm4sLX4TCtCB1PlcFTb4Hx0ziwRhd/QkRDLfdKB/qzoaejkR+z4BDQzzUpQ==", "blog_id"=>"3", "id"=>"24"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 24], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 12ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:15 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (24.8ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 82ms (Views: 79.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/blogs/3/blog_comments/25" for 106.154.6.90 at 2021-05-15 05:26:16 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OrLTjIezhi6vqkEqlMczJWa7UyZckcizm7JQrw1M4chzc3tssQBvCuamgSKJjcx2a60SY4uUzfy6+RJYbgULOg==", "blog_id"=>"3", "id"=>"25"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 25], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (0.9ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 25]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 12ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:17 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (22.8ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/blogs/3/blog_comments/23" for 106.154.6.90 at 2021-05-15 05:26:17 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"226qCI9xHb7SFQEuSPfE2ZVlcA6A7/1DplMlXJewXzOSrwLoucL0mpsZwSZVvTuKmHMxS1fq+AyHGGer9Pm1wQ==", "blog_id"=>"3", "id"=>"23"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 23], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (0.9ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 11ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:17 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (19.7ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 97ms (Views: 94.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/blogs/3/blog_comments/21" for 106.154.6.90 at 2021-05-15 05:26:18 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"N5erq18zegmf1AmL0j/y1cvbSlqTpUYFiFciCRRFRTF+VgNLaYCTLdbYyYPPdQ2Gxs0LH0SgQ0qpHGD+dwyvww==", "blog_id"=>"3", "id"=>"21"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 21], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 21]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 12ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:19 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (18.1ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/blogs/3/blog_comments/17" for 106.154.6.90 at 2021-05-15 05:26:19 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z73B3C4N5jYEHmS94kkvrSPg5nScWNjjuuUVCPd8yD6GfGk8GL4PEk0SpLX/A9D+LvanMUtd3aybrlf/lDUizA==", "blog_id"=>"3", "id"=>"17"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 17], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 17]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 13ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:20 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (15.7ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 74ms (Views: 71.8ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/blogs/3/blog_comments/19" for 106.154.6.90 at 2021-05-15 05:26:21 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3qd0U4LTQNPgigsNfYoRoRJRIMt3luWtFi6DNG43E/uXZtyztGCp96mGywVgwO7yH0dhjqCT4OI3ZcHDDX75CQ==", "blog_id"=>"3", "id"=>"19"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 19], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 19]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 12ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:21 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (14.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 101ms (Views: 98.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/blogs/3/blog_comments/20" for 106.154.6.90 at 2021-05-15 05:26:22 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8MDla6lLQeqO7YLBGOVu4Se+JwJDwx2igkcQoM7SC3m5AU2Ln/iozsfhQskFr5GyKqhmR5TGGO2jDFJXrZvhiw==", "blog_id"=>"3", "id"=>"20"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 20], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (0.9ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 20]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 13ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:22 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (17.4ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 76ms (Views: 73.8ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/blogs/3/blog_comments/18" for 106.154.6.90 at 2021-05-15 05:26:23 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"krVg73971mXFW/bBfcDzMCm4TEVKjHfhYNjjT9zDb5jbdMgPScg/QYxXNslgigxjJK4NAJ2Jcq5Bk6G4v4qFag==", "blog_id"=>"3", "id"=>"18"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 18], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (0.9ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 18]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 10ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:23 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (15.4ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 73ms (Views: 70.4ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/blogs/3/blog_comments/16" for 106.154.6.90 at 2021-05-15 05:26:24 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8N8L08cA0Gr3MnRBVzr7cyA+rpS+7pwwTwV8N/tTQKW5HqMz8bM5Tr4+tElKcAQgLSjv0WnrmX9uTj7AmBqqVw==", "blog_id"=>"3", "id"=>"16"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 16], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 16]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 11ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:25 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (14.2ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 93ms (Views: 90.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/blogs/3/blog_comments/15" for 106.154.6.90 at 2021-05-15 05:26:25 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Q8eSMtR4qnn9fzNhmcmwGXffPfxp6cH0YFCQqCs5hyMKBjrS4stDXbRz82mEg09Kesl8ub7sxLtBG9JfSHBt0Q==", "blog_id"=>"3", "id"=>"15"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 15], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (0.9ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 15]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 11ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:26 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (13.1ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 72ms (Views: 69.1ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/blogs/3/blog_comments/14" for 106.154.6.90 at 2021-05-15 05:26:27 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ApN7pORrqrIIYJVsUO2t8UaASA5WSNfgHn0nLpd5xSJLUtNE0thDlkFsVWRNp1KiS5YJS4FN0q8/NmXZ9DAv0A==", "blog_id"=>"3", "id"=>"14"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 14], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (0.9ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 15ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:27 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (11.8ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/blogs/3/blog_comments/13" for 106.154.6.90 at 2021-05-15 05:26:28 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"u9af5zTL4WaohXrTg04qHbSmUwo7I5kz6svNgOIR3+zyFzcHAngIQuGJutueBNVOubAST+wmnHzLgI93gVg1Hg==", "blog_id"=>"3", "id"=>"13"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 13], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 11ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:28 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (10.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 88ms (Views: 85.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/blogs/3/blog_comments/12" for 106.154.6.90 at 2021-05-15 05:26:29 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4DJu3C6kLqt0/3UPXw1zIpZj54mj+lWYIKOay9rZ1eap88Y8GBfHjz3ztQdCR4xxm3WmzHT/UNcB6Ng8uZA/FA==", "blog_id"=>"3", "id"=>"12"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 12], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 11ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:29 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (9.1ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 68ms (Views: 65.1ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/blogs/3/blog_comments/11" for 106.154.6.90 at 2021-05-15 05:26:31 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"UnfHC/+AMjmmxuP21tTqSrHcuZ5n9GQ0hbvcXo8wG/gbtm/ryTPbHe/KI/7LnhUZvMr427DxYXuk8J6p7HnxCg==", "blog_id"=>"3", "id"=>"11"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 11], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 11]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 12ms (ActiveRecord: 6.8ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:31 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (8.0ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/blogs/3/blog_comments/10" for 106.154.6.90 at 2021-05-15 05:26:32 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9d/TOfW0A/F61VT6w07/KQ9oVRBUYhWP3GZhzNbakwu8HnvZwwfq1TPZlPLeBAB6An4UVYNnEMD9LSM7tZN5+Q==", "blog_id"=>"3", "id"=>"10"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 10], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 11ms (ActiveRecord: 6.1ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:32 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  [1m[36mCACHE Customer Load (0.0ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (7.7ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 83ms (Views: 80.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/blogs/3/blog_comments/9" for 106.154.6.90 at 2021-05-15 05:26:34 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ckUtCLBUHMkqMerUlrDhmuuZOVJV+NkaZKocde4CwsU7hIXohuf17WM9KtyL+h7J5o94F4L93FVF4V6CjUsoNw==", "blog_id"=>"3", "id"=>"9"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 9], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (0.9ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 12ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:34 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/blogs/show.html.erb:24
+  Rendered customer/blogs/show.html.erb within layouts/application (5.5ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 64ms (Views: 61.7ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/blogs/3/blog_comments/4" for 106.154.6.90 at 2021-05-15 05:26:35 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogCommentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"e/56AjLiC+ld0B3oOZcU8/mr65mJAXySu8CUsx3+KTYyP9LiBFHizRTc3eAk3eug9L2q3F4Eed2ai9ZEfrfDxA==", "blog_id"=>"3", "id"=>"4"}
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT  "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."id" = ? AND "blog_comments"."blog_id" = ? LIMIT ?[0m  [["id", 4], ["blog_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[36mBlogComment Destroy (1.0ms)[0m  [1m[31mDELETE FROM "blog_comments" WHERE "blog_comments"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/blog_comments_controller.rb:12
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/blogs/3
+Completed 302 Found in 11ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/blogs/3" for 106.154.6.90 at 2021-05-15 05:26:35 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/customer/blogs_controller.rb:18
+  Rendering customer/blogs/show.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:22
+  [1m[36mBlogComment Load (0.1ms)[0m  [1m[34mSELECT "blog_comments".* FROM "blog_comments" WHERE "blog_comments"."blog_id" = ?[0m  [["blog_id", 3]]
+  ↳ app/views/customer/blogs/show.html.erb:23
+  Rendered customer/blogs/show.html.erb within layouts/application (4.0ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events" for 106.154.6.90 at 2021-05-15 05:57:22 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::EventsController#index as HTML
+  Rendering customer/events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/customer/events/index.html.erb:4
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/events/index.html.erb:11
+  Rendered customer/events/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 88ms (Views: 83.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/events/2" for 106.154.6.90 at 2021-05-15 05:57:57 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/customer/events_controller.rb:21
+  Rendering customer/events/show.html.erb within layouts/application
+  Rendered customer/events/show.html.erb within layouts/application (0.3ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 60ms (Views: 56.5ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/events/1" for 106.154.6.90 at 2021-05-15 05:58:00 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"t2ntktUoIcuX80cN0ImXFeFNUXIcNYQ4hafR+TIIWzr+qEVy45vI797/hwXNw2hG7FsQN8swgXek7JMOUUGxyA==", "id"=>"1"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/customer/events_controller.rb:28
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/customer/events_controller.rb:29
+  [1m[36mEvent Destroy (1.2ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/customer/events_controller.rb:29
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/customer/events_controller.rb:29
+Redirected to https://1e84bb0446174383bdc90a9b6585c845.vfs.cloud9.us-east-1.amazonaws.com/events
+Completed 302 Found in 13ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/events" for 106.154.6.90 at 2021-05-15 05:58:00 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::EventsController#index as HTML
+  Rendering customer/events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/customer/events/index.html.erb:4
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/events/index.html.erb:11
+  Rendered customer/events/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 63ms (Views: 61.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new" for 106.154.6.90 at 2021-05-15 05:58:03 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::EventsController#new as HTML
+  Rendering customer/events/new.html.erb within layouts/application
+  Rendered customer/events/new.html.erb within layouts/application (11.3ms)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:13
+Completed 200 OK in 88ms (Views: 86.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 106.154.6.90 at 2021-05-15 05:58:06 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::HomesController#top as HTML
+  Rendering customer/homes/top.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/homes/top.html.erb:2
+  Rendered customer/homes/top.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 59ms (Views: 57.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events" for 106.154.6.90 at 2021-05-15 05:58:07 +0000
+Cannot render console from 106.154.6.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Customer::EventsController#index as HTML
+  Rendering customer/events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/customer/events/index.html.erb:4
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? ORDER BY "customers"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/customer/events/index.html.erb:11
+  Rendered customer/events/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 0.2ms)
+
+

@@ -18,10 +18,7 @@
       <% if customer_signed_in? %>
         <span class="welcome">ようこそ、<%= current_customer.name %>さん！</span>
         <li>
-          <%= link_to "TOP",root_path, class: 'headericon' %>
-        </li>
-        <li>
-          <%= link_to "今後の予定",events_path, class: 'headericon' %>
+          <%= link_to "今後の予定",events_path(current_customer.id), class: 'headericon' %>
         </li>
         <li>
           <%= link_to "検索する",searches_path, class: 'headericon' %>
@@ -37,9 +34,6 @@
           <%= link_to "管理者ログアウト",destroy_admin_session_path, method: :delete, class: 'headericon' %>
         </li>
       <% else %>
-        <li>
-          <%= link_to "トップページ",root_path, class: 'headericon' %>
-        </li>
         <li>
           <%= link_to "検索する",searches_path, class: 'headericon' %>
         </li>

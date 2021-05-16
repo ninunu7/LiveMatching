@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <h1>イベント詳細</h1>
+    <span><%= link_to '一覧に戻る', events_path, class: "btn btn-sm btn-success" %></span>
+
+
+    <div class="field">
+
+        <%= @event.created_at %><br>
+      </div>
+
+      <div>
+        <%= @event.blog_title %>
+      </div>
+      <div>
+      <%= @blog.blog_text %>
+      </div>
+
+      </div>

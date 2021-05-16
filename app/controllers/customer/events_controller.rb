@@ -10,6 +10,7 @@ class Customer::EventsController < ApplicationController
   end
 
   def index
+
     @events = Event.all
   end
 

@@ -5,12 +5,13 @@ class Customer::EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
+    @event.customer_id = current_customer.id
     @event.save
       redirect_to customer_path(current_customer), notice: "投稿を保存しました"
   end
 
   def index
-    @events = Event.all
+    @events = Event.where(customer_id: params[:customer_id])
   end
 
   def search
@@ -18,6 +19,7 @@ class Customer::EventsController < ApplicationController
   end
 
   def show
+     @events = Event.all
     @event = Event.find(params[:id])
   end
 

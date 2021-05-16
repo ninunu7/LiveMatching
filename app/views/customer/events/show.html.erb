@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <h1>イベント詳細</h1>
+    <span><%= link_to '一覧に戻る', events_path, class: "btn btn-sm btn-success" %></span>
+      <div class="field">
+        <%= @event.join_day %><br>
+      </div>
+      <div>
+        <%= @event.artist_name %>
+      </div>
+      <div>
+      <%= @event.message %>
+      </div>
+  </div>
+</div>

@@ -21,20 +21,45 @@
   box-sizing: border-box;
 }
 
-header {
-  background-color: #FFC7AF;
+.header {
+  background-color: #bc8f8f;
   height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  line-height: 70px;
+}
+
+.headertitle:hover {
+  color: #4b4b4b;
+  text-decoration: none;
+}
+
+
+.headertitle {
+  text-decoration: none;
+  color: #4b4b4b;
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+.nav {
+  list-style: none;
+  float: right;
 }
 
 .welcome {
-  margin-right: 30px;
+  font-size: 20px;
+  margin-right: 100px;
+  color: white;
 }
 
-.headerbutton {
-  width: 100px;
+.headericon {
+  width: 150px;
   height: 40px;
-  margin-right: 30px;
+  font-size: 20px;
+  color: white;
+  margin-right: 35px;
+}
+
+.headericon:hover {
+  color: white;
+  text-decoration: none;
 }

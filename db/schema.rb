@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_15_050254) do
+ActiveRecord::Schema.define(version: 2021_05_16_043706) do
 
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 2021_05_15_050254) do
     t.date "join_day"
     t.string "artist_name"
     t.text "message"
+    t.integer "customer_id"
   end
 
 end

@@ -64,7 +64,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem 'refile-mini_magick'
-gem 'dotenv-rails'
 gem 'rubocop'
 gem 'kaminari'
 gem 'active_hash'
@@ -73,3 +72,7 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.5'
 gem 'pry-byebug'
 gem 'carrierwave'
+gem 'dotenv-rails'
+group :production do
+  gem 'mysql2'
+end

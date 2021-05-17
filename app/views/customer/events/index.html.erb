@@ -20,7 +20,7 @@
             <td><%= event.join_day %></td>
             <td><%= event.artist_name %></td>
             <td><%= event.message %></td>
-            <td><button><%= link_to "詳細を見る",event_path(current_customer.id) %></button></td>
+            <td><button><%= link_to "詳細を見る",event_path(event) %></button></td>
             <td><%= link_to '削除する', event_path(event), method: :delete, class: "btn btn-sm btn-danger destroy_event_#{event.id}"%></td>
           </tr>
         <% end %>

@@ -19,7 +19,7 @@ class Customer::EventsController < ApplicationController
   end
 
   def show
-     @events = Event.all
+    @events = Event.all
     @event = Event.find(params[:id])
   end
 

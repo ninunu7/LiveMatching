@@ -20,11 +20,10 @@ Rails.application.routes.draw do
     get 'homes/top'
     get 'homes/about'
     resources :customers
-    get 'customers/quit'
+    get '/customers/:id/quit' => 'customers#quit', as: 'quit_customer' #退会画面への遷移
+    patch '/customers/:id/quit' => 'customers#out', as: 'out_customer' #会員ステータスの切替
     resources :events
     resources :searches
-    get 'search' => 'events#search'
-    get 'search' => 'customers#search'
     resources :blogs, only: [:new, :create, :index, :show, :destroy] do
       resources :blog_comments, only: [:create, :destroy]
     end

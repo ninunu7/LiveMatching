@@ -16,7 +16,7 @@ class Customer::EventsController < ApplicationController
   def search
     @search_params = event_search_params
     #検索結果の画面で、フォームに検索した値を表示するために、paramsの値をビューで使えるようにする
-    @events = Event.search(@event_params)
+    @events = Event.search(@search_params)
   end
 
   def show

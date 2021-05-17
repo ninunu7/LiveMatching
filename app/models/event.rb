@@ -10,10 +10,11 @@ class Event < ApplicationRecord
       .message_like(search_params[:message])
   end
 
-  scope :artist_name_like, -> (artist_name) { where('artist_name LIKE ?', "%#{artist_name}%") if artist_name.present? }
-  scope :join_day_from, -> (from) { where('? <= join_day', from) if from.present? }
+  scope :artist_name_like, -> (artist_name) { where('artist_name LIKE ?', "%#{artist_name}%") }
+  scope :join_day_from, -> (from) { where('? <= join_day', from) }
+  #scope :join_day_from, -> (from) { where('? <= join_day', from) if from.present? }にすると検索フォームに値がない場合実行されない
+  #if 引数.present?
   scope :join_day_to, -> (to) { where('join_day <= ?', to) }
   scope :message_like, -> (message) { where('message LIKE ?', "%#{message}%") }
   #scope :メソッド名 -> (引数) { SQL文 }
-  #if 引数.present?をつけることで、検索フォームに値がない場合は実行されない
 end

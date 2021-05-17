@@ -19,10 +19,18 @@ Rails.application.routes.draw do
   scope module: :customer do
     get 'homes/top'
     get 'homes/about'
+    get 'events/search'
     resources :customers
     get '/customers/:id/quit' => 'customers#quit', as: 'quit_customer' #退会画面への遷移
     patch '/customers/:id/quit' => 'customers#out', as: 'out_customer' #会員ステータスの切替
-    resources :events
+
+    resources :events do
+      collection do
+      get :search
+      end
+    end
+
+
     resources :searches
     resources :blogs, only: [:new, :create, :index, :show, :destroy] do
       resources :blog_comments, only: [:create, :destroy]
@@ -30,6 +38,6 @@ Rails.application.routes.draw do
     resources :blog_images, only: [:new, :create, :index, :show, :destroy]
     root to: 'homes#top'
   end
+end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-end

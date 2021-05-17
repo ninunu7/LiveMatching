@@ -21,7 +21,7 @@
           <%= link_to "今後の予定",events_path(customer_id: current_customer.id), class: 'headericon' %>
         </li>
         <li>
-          <%= link_to "検索する",searches_path, class: 'headericon' %>
+          <%= link_to "検索する",events_search_path, class: 'headericon' %>
         </li>
         <li>
           <%= link_to "マイページ",customer_path(current_customer.id), class: 'headericon' %>

@@ -1,6 +1,5 @@
 class Customer::EventsController < ApplicationController
   def new
-    @event = Event.new
   end
 
   def create
@@ -15,7 +14,9 @@ class Customer::EventsController < ApplicationController
   end
 
   def search
-    @events = Event.search(params[:keyword])
+    @search_params = event_search_params
+    #検索結果の画面で、フォームに検索した値を表示するために、paramsの値をビューで使えるようにする
+    @events = Event.search(@event_params)
   end
 
   def show
@@ -29,12 +30,17 @@ class Customer::EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to events_path
+    redirect_to events_path(current_customer)
   end
 
   private
-
   def event_params
-    params.require(:event).permit(:join_day, :artist_name, :message)
+    params.permit(:join_day, :artist_name, :message)
+  end
+
+  def event_search_params
+    params.fetch(:search, {}).permit(:artist_name, :join_day_from, :join_day_to, :message)
+    #fetch(:search, {})と記述することで、検索フォームに値がない場合はnilを返し、エラーが起こらなくなる
+    #ここでの:searchには、フォームから送られてくるparamsの値が入っている
   end
 end

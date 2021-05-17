@@ -4,11 +4,12 @@ class Customer::BlogsController < ApplicationController
 
   def index
     @blog_new = Blog.new
-    @blogs = Blog.all
+    @blogs = Blog.where(customer_id: params[:customer_id])
   end
 
   def create
     @blog = Blog.new(blog_params)
+    @blog.customer_id = current_customer.id
     @blog.save
     redirect_to blogs_path, notice: "投稿しました"
   end

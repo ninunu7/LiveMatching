@@ -52,7 +52,7 @@
               <%= f.label :'パスワード' %>
             </td>
             <td>
-              <%= f.password_field :current_password, placeholder: "変更しない場合は記入不要", :size=>"40" %>
+              <%= f.password_field :current_password, placeholder: "現在のパスワード", :size=>"40" %>
             </td>
           </tr>
           <tr>
@@ -78,7 +78,7 @@
         <%= f.submit "編集" %>
       </div>
     <% end %>
-    <p><%= button_to "退会する", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
     <%= link_to "戻る", :back %>
   </div>
   </div>

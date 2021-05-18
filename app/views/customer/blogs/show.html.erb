@@ -33,6 +33,8 @@
 
         <% @blog.blog_comments.each do |blog_comment| %>
         <%= blog_comment.created_at.strftime('%Y/%m/%d') %>
+
+        <%= image_tag blog_comment.customer.profile_image.to_s, :size =>'50x50' %>
         <%= blog_comment.customer.name %>
         <span class="ml-5"><%= blog_comment.comment %></span>
         <%= link_to "コメントを削除", blog_blog_comment_path(blog_comment.blog, blog_comment), method: :delete %>

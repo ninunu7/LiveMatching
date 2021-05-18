@@ -35,6 +35,7 @@
       <div class="comments">
         <% @event.comments.each do |comment| %>
         <%= comment.created_at.strftime('%Y/%m/%d') %>
+        <%= image_tag comment.customer.profile_image.to_s, :size =>'50x50' %>
         <%= comment.customer.name %>
         <span class="ml-5"><%= comment.comment %></span>
         <%= link_to "コメントを削除", event_comment_path(comment.event, comment), method: :delete %>

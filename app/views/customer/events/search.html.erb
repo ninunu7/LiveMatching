@@ -21,6 +21,7 @@
   <table class="table table-hover tablee-bordered">
     <thead>
       <tr class="info">
+        <th style="background:#FAEBD7;"></th>
         <th style="background:#FAEBD7;">ユーザー</th>
         <th style="background:#FAEBD7;">性別</th>
         <th style="background:#FAEBD7;">参加日</th>
@@ -31,11 +32,12 @@
     </thead>
     <tbody>
     <% unless @search_params.blank? %>
+    (全<%= @events.count %>件)
       <% @events.each do |event| %>
         <tr>
+          <td><%= image_tag event.customer.profile_image.to_s, :size =>'50x50' %></td>
           <td><%= link_to(event.customer.name, customer_path(event.customer_id)) %></td>
           <td><%= event.customer.gender %></td>
-
           <td><%= event.join_day %></td>
           <td><%= event.artist_name %></td>
           <td><%= event.message.truncate(15) %></td>

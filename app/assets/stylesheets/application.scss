@@ -63,3 +63,25 @@
   color: white;
   text-decoration: none;
 }
+
+.wrapper{
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 120px;
+    box-sizing: border-box;
+}
+
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #faf0e6;
+  position: absolute;
+  bottom: 0;
+}
+
+.footertext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

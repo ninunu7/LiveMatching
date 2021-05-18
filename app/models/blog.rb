@@ -3,5 +3,4 @@ class Blog < ApplicationRecord
   has_many :blog_images, dependent: :destroy
   has_many :blog_comments, dependent: :destroy
   accepts_attachments_for :blog_images, attachment: :image
-
 end

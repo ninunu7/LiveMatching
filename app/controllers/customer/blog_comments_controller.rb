@@ -1,11 +1,14 @@
 class Customer::BlogCommentsController < ApplicationController
   def create
-    blog = Blog.find(params[:blog_id])
-    blog_comment = BlogComment.create(blog_comment_params)
-    blog_comment = current_customer.blog_comments.new(blog_comment_params)
-    blog_comment.blog_id = blog.id
-    blog_comment.save
-    redirect_to blog_path(blog)
+    @blog = Blog.find(params[:blog_id])
+    @blog_comment = BlogComment.create(blog_comment_params)
+    @blog_comment.customer_id = current_customer.id
+    @blog_comment.blog_id = @blog.id
+    if @blog_comment.save
+      redirect_to blog_path(@blog)
+    else
+      render template: 'customer/blogs/show'
+    end
   end
 
   def destroy

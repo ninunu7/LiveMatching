@@ -24,7 +24,13 @@
     <span><%= link_to '削除する', event_path(@event), method: :delete, class: "btn btn-sm btn-danger destroy_event_#{@event.id}"%></span>
   </div>
   <div class="row">
-
+    <div>
+      <% if @comment.errors.any? %>
+        <% @comment.errors.full_messages.each do |message| %>
+          <%= message %>
+        <% end %>
+      <% end %>
+    </div>
     <span>コメント数:<%= @event.comments.count %></span>
       <div class="new-comment">
         <%= form_with(model:[@event,@comment], local: true) do |f| %>

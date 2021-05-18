@@ -10,7 +10,10 @@ class Customer::BlogsController < ApplicationController
     @blog_new = Blog.new(blog_params)
     @blog_new.customer_id = current_customer.id
     if @blog_new.save
-      redirect_to blogs_path
+
+
+      redirect_to blogs_path(current_customer)
+
     else
       render :index
     end

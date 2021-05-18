@@ -11,7 +11,6 @@ class Customer::EventsController < ApplicationController
 
   def index
     @events = Event.where(customer_id: params[:customer_id])
-
   end
 
   def search

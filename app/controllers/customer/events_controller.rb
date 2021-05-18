@@ -22,6 +22,7 @@ class Customer::EventsController < ApplicationController
   def show
     @events = Event.all
     @event = Event.find(params[:id])
+    @comment = Comment.new
   end
 
   def edit

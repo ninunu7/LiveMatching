@@ -38,7 +38,7 @@
 
           <td><%= event.join_day %></td>
           <td><%= event.artist_name %></td>
-          <td><%= event.message %></td>
+          <td><%= event.message.truncate(15) %></td>
           <td><%= link_to"詳細を見る", event_path(event) %></td>
         </tr>
       <% end %>

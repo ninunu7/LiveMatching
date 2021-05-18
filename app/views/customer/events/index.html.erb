@@ -19,7 +19,8 @@
           <tr>
             <td><%= event.join_day %></td>
             <td><%= event.artist_name %></td>
-            <td><%= event.message %></td>
+            <td><%= event.message.truncate(15) %></td>
+            <td><%= "#{event.comments.count}コメント" %></td>
             <td><button><%= link_to "詳細を見る",event_path(event) %></button></td>
           </tr>
         <% end %>

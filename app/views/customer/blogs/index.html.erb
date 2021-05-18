@@ -36,7 +36,7 @@
               <td><%= blog.created_at.strftime('%Y/%m/%d') %></td>
               <td><%= blog.blog_title %></td>
               <td><%= blog.blog_text.truncate(20) %></td>
-              <td><%#= link_to "#{blog.blog_comments.count}コメント", blog_path(blog.id) %></td>
+              <td><%= "#{blog.blog_comments.count}コメント" %></td>
               <td><%= link_to '詳細を見る', blog_path(blog), class: "btn btn-sm btn-primary"%></td>
               <td><%= link_to '削除する', blog_path(blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{blog.id}"%></td>
             </tr>

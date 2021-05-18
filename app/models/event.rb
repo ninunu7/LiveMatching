@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :customer, optional: true #belongs_toの外部キーのnilを許可する
+  has_many :comments, dependent: :destroy
 
   scope :search, -> (search_params) do
     return if search_params.blank?

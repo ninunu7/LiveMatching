@@ -15,6 +15,7 @@ class Customer < ApplicationRecord
   has_many :blog_comments, dependent: :destroy
   has_many :blog_images, dependent: :destroy
   has_many :events, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   def active_for_authentication?
     super && (self.user_status == true)

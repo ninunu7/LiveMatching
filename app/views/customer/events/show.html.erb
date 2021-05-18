@@ -1,16 +1,28 @@
 <div class="container">
   <div class="row">
     <h1>イベント詳細</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8 offset-2 align-self-center">
+      <div>
+        <span>参加日</span><br>
+        <span class="ml-5"><%= @event.join_day %></span>
+      </div>
+      <div>
+        <span>アーティスト名</span><br>
+        <span class="ml-5"><%= @event.artist_name %></span>
+      </div>
+      <div>
+        <span>メッセージ</span><br>
+      <span class="ml-5"><%= @event.message %></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
     <span><%= link_to '一覧に戻る', events_path, class: "btn btn-sm btn-success" %></span>
     <span><%= link_to '削除する', event_path(@event), method: :delete, class: "btn btn-sm btn-danger destroy_event_#{@event.id}"%></span>
-      <div class="field">
-        <%= @event.join_day %><br>
-      </div>
-      <div>
-        <%= @event.artist_name %>
-      </div>
-      <div>
-      <%= @event.message %>
-      </div>
   </div>
-</div>
+  </div>
+

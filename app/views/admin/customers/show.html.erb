@@ -29,9 +29,21 @@
         <td>自己紹介</td>
         <td><%= @customer.introduction %></td>
       </tr>
+      <tr>
+        <td>会員ステータス</td>
+        <td>
+          <% if @customer.user_status == true %>
+            <span>有効</span>
+          <% else %>
+            <span>退会</span>
+          <% end %>
+        </td>
+      </tr>
   </tbody>
 </table>
 <button>
   <%= link_to "編集する",edit_admin_customer_path(@customer) %>
 </button>
-
+<button>
+  <%= link_to "戻る",admin_customers_path %>
+</button>

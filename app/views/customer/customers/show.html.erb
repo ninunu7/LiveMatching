@@ -1,33 +1,33 @@
 <div class="container">
 	<div class="row">
-		<h3 class="my-4 px-4 rounded-circle", style="background:#EEEEEE;">マイページ</h3>
+		<h3 class="my-4 px-4 rounded-circle", style="background:#EEEEEE;"><%= @customer.name %>のプロフィール</h3>
 	</div>
 	<div class="row">
 	  <div class="col-lg-2">
-      <span><%= image_tag current_customer.profile_image.to_s, :size =>'80x80' %></span>
+      <span><%= image_tag @customer.profile_image.to_s, :size =>'80x80' %></span>
     </div>
     <div class="col-lg-8">
       <table class="table table-bordered table-condensed">
         <tbody>
           <tr>
             <td style="width: 25%">名前</td>
-            <td style="width: 45%"><%= current_customer.name %></td>
+            <td style="width: 45%"><%= @customer.name %></td>
           </tr>
           <tr>
             <td>メールアドレス</td>
-            <td><%= current_customer.email %></td>
+            <td><%= @customer.email %></td>
           </tr>
           <tr>
             <td>生年月日</td>
-            <td><%= current_customer.birth_date %></td>
+            <td><%= @customer.birth_date %></td>
           </tr>
           <tr>
             <td>性別</td>
-            <td><%= current_customer.gender %></td>
+            <td><%= @customer.gender %></td>
           </tr>
           <tr>
             <td>自己紹介</td>
-            <td><%= current_customer.introduction %></td>
+            <td><%= @customer.introduction %></td>
           </tr>
         </tbody>
       </table>
@@ -40,11 +40,10 @@
     <button>
       <%= link_to "参加するイベント",events_path(customer_id: current_customer.id) %>
     </button>
+    <% if customer_signed_in? && @customer.id == current_customer.id %>
     <button>
       <%= link_to "編集する",edit_customer_registration_path %>
     </button>
-
-    <% if customer_signed_in? && @customer.id == current_customer.id %>
     <button>
       <%= link_to "退会する",quit_customer_path %>
     </button>

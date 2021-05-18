@@ -11,6 +11,7 @@ class Customer::EventsController < ApplicationController
 
   def index
     @events = Event.where(customer_id: params[:customer_id])
+
   end
 
   def search
@@ -22,6 +23,7 @@ class Customer::EventsController < ApplicationController
   def show
     @events = Event.all
     @event = Event.find(params[:id])
+    #@customer = @event.customer
     @comment = Comment.new
   end
 

@@ -10,10 +10,7 @@ class Customer::BlogsController < ApplicationController
     @blog_new = Blog.new(blog_params)
     @blog_new.customer_id = current_customer.id
     if @blog_new.save
-
-
-      redirect_to blogs_path(current_customer)
-
+      redirect_to blogs_path(customer_id: current_customer.id)
     else
       render :index
     end
@@ -29,7 +26,7 @@ class Customer::BlogsController < ApplicationController
   def destroy
     @blog = Blog.find(params[:id])
     @blog.destroy
-    redirect_to blogs_path
+    redirect_to blogs_path(customer_id: current_customer.id)
   end
 
   private

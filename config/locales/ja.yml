@@ -5,3 +5,10 @@ ja:
         name: 名前
         email: メールアドレス
         password: パスワード
+ja:
+  enums:
+    customer:
+        gender:
+          default: 未設定
+          man: 男性
+          woman: 女性

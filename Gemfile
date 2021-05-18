@@ -71,6 +71,7 @@ gem 'rails-i18n'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.5'
 gem 'pry-byebug'
+gem 'enum_help'
 gem 'carrierwave'
 gem 'dotenv-rails'
 group :production do

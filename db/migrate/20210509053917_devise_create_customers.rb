@@ -35,7 +35,7 @@ class DeviseCreateCustomers < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :profile_image
       t.date :birth_date
-      t.integer :gender
+      t.integer :gender, default: 0
 
       t.timestamps null: false
     end

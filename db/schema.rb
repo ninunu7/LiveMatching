@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_18_040507) do
+ActiveRecord::Schema.define(version: 2021_05_18_123115) do
 
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -40,12 +40,12 @@ ActiveRecord::Schema.define(version: 2021_05_18_040507) do
   end
 
   create_table "blogs", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string "blog_title"
     t.text "blog_text"
-    t.string "blog_images"
     t.integer "customer_id"
+    t.string "blog_images"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|
@@ -65,7 +65,7 @@ ActiveRecord::Schema.define(version: 2021_05_18_040507) do
     t.string "name"
     t.string "profile_image"
     t.date "birth_date"
-    t.integer "gender"
+    t.integer "gender", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "user_status", default: true
@@ -75,12 +75,12 @@ ActiveRecord::Schema.define(version: 2021_05_18_040507) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.date "join_day"
     t.string "artist_name"
     t.text "message"
     t.integer "customer_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

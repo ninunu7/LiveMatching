@@ -5,6 +5,10 @@ ja:
         name: 名前
         email: メールアドレス
         password: パスワード
+      event:
+        join_day: 参加日
+        artist_name: アーティスト名
+        message: メッセージ
 ja:
   enums:
     customer:

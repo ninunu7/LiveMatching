@@ -1,33 +1,41 @@
-<div class="container">
-
+<div class="index-body">
+<div class="error">
   <% if @blog_new.errors.any? %>
-  <%= @blog_new.errors.count %>件のエラーが発生しました
-  <% @blog_new.errors.full_messages.each do |message| %>
-    <%= message %>
+    <% @blog_new.errors.full_messages.each do |message| %>
+      <li class="text-danger"><%= message %></li>
+    <% end %>
   <% end %>
-<% end %>
+</div>
 
-  <div class="row">
-    <div class="offset-1">
-    <h1 class="mt-3">ブログ</h1>
+<div class="top">
+    <h1 class="blog">ブログ</h1>
+    <a href="#anchor" class="btn btn-shadow">これまでの投稿を見る(ページ下部へ)</a>
+</div>
+<div>
     <%= form_with model:@blog_new, local:true do |f| %>
       <div class="field">
-        <%= f.label :'タイトル' %><br>
+        <%= f.label :'タイトル' %>
+      </div>
+      <div class="form">
         <%= f.text_field :blog_title, autofocus: true, :size =>'50' %>
       </div>
       <div class="field">
-        <%= f.label :'本文' %><br>
-        <%= f.text_area :blog_text, :size =>'60x30' %>
+        <%= f.label :'本文' %>
       </div>
-      <div class="field">
+      <div class="form">
+        <%= f.text_area :blog_text, :size =>'70x20' %>
+      </div>
+      <div class="form">
         <%= f.attachment_field :blog_images_images, multiple: true %>
       </div>
-      <div class="mt-3">
-        <%= f.submit "投稿する", class: "btn btn-success" %>
+      <div class="submit">
+        <%= f.submit "投稿する", class: "btn btn-submit btn-success" %>
       </div>
       <% end %>
 
-      <h1 class="mt-4">これまでの投稿</h1><span>ブログ投稿数:<%= @blogs.count %></span>
+
+
+      <h1 id="anchor">これまでの投稿</h1><span>ブログ投稿数:<%= @blogs.count %></span>
 
       <table class="table table-hover text-center">
         <thead>
@@ -46,8 +54,8 @@
               <td><%= blog.blog_title %></td>
               <td><%= blog.blog_text.truncate(20) %></td>
               <td><%= "#{blog.blog_comments.count}コメント" %></td>
-              <td><%= link_to '詳細を見る', blog_path(blog), class: "btn btn-sm btn-primary"%></td>
-              <td><%= link_to '削除する', blog_path(blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{blog.id}"%></td>
+              <td><%= link_to '詳細を見る', blog_path(blog), class: "btn btn-sm btn-primary" %></td>
+              <td><%= link_to '削除する', blog_path(blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{blog.id}" %></td>
             </tr>
           <% end %>
           <!--<% if @blog_new.blog_images.present? %>-->-->
@@ -59,8 +67,9 @@
           <!--  <% end %>-->
         </tbody>
       </table>
-
-      </div>
     </div>
   </div>
+
+
+
 

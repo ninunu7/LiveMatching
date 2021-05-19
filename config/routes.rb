@@ -20,17 +20,21 @@ Rails.application.routes.draw do
     get 'homes/top'
     get 'homes/about'
     get 'events/search'
-    resources :customers
-    get '/customers/:id/quit' => 'customers#quit', as: 'quit_customer' #退会画面への遷移
-    patch '/customers/:id/quit' => 'customers#out', as: 'out_customer' #会員ステータスの切替
+    resources :customers do
+      resource :relationships, only: [:create, :destroy]
+      get 'followings' => 'relationships#followings', as: 'followings'
+      get 'followers' => 'relationships#followers', as: 'followers'
+    end
+
+      get '/customers/:id/quit' => 'customers#quit', as: 'quit_customer' #退会画面への遷移
+      patch '/customers/:id/quit' => 'customers#out', as: 'out_customer' #会員ステータスの切替
 
     resources :events do
       collection do
       get :search
       end
       resources :comments, only: [:create, :destroy]
-    end
-
+  end
 
     resources :searches
     resources :blogs, only: [:new, :create, :index, :show, :destroy] do

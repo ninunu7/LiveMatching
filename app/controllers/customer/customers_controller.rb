@@ -5,6 +5,11 @@ class Customer::CustomersController < ApplicationController
 
   def edit
     @customer = current_customer
+    if @customer.save
+      redirect_to edit_customer_path(@customer.id)
+    else
+      render :edit
+    end
   end
 
   def quit

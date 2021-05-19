@@ -1,6 +1,9 @@
 class Event < ApplicationRecord
   belongs_to :customer, optional: true #belongs_toの外部キーのnilを許可する
   has_many :comments, dependent: :destroy
+  validates :join_day, presence: true
+  validates :artist_name, presence: true, length: { maximum: 30}
+  validates :message, presence: true
 
   scope :search, -> (search_params) do
     return if search_params.blank?

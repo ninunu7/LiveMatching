@@ -1,3 +1,79 @@
 // Place all the styles related to the customer::blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+a.btn {
+  color: white;
+  background-color: #eb6100;
+  border-bottom: 4px solid #b84c00;
+  height: 40px;
+}
+a.btn:hover {
+  height: 37px;
+  margin-top: 3px;
+  color: white;
+  background: #f56500;
+  border-bottom: 3px solid #b84c00;
+
+}
+a.btn-shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+.index-body {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.top {
+  display: flex;
+  margin-top: 40px;
+  margin-left: 30px;
+
+}
+
+.blog {
+  margin-right: 80px;
+}
+
+#anchor {
+margin-left: 30px;
+}
+
+.field {
+  font-size: 20px;
+}
+
+.form {
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.btn-submit {
+  width: 140px;
+  height: 40px;
+}
+
+.show {
+  width: 100%;
+
+  display: inline-block;
+}
+
+.blog-body {
+  width: 400px;
+  margin-top: 50px;
+  margin-left: 100px;
+  padding-left: 100px;
+  float: left;
+}
+
+.sidebar {
+  margin-top: 50px;
+  display: inline-block;
+  width: 500px;
+  margin-right: 100px;
+  float: right;
+
+}

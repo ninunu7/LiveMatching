@@ -4,7 +4,7 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :'名前' %><br>
+    <%= f.label :'名前(20文字以内)' %><br>
     <%= f.text_field :name,autofocus: true %>
   </div>
 
@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= f.label :'メールアドレス' %><br>
-    <%= f.email_field :email %>
+    <%= f.email_field :email, autocomplete: 'off' %>
   </div>
 
   <div class="field">
-    <%= f.label :'パスワード' %><br>
-    <%= f.password_field :password, placeholder: "6文字以上" %>
+    <%= f.label :'パスワード(6文字以上)' %><br>
+    <%= f.password_field :password, autocomplete: 'off' %>
   </div>
 
   <div class="field">

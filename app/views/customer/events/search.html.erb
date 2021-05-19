@@ -37,7 +37,7 @@
         <tr>
           <td><%= image_tag event.customer.profile_image.to_s, :size =>'50x50' %></td>
           <td><%= link_to(event.customer.name, customer_path(event.customer_id)) %></td>
-          <td><%= event.customer.gender %></td>
+          <td><%= event.customer.gender_i18n %></td>
           <td><%= event.join_day %></td>
           <td><%= event.artist_name %></td>
           <td><%= event.message.truncate(15) %></td>

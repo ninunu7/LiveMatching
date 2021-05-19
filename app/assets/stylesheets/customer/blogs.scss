@@ -2,13 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-a.btn {
+a.btn-orange {
   color: white;
   background-color: #eb6100;
   border-bottom: 4px solid #b84c00;
   height: 40px;
 }
-a.btn:hover {
+a.btn-orange:hover {
   height: 37px;
   margin-top: 3px;
   color: white;
@@ -16,7 +16,7 @@ a.btn:hover {
   border-bottom: 3px solid #b84c00;
 
 }
-a.btn-shadow {
+a.btn-orange-shadow {
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
 }
@@ -76,4 +76,28 @@ margin-left: 30px;
   margin-right: 100px;
   float: right;
 
+}
+
+// .comments {
+// 	border: 2px solid #000000;
+// 	width: 100px;
+// 	height: 50px;
+// }
+
+.blog-title {
+  font-size: 35px;
+}
+
+.blog-text {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+}
+
+.blog-time {
+  font-size: 15px;
+}
+
+.customer-name {
+  font-size: 20px;
 }

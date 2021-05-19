@@ -1,3 +1,46 @@
 // Place all the styles related to the customer::homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  text-align: center;
+}
+
+.btn-orange {
+  color: white;
+  background-color: #eb6100;
+  border-bottom: 4px solid #b84c00;
+  height: 40px;
+  width: 200px;
+}
+.btn-orange:hover {
+  height: 37px;
+  margin-top: 3px;
+  color: white;
+  background: #f56500;
+  border-bottom: 3px solid #b84c00;
+
+}
+.btn-orange-shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+.top-title {
+  font-size: 50px;
+  padding-top: 30px;
+}
+
+.top-text {
+  font-size: 25px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.top-button {
+  padding: 10px;
+}
+
+.admin {
+  padding-top: 70px;
+}

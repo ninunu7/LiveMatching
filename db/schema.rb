@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_19_044128) do
+ActiveRecord::Schema.define(version: 2021_05_20_042542) do
 
   create_table "admins", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(version: 2021_05_19_044128) do
     t.string "blog_title"
     t.text "blog_text"
     t.integer "customer_id"
-    t.string "blog_images"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

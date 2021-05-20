@@ -12,16 +12,22 @@
 <% end %>
 
 	<%#= render '/relationships/follow_button', customers: @customers %>
-  <div>フォロー数：<%= @customer.followings.count %></div>
-	<div>フォロワー数：<%= @customer.followers.count %></div>
-
- <%= link_to "フォロー一覧",customer_followings_path(@customer.id), class: "btn btn-sm btn-secondary" %>
- <%= link_to "フォロワー一覧",customer_followers_path(@customer.id), class: "btn btn-sm btn-secondary" %>
 
 	<div class="row">
 	  <div class="col-lg-2">
       <span><%= image_tag @customer.profile_image.to_s, :size =>'80x80' %></span>
+
+      <div>フォロー数：<%= @customer.followings.count %></div>
+	    <div>フォロワー数：<%= @customer.followers.count %></div>
+
+      <div class="follow-button">
+        <%= link_to "フォロー一覧",customer_followings_path(@customer.id), class: "btn btn-sm btn-secondary" %>
+      </div>
+      <div class="follow-button">
+        <%= link_to "フォロワー一覧",customer_followers_path(@customer.id), class: "btn btn-sm btn-secondary" %>
+      </div>
     </div>
+
     <div class="col-lg-8">
       <table class="table table-bordered table-condensed">
         <tbody>
@@ -46,19 +52,18 @@
     </div>
   </div>
   <div class="row">
-    <button>
-      <%= link_to "ブログ",blogs_path(customer_id: current_customer.id) %>
-    </button>
-    <button>
-      <%= link_to "参加するイベント",events_path(customer_id: current_customer.id) %>
-    </button>
+
+      <%= link_to "ブログ",blogs_path(customer_id: current_customer.id), class: "btn btn-orange btn-shadow" %>
+
+      <%= link_to "参加するイベント",events_path(customer_id: current_customer.id), class: "btn btn-orange btn-shadow" %>
+
     <% if customer_signed_in? && @customer.id == current_customer.id %>
-    <button>
-      <%= link_to "編集する",edit_customer_registration_path %>
-    </button>
-    <button>
-      <%= link_to "退会する",quit_customer_path %>
-    </button>
+
+      <%= link_to "編集する",edit_customer_registration_path, class: "btn btn-orange btn-shadow" %>
+
+
+      <%= link_to "退会する",quit_customer_path, class: "btn btn-sm btn-secondary" %>
+
     <% end %>
   </div>
 </div>

@@ -25,6 +25,7 @@
       <div class="form">
         <%= f.text_area :blog_text, :size =>'70x20' %>
       </div>
+      <div>画像(10枚まで)</div>
       <div class="form">
         <%= f.attachment_field :blog_images_images, multiple: true %>
       </div>
@@ -55,9 +56,9 @@
               <td><%= blog.blog_text.truncate(20) %></td>
               <td>
                 <% if blog.blog_images.present? %>
-                  <% blog.blog_images.each do |image| %>
-                    <%= attachment_image_tag image, :image, :size =>'50x50'  %>
-                  <% end %>
+                <% blog.blog_images.each do |image| %>
+                  <%= attachment_image_tag image, :image, :size =>'50x50'  %>
+                <% end %>
                 <% else %>
                   画像はありません。
                 <% end %>

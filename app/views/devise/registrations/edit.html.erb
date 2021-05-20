@@ -33,7 +33,7 @@
             <td><%= f.date_select(
                 :birth_date,
                 start_year: 1930,
-                end_year: (Time.now.year - 18),
+                end_year: (Time.now.year),
                 default: Date.new(1989, 1, 1)) %></td>
           </tr>
           <tr>
@@ -55,17 +55,17 @@
               <%= f.label :'パスワード' %>
             </td>
             <td>
-              <%= f.password_field :current_password, placeholder: "現在のパスワード", :size=>"40" %>
+              現在のパスワード<%= f.password_field :current_password, :size=>"40" %>
             </td>
           </tr>
           <tr>
             <td>
-              <%= f.password_field :password, placeholder: "新しいパスワード(6文字以上)", :size=>"40" %>
+              新しいパスワード(6文字以上)<%= f.password_field :password, :size=>"40" %>
             </td>
           </tr>
           <tr>
             <td>
-              <%= f.password_field :password_confirmation, placeholder: "新しいパスワード(確認)", :size=>"40" %>
+              新しいパスワード(確認)<%= f.password_field :password_confirmation, :size=>"40" %>
             </td>
           </tr>
           <tr>

@@ -17,21 +17,14 @@ class Customer < ApplicationRecord
   has_many :events, dependent: :destroy
   has_many :comments, dependent: :destroy
 
-  # has_many :relationships
-  # has_many :followings, through: :relationships, source: :follow
-  # has_many :reverse_of_relationships, class_name: 'Relationship', foreign_key: 'follow_id'
-  # has_many :followers, through: :reverse_of_relationships, source: :user
-
   has_many :reverse_of_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
   has_many :followers, through: :reverse_of_relationships, source: :follower
-  # 被フォロー関係を通じて参照→followed_idをフォローしている人
 
   has_many :relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
   # 【class_name: "Relationship"】は省略可能
   has_many :followings, through: :relationships, source: :followed
-  # 与フォロー関係を通じて参照→follower_idをフォローしている人
-  #1行上のhas_many :relationshipsモデルをthroughしてfollower(_id)カラムを参照(source)する
-  #@customer.followersとcontrollerで記述出来る(フォロー・フォロワー一覧ページ作成)
+  #1行上のhas_many :relationshipsモデルをthroughしてfollowed(_id)カラムを参照(source)する
+  #@customer.followingsとcontrollerで記述出来る(フォロー・フォロワー一覧ページ作成)
 
 
 

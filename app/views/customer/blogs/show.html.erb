@@ -7,7 +7,6 @@
         <% if @blog.blog_images.present? %>
           <% @blog.blog_images.each do |image| %>
             <%= link_to Refile.attachment_url(image, :image), "data-lightbox": image.image do %>
-            <%#=  Refile.attachment_url(image, :) %>
               <%= attachment_image_tag image, :image, :size =>'100x100',class: "img_#{image.id}" %>
             <% end %>
           <% end %>

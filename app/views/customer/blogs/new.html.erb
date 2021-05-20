@@ -1,0 +1,35 @@
+<div class="index-body">
+<div class="error">
+  <% if @blog_new.errors.any? %>
+    <% @blog_new.errors.full_messages.each do |message| %>
+      <li class="text-danger"><%= message %></li>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="top">
+    <h1 class="blog">ブログ</h1>
+</div>
+<div>
+    <%= form_with model:@blog_new, local:true do |f| %>
+      <div class="field">
+        <%= f.label :'タイトル' %>
+      </div>
+      <div class="form">
+        <%= f.text_field :blog_title, autofocus: true, :size =>'50' %>
+      </div>
+      <div class="field">
+        <%= f.label :'本文' %>
+      </div>
+      <div class="form">
+        <%= f.text_area :blog_text, :size =>'70x20' %>
+      </div>
+      <div>画像(10枚まで)</div>
+      <div class="form">
+        <%= f.attachment_field :blog_images_images, multiple: true %>
+      </div>
+      <div class="submit">
+        <%= f.submit "投稿する", class: "btn btn-submit btn-success" %>
+      </div>
+      <% end %>
+

@@ -1,12 +1,14 @@
 class Customer::EventsController < ApplicationController
   def new
-    @event = Event.new(event_params)
+    @event = Event.new
   end
 
   def create
     @event = Event.new(event_params)
     @event.customer_id = current_customer.id
-    if @event.save
+
+    if @event.save!
+
       redirect_to customer_path(current_customer)
     else
       render :new
@@ -41,7 +43,7 @@ class Customer::EventsController < ApplicationController
 
   private
   def event_params
-    params.permit(:join_day, :artist_name, :message)
+    params.require(:event).permit(:join_day, :artist_name, :message)
   end
 
   def event_search_params

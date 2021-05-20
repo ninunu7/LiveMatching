@@ -1,22 +1,29 @@
 class Customer::BlogsController < ApplicationController
   before_action :authenticate_customer!
-  def index
+  def new
     @blog_new = Blog.new
+  end
+
+  def index
     @blogs = Blog.where(customer_id: params[:customer_id])
+    @blogs = Kaminari.paginate_array(@blogs).page(params[:page]).per(10)
   end
 
   def create
     @blogs = Blog.where(customer_id: params[:customer_id])
+    @blogs = Kaminari.paginate_array(@blogs).page(params[:page]).per(10)
     @blog_new = Blog.new(blog_params)
     @blog_new.customer_id = current_customer.id
     if @blog_new.save
+      flash[:notice] = "投稿が完了しました。"
       redirect_to blogs_path(customer_id: current_customer.id)
     else
-      render :index
+      render :new
     end
   end
 
   def show
+    @blogs = Blog.where(customer_id: params[:customer_id])
     @blog_new = Blog.new
     @blog = Blog.find(params[:id])
     @customer = @blog.customer

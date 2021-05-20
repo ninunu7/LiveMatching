@@ -6,8 +6,9 @@
       <div class="blog-images">
         <% if @blog.blog_images.present? %>
           <% @blog.blog_images.each do |image| %>
-            <%= link_to image, "data-lightbox": image do %>
-              <%= attachment_image_tag image, :image, :size =>'100x100'  %>
+            <%= link_to Refile.attachment_url(image, :image), "data-lightbox": "img_#{image.id}" do %>
+            <%#=  Refile.attachment_url(image, :) %>
+              <%= attachment_image_tag image, :image, :size =>'100x100',class: "img_#{image.id}"  %>
             <% end %>
           <% end %>
           <% else %>
@@ -16,7 +17,9 @@
       </div>
       <div class="link">
         <%= link_to 'ブログを削除する', blog_path(@blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{@blog.id}"%>
-        <%= link_to 'ブログ一覧に戻る', blogs_path(@blog), class: "btn btn-sm btn-success" %>
+        <%= link_to 'ブログ一覧に戻る', blogs_path(customer_id: @customer.id), class: "btn btn-sm btn-success" %>
+
+        <%= button_to "戻る", { :action => "index" }, :method => "get" %>
       </div>
   </div>
 

@@ -1,6 +1,7 @@
 class Customer::CustomersController < ApplicationController
   def show
     @customer = Customer.find(params[:id])
+    @blogs = Blog.where(customer_id: params[:customer_id])
   end
 
   def edit

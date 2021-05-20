@@ -1,43 +1,9 @@
-<div class="index-body">
-<div class="error">
-  <% if @blog_new.errors.any? %>
-    <% @blog_new.errors.full_messages.each do |message| %>
-      <li class="text-danger"><%= message %></li>
-    <% end %>
-  <% end %>
-</div>
-
-<div class="top">
-    <h1 class="blog">ブログ</h1>
-    <a href="#anchor" class="btn btn-orange btn--shadow">これまでの投稿を見る(ページ下部へ)</a>
-</div>
-<div>
-    <%= form_with model:@blog_new, local:true do |f| %>
-      <div class="field">
-        <%= f.label :'タイトル' %>
-      </div>
-      <div class="form">
-        <%= f.text_field :blog_title, autofocus: true, :size =>'50' %>
-      </div>
-      <div class="field">
-        <%= f.label :'本文' %>
-      </div>
-      <div class="form">
-        <%= f.text_area :blog_text, :size =>'70x20' %>
-      </div>
-      <div>画像(10枚まで)</div>
-      <div class="form">
-        <%= f.attachment_field :blog_images_images, multiple: true %>
-      </div>
-      <div class="submit">
-        <%= f.submit "投稿する", class: "btn btn-submit btn-success" %>
-      </div>
-      <% end %>
+<%= flash[:notice] %>
+    <h1>これまでの投稿</h1>
+    <%= link_to"ブログを投稿する", new_blog_path, class: "btn btn-sm btn-info" %>
 
 
-
-      <h1 id="anchor">これまでの投稿</h1><span>ブログ投稿数:<%= @blogs.count %></span>
-
+<span>ブログ投稿数:<%= @blogs.total_count %></span>
       <table class="table table-hover text-center">
         <thead>
           <tr>
@@ -71,8 +37,7 @@
 
         </tbody>
       </table>
-    </div>
-  </div>
+      <%= paginate @blogs %>
 
 
 

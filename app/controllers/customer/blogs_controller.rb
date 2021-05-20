@@ -31,6 +31,6 @@ class Customer::BlogsController < ApplicationController
 
   private
   def blog_params
-    params.require(:blog).permit(:blog_title, :blog_text, blog_images_images:[])
+    params.require(:blog).permit(:blog_title, :blog_text, blog_images_images: [])
   end
 end

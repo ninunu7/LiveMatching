@@ -7,7 +7,7 @@
     <div class="col-lg-8 offset-2 align-self-center">
       <div>
         <span>参加日</span><br>
-        <span class="ml-5"><%= @event.join_day %></span>
+        <span class="ml-5"><%= @event.join_day.strftime('%Y/%m/%-d(%a)') %></span>
       </div>
       <div>
         <span>アーティスト名</span><br>
@@ -40,7 +40,7 @@
       </div>
       <div class="comments">
         <% @event.comments.each do |comment| %>
-        <%= comment.created_at.strftime('%Y/%m/%d') %>
+        <%= comment.created_at.strftime('%Y/%m/%-d(%a) %-H:%M') %>
         <%= image_tag comment.customer.profile_image.to_s, :size =>'50x50' %>
         <%= comment.customer.name %>
         <span class="ml-5"><%= comment.comment %></span>

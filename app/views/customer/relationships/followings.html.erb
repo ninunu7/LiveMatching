@@ -1,4 +1,4 @@
-<h2>Follow一覧</h2>
+<h2>フォロー一覧</h2>
 <% if @customers.exists? %>
   <thead>
     <tr>
@@ -10,9 +10,9 @@
   <tbody>
     <% @customers.each do |customer| %>
       <tr>
-        <td><%= customer.name %></td>
-        <td>フォロー数: <%= customer.followings.count %></td>
-        <td>フォロワー数: <%= customer.followers.count %></td>
+        <td><%= image_tag customer.profile_image.to_s %></td>
+        <td><%= link_to(customer.name, customer_path(customer)) %></td>
+        <td><%= customer.introduction %></td>
       </tr>
     <% end %>
   </tbody>

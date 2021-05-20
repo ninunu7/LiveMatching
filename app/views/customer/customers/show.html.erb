@@ -3,20 +3,20 @@
 		<h3 class="my-4 px-4 rounded-circle", style="background:#EEEEEE;"><%= @customer.name %>のプロフィール</h3>
 	</div>
 
-<%# if current_user.id != user.id %>
+<% if current_customer.id != @customer.id %>
   <% if current_customer.following?(@customer) %>
-    <%= link_to "フォロー外す", customer_relationships_path(@customer.id), method: :delete %>
+    <%= link_to "フォロー外す", customer_relationships_path(@customer.id), method: :delete, class: "btn btn-sm btn-info" %>
   <% else %>
-    <%= link_to "フォローする", customer_relationships_path(@customer.id), method: :post %>
+    <%= link_to "フォローする", customer_relationships_path(@customer.id), method: :post, class: "btn btn-sm btn-info" %>
   <% end %>
-<%# end %>
+<% end %>
 
 	<%#= render '/relationships/follow_button', customers: @customers %>
+  <div>フォロー数：<%= @customer.followings.count %></div>
+	<div>フォロワー数：<%= @customer.followers.count %></div>
 
-	<div>フォロー数：<%= @customer.followers.count %></div>
- <div>フォロワー数：<%= @customer.followings.count %></div>
- <%= link_to "フォロー一覧",customer_followings_path(@customer.id) %>
- <%= link_to "フォロワー一覧",customer_followers_path(@customer.id) %>
+ <%= link_to "フォロー一覧",customer_followings_path(@customer.id), class: "btn btn-sm btn-secondary" %>
+ <%= link_to "フォロワー一覧",customer_followers_path(@customer.id), class: "btn btn-sm btn-secondary" %>
 
 	<div class="row">
 	  <div class="col-lg-2">
@@ -28,10 +28,6 @@
           <tr>
             <td style="width: 25%">名前</td>
             <td style="width: 45%"><%= @customer.name %></td>
-          </tr>
-          <tr>
-            <td>メールアドレス</td>
-            <td><%= @customer.email %></td>
           </tr>
           <tr>
             <td>生年月日</td>

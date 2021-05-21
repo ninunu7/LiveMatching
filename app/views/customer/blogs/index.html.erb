@@ -1,15 +1,18 @@
-<%= flash[:notice] %>
-    <h1>これまでの投稿</h1>
-    <%= link_to"ブログを投稿する", new_blog_path, class: "btn btn-sm btn-info" %>
-
-
-<span>ブログ投稿数:<%= @blogs.total_count %></span>
+<div class="index-body">
+  <%= flash[:notice] %>
+  <div class="top-title">
+    <span class="top-title">これまでの投稿</span>
+  </div>
+    <div><%= link_to"ブログを投稿する", new_blog_path, class: "btn btn-orange btn-shadow" %></div>
+    <div class="blog-count">ブログ投稿数:<%= @blogs.total_count %></div>
       <table class="table table-hover text-center">
         <thead>
           <tr>
             <th>投稿日</th>
             <th>タイトル</th>
             <th width=320px>本文</th>
+            <th></th>
+            <th></th>
             <th></th>
             <th></th>
           </tr>
@@ -26,7 +29,7 @@
                   <%= attachment_image_tag image, :image, :size =>'50x50'  %>
                 <% end %>
                 <% else %>
-                  画像はありません。
+                  画像はありません
                 <% end %>
               </td>
               <td><%= "#{blog.blog_comments.count}コメント" %></td>
@@ -38,6 +41,7 @@
         </tbody>
       </table>
       <%= paginate @blogs %>
+</div>
 
 
 

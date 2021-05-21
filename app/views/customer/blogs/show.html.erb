@@ -1,7 +1,7 @@
 <div class="split">
   <div class="split-item split-left">
     <div class="split-left__inner">
-      <div class="blog-title"><%= image_tag @blog.customer.profile_image.to_s, :size =>'50x50',class: "profile-image" %>
+      <div class="display"><%= image_tag @blog.customer.profile_image.to_s, :size =>'50x50',class: "profile-image" %>
       <div class="title"><%= @blog.blog_title %></div>
       </div>
       <div class="blog-time"><%= @blog.created_at.strftime('%Y/%m/%-d(%a) %-H:%M') %></div>
@@ -40,14 +40,16 @@
         <%= f.submit "送信する", class: "btn btn-sm btn-primary" %>
         <% end %>
       </div>
-      <span>コメント数:<%= @blog.blog_comments.count %></span>
-        <% @blog.blog_comments.each do |blog_comment| %>
+      <div>コメント数:<%= @blog.blog_comments.count %></div>
+        <% @blog.blog_comments.reverse.each do |blog_comment| %>
         <div class="comments">
-        <div class="image"><%= image_tag blog_comment.customer.profile_image.to_s, :size =>'50x50',class: "profile-image" %></div>
-        <span class="customer-name"><%= blog_comment.customer.name %></span>
-        <div><%= blog_comment.created_at.strftime('%Y/%m/%-d(%a) %-H:%M') %></div>
-        <div class="comment"><%= blog_comment.comment %></div>
-        <%= link_to "コメントを削除", blog_blog_comment_path(blog_comment.blog, blog_comment), method: :delete, class: "btn btn-sm btn-danger", data: {confirm: '本当にコメントを削除しますか？'} %>
+          <div class="display">
+            <div class="image"><%= image_tag blog_comment.customer.profile_image.to_s, :size =>'35x35',class: "profile-image" %></div>
+            <div class="customer-name"><%= link_to(blog_comment.customer.name, customer_path(blog_comment.customer_id)) %></div>
+          </div>
+          <div class="comment-time"><%= blog_comment.created_at.strftime('%Y/%m/%-d(%a) %-H:%M') %></div>
+          <div class="comment"><%= blog_comment.comment %></div>
+          <%= link_to "コメントを削除", blog_blog_comment_path(blog_comment.blog, blog_comment), method: :delete, class: "btn btn-sm btn-danger", data: {confirm: '本当にコメントを削除しますか？'} %>
         </div>
         <% end %>
 

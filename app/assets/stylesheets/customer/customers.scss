@@ -1,12 +1,19 @@
 // Place all the styles related to the customer::customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile {
+  width: 70%;
+  margin: 0 auto;
+}
+
 a.btn-orange {
   color: white;
   background-color: #eb6100;
   border-bottom: 4px solid #b84c00;
   height: 40px;
 }
+
 a.btn-orange:hover {
   height: 37px;
   margin-top: 3px;
@@ -18,4 +25,50 @@ a.btn-orange:hover {
 a.btn-orange-shadow {
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+div.top-title {
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+span.top-title {
+  font-size: 40px;
+  padding: 5px 30px;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  letter-spacing: 3px;
+}
+
+.profile-image {
+  border-radius: 20px;
+  margin-right: 50px;
+}
+
+.profile-top {
+  width: 80%;
+  margin: 0 auto 20px;
+  display: flex
+}
+
+.follow {
+  display: block;
+  margin: 25px;
+}
+
+.follow-count {
+  font-size: 20px;
+}
+
+.blog-event {
+  display: block;
+  margin: 25px;
+}
+
+.blog-event-button {
+  margin: 7px 0;
+}
+
+.profile-bottom {
+  text-align:  center;
 }

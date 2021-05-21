@@ -37,10 +37,6 @@ a.btn-orange-shadow {
   margin-right: 80px;
 }
 
-#anchor {
-margin-left: 30px;
-}
-
 .field {
   font-size: 20px;
 }
@@ -59,21 +55,40 @@ margin-left: 30px;
   width: 100%;
 }
 
-
-.sidebar {
-  margin-top: 50px;
-  width: 500px;
-  margin-right: 100px;
+.split{
+    display: table;
+    width: 100%;
 }
 
-// .comments {
-// 	border: 2px solid #000000;
-// 	width: 100px;
-// 	height: 50px;
-// }
+.split-item{
+    display: table-cell;
+    padding: 50px;
+    width: 50%;
+}
+
+.split-left{
+    position: relative;
+    margin-right: 30px;
+
+}
+
+.profile-image {
+  border-radius: 10px;
+}
+
+
+.split-left__inner{
+    height: 100%;
+    width: 95%;
+}
 
 .blog-title {
-  font-size: 35px;
+  font-size: 30px;
+  display: flex;
+}
+
+.title {
+  padding-left: 10px;
 }
 
 .blog-text {
@@ -83,9 +98,32 @@ margin-left: 30px;
 }
 
 .blog-time {
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .customer-name {
   font-size: 20px;
+}
+
+.comments {
+  width: 450px;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+@media screen and (max-width:1024px) {
+    .split{
+        display: block;
+    }
+    .split-item{
+        display: block;
+        width: auto;
+    }
+    .split-left__inner{
+        position: inherit;
+        width: auto;
+    }
 }

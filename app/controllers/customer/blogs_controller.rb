@@ -5,7 +5,7 @@ class Customer::BlogsController < ApplicationController
   end
 
   def index
-    @blogs = Blog.where(customer_id: params[:customer_id])
+    @blogs = Blog.where(customer_id: params[:customer_id]).order(created_at: :desc)
     @blogs = Kaminari.paginate_array(@blogs).page(params[:page]).per(10)
   end
 

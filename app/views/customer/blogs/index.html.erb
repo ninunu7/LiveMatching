@@ -18,11 +18,11 @@
           <% @blogs.each do |blog| %>
             <tr>
               <td><%= blog.created_at.strftime('%Y/%m/%d') %></td>
-              <td><%= blog.blog_title %></td>
+              <td><%= blog.blog_title.truncate(15) %></td>
               <td><%= blog.blog_text.truncate(20) %></td>
               <td>
                 <% if blog.blog_images.present? %>
-                <% blog.blog_images.each do |image| %>
+                <% blog.blog_images.first(4).each do |image| %>
                   <%= attachment_image_tag image, :image, :size =>'50x50'  %>
                 <% end %>
                 <% else %>

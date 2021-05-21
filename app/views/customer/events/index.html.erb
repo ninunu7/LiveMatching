@@ -23,6 +23,7 @@
             <td><%= event.message.truncate(15) %></td>
             <td><%= "#{event.comments.count}コメント" %></td>
             <td><button><%= link_to "詳細を見る",event_path(event) %></button></td>
+            <td><%= link_to '削除する', event_path(event), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{event.id}", data: {confirm: '本当にイベントを削除しますか？'} %></td>
           </tr>
         <% end %>
       </tbody>

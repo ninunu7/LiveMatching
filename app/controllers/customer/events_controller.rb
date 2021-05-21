@@ -7,7 +7,7 @@ class Customer::EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.customer_id = current_customer.id
 
-    if @event.save!
+    if @event.save
 
       redirect_to customer_path(current_customer)
     else
@@ -28,7 +28,7 @@ class Customer::EventsController < ApplicationController
   def show
     @events = Event.all
     @event = Event.find(params[:id])
-    #@customer = @event.customer
+    @customer = @event.customer
     @comment = Comment.new
   end
 
@@ -38,8 +38,9 @@ class Customer::EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
-    redirect_to events_path(current_customer)
+    redirect_to events_path(customer_id: current_customer.id)
   end
+
 
   private
   def event_params

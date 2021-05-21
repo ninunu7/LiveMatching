@@ -20,8 +20,8 @@
     </div>
   </div>
   <div class="row">
-    <span><%= link_to '一覧に戻る', events_path, class: "btn btn-sm btn-success" %></span>
-    <span><%= link_to '削除する', event_path(@event), method: :delete, class: "btn btn-sm btn-danger destroy_event_#{@event.id}"%></span>
+    <span><%= link_to '一覧に戻る', events_path(customer_id: @customer.id), class: "btn btn-sm btn-success" %></span>
+    <span><%= link_to '削除する', event_path(@event), method: :delete, class: "btn btn-sm btn-danger destroy_event_#{@event.id}", data: {confirm: '本当にイベントを削除しますか？' }%></span>
   </div>
   <div class="row">
     <div>
@@ -44,7 +44,7 @@
         <%= image_tag comment.customer.profile_image.to_s, :size =>'50x50' %>
         <%= comment.customer.name %>
         <span class="ml-5"><%= comment.comment %></span>
-        <%= link_to "コメントを削除", event_comment_path(comment.event, comment), method: :delete %>
+        <%= link_to "コメントを削除", event_comment_path(comment.event, comment), method: :delete, data: {confirm: '本当にコメントを削除しますか？'} %>
         <% end %>
       </div>
     </div>

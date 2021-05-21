@@ -31,7 +31,7 @@
               </td>
               <td><%= "#{blog.blog_comments.count}コメント" %></td>
               <td><%= link_to '詳細を見る', blog_path(blog), class: "btn btn-sm btn-primary",data: {"turbolinks"=>false} %></td>
-              <td><%= link_to '削除する', blog_path(blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{blog.id}" %></td>
+              <td><%= link_to '削除する', blog_path(blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{blog.id}", data: {confirm: '本当にブログを削除しますか？'} %></td>
             </tr>
           <% end %>
 

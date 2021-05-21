@@ -25,10 +25,10 @@
     </div>
   <% end %>
 
-
+<div class="result">
   <table class="table table-hover">
-    <thead>
-      <tr class="info">
+    <thead class="result-th">
+      <tr>
         <th style="background:#FAEBD7;">ユーザー</th>
         <th style="background:#FAEBD7;">性別</th>
         <th style="background:#FAEBD7;">参加日</th>
@@ -42,18 +42,19 @@
     (全<%= @events.count %>件)
       <% @events.each do |event| %>
         <tr>
-          <td>
+          <td class="result-td">
             <%= image_tag event.customer.profile_image.to_s, :size =>'50x50' %>
             <%= link_to(event.customer.name, customer_path(event.customer_id)) %>
           </td>
-          <td><%= event.customer.gender_i18n %></td>
-          <td><%= event.join_day.strftime('%Y/%m/%-d(%a)') %></td>
-          <td><%= event.artist_name %></td>
-          <td><%= event.message.truncate(15) %></td>
-          <td><%= link_to"詳細を見る", event_path(event),class: 'btn btn-primary' %></td>
+          <td class="result-td"><%= event.customer.gender_i18n %></td>
+          <td class="result-td"><%= event.join_day.strftime('%Y/%m/%-d(%a)') %></td>
+          <td class="result-td"><%= event.artist_name %></td>
+          <td class="result-td"><%= event.message.truncate(15) %></td>
+          <td class="result-td"><%= link_to"詳細を見る", event_path(event),class: 'btn btn-primary' %></td>
         </tr>
       <% end %>
     <% end %>
     </tbody>
   </table>
+  </div>
 </div>

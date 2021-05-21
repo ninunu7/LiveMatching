@@ -1,3 +1,47 @@
 // Place all the styles related to the customer::events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.search-body {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.search-table {
+  width: 45%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0px 8px;
+}
+
+
+.search-top {
+  width: 90%;
+  margin: 0 auto;
+  letter-spacing: 3px;
+}
+
+.search {
+  text-align: center;
+}
+
+.search-button {
+  width: 140px;
+  height: 45px;
+}
+
+.joinday-form {
+  width: 200px;
+  height: 35px;
+}
+
+.artistname-form {
+  width: 400px;
+  height: 35px;
+}
+
+.message-form {
+  width: 400px;
+  height: 60px;
+}

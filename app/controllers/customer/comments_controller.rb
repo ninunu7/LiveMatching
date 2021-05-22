@@ -5,7 +5,7 @@ class Customer::CommentsController < ApplicationController
     @comment = current_customer.comments.new(comment_params)
     @comment.event_id = @event.id
     if @comment.save
-    redirect_to event_path(@event)
+
     else
       render 'customer/events/show'
     end

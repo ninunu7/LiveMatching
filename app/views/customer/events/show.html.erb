@@ -29,24 +29,14 @@
       <% end %>
     </div>
       <div class="new-comment">
-        <%= form_with(model:[@event,@comment], local: true) do |f| %>
+        <%= form_with(model:[@event,@comment]) do |f| %>
         <%= f.text_area :comment, :size =>'45x7',placeholder: "コメントを入力" %>
         <%= f.submit "送信する", class: "btn btn-sm btn-primary" %>
         <% end %>
       </div>
-      <div>コメント数:<%= @event.comments.count %></div>
-      <% @event.comments.reverse.each do |comment| %>
-      <div class="comments">
-        <div class="display">
-          <div class="image"><%= image_tag comment.customer.profile_image.to_s, :size =>'35x35' %></div>
-          <div class="customer-name"><%= link_to(comment.customer.name, customer_path(comment.customer_id)) %></div>
-        </div>
-        <div class="comment-time"><%= comment.created_at.strftime('%Y/%m/%-d(%a) %-H:%M') %></div>
-        <div class="comment"><%= comment.comment %></div>
-        <%= link_to "コメントを削除", event_comment_path(comment.event, comment), method: :delete, class: 'btn btn-sm btn-danger', data: {confirm: '本当にコメントを削除しますか？'} %>
-
+      <div id="comments-view">
+          <%= render partial: 'customer/events/index', locals: { comments: @event.comments } %>
       </div>
-      <% end %>
     </div>
   </div>
 </div>

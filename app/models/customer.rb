@@ -59,6 +59,4 @@ mount_uploader :profile_image, ProfileimageUploader
     followings.include?(customer)
   end
 
-
-
 end

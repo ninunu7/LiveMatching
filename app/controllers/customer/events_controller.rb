@@ -6,9 +6,7 @@ class Customer::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
     @event.customer_id = current_customer.id
-
     if @event.save
-
       redirect_to customer_path(current_customer)
     else
       render :new

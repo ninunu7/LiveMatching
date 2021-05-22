@@ -12,15 +12,16 @@ class Blog < ApplicationRecord
   validates :blog_title, presence: true, length: { maximum: 50 }
   validates :blog_text, presence: true
 
+
+
 # has_many_attached :avatars
 # validate :avatar_length
 
-
 #   private
 #     def avatar_length
-#       if avatars.length > 8
+#       if avatars.length > 6
 #         avatars.purge
-#         errors.add(:avatars, "は8枚以内にしてください")
+#         errors.add(:avatars, "は6枚以内にしてください")
 #       end
 #     end
 

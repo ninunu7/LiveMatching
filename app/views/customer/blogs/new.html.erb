@@ -1,5 +1,7 @@
 <div class="index-body">
 <div class="error">
+
+  <%= flash[:notice] %>
   <% if @blog_new.errors.any? %>
     <% @blog_new.errors.full_messages.each do |message| %>
       <li class="text-danger"><%= message %></li>
@@ -24,7 +26,7 @@
       <div class="form">
         <%= f.text_area :blog_text, :size =>'70x20' %>
       </div>
-      <div>画像(10枚まで)</div>
+      <div>画像(6枚まで)</div>
       <div class="form">
         <%= f.attachment_field :blog_images_images, multiple: true %>
       </div>

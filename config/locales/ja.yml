@@ -1,18 +1,19 @@
 ja:
   activerecord:
+    models:
+      event: イベント
     attributes:
-      customer:
-        name: 名前
-        email: メールアドレス
-        password: パスワード
       event:
-        join_day: 参加日
         artist_name: アーティスト名
+        join_day: 参加日
         message: メッセージ
-ja:
-  enums:
-    customer:
-        gender:
-          default: 未設定
-          man: 男性
-          woman: 女性
+    models:
+      bolg: ブログ
+      blog_comment: コメント
+    attributes:
+      blog:
+        blog_title: タイトル
+        blog_text: 本文
+      blog_comment:
+        comment: コメント
+

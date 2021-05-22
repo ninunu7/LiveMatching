@@ -4,6 +4,7 @@ class Customer::BlogCommentsController < ApplicationController
     @blog_comment = BlogComment.create(blog_comment_params)
     @blog_comment.customer_id = current_customer.id
     @blog_comment.blog_id = @blog.id
+    @customer = @blog.customer
     if @blog_comment.save
       redirect_to blog_path(@blog)
     else

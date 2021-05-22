@@ -6,7 +6,6 @@ class Customer::BlogCommentsController < ApplicationController
     @blog_comment.blog_id = @blog.id
     @customer = @blog.customer
     if @blog_comment.save
-
     else
       render template: 'customer/blogs/show'
     end
@@ -16,8 +15,6 @@ class Customer::BlogCommentsController < ApplicationController
     @blog = Blog.find(params[:blog_id])
     @blog_comment = BlogComment.find_by(id: params[:id], blog_id: params[:blog_id])
     @blog_comment.destroy
-    #render :show
-    #redirect_to blog_path(params[:blog_id])
   end
 
   private

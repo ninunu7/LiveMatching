@@ -58,4 +58,7 @@ mount_uploader :profile_image, ProfileimageUploader
   def following?(customer)
     followings.include?(customer)
   end
+
+
+
 end

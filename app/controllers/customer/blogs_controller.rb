@@ -14,8 +14,8 @@ class Customer::BlogsController < ApplicationController
     @blogs = Kaminari.paginate_array(@blogs).page(params[:page]).per(10)
     @blog_new = Blog.new(blog_params)
     @blog_new.customer_id = current_customer.id
-    if blog_params["blog_images_images"].count > 8
-      flash[:notice] = "画像は６枚まで投稿できます"
+    if blog_params["blog_images_images"].count > 9
+      flash[:notice] = "画像は8枚まで投稿できます"
       render :new
       return
     end

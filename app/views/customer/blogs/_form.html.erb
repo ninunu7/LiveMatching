@@ -1,0 +1,6 @@
+<div class="new-comment">
+  <%= form_with(model:[blog,blog_comment]) do |f| %>
+  <%= f.text_area :comment, :size =>'45x7',placeholder: "コメントを入力" %>
+  <%= f.submit "送信する", class: "btn btn-sm btn-primary" %>
+  <% end %>
+</div>

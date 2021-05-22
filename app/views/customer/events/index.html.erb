@@ -2,6 +2,19 @@
   <div class="row">
     <h3 class="my-5 px-4 rounded-circle", style="background:#EEEEEE;">今後の予定</h3>
   </div>
+
+<%= month_calendar events: @events do |date, events| %>
+  <%= date.day %>
+
+  <% events.each do |event| %>
+    <div>
+      <%= link_to event.artist_name, event %>
+    </div>
+  <% end %>
+<% end %>
+
+
+
   <div>登録数:<%= @events.count %></div>
   <div class="row">
     <table>
@@ -19,7 +32,7 @@
       <tbody>
         <% @events.each do |event| %>
           <tr>
-            <td><%= event.join_day %></td>
+            <td><%= event.start_time.strftime('%Y/%m/%-d(%a)') %></td>
             <td><%= event.artist_name %></td>
             <td><%= event.message.truncate(15) %></td>
             <td><%= "#{event.comments.count}コメント" %></td>

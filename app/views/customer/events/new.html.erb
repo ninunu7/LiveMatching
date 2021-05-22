@@ -21,7 +21,8 @@
 
   <div class="field">
     <%= f.label :'日付' %><br>
-    <%= f.date_field :join_day %>
+    <%#= f.date_field :start_time %>
+    <%= f.datetime_select :start_time %>
   </div>
 
   <div class="actions">

@@ -7,7 +7,7 @@ class Customer::EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.customer_id = current_customer.id
     if @event.save
-      redirect_to customer_path(current_customer)
+      redirect_to events_path(customer_id: current_customer.id)
     else
       render :new
     end
@@ -42,11 +42,11 @@ class Customer::EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:join_day, :artist_name, :message)
+    params.require(:event).permit(:start_time, :artist_name, :message)
   end
 
   def event_search_params
-    params.fetch(:search, {}).permit(:artist_name, :join_day_from, :join_day_to, :message)
+    params.fetch(:search, {}).permit(:artist_name, :start_time_from, :start_time_to, :message)
     #fetch(:search, {})と記述することで、検索フォームに値がない場合はnilを返し、エラーが起こらなくなる
     #ここでの:searchには、フォームから送られてくるparamsの値が入っている
   end

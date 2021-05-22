@@ -1,13 +1,12 @@
 <div>
-
   <h1 class="search-top">検索画面</h1>
     <%= form_with(scope: :search, url: search_events_path, method: :get, local: true) do |f| %>
     <table class="search-table">
       <tbody>
         <tr>
-          <td><%= f.label :join_day, "参加日" %></td>
-          <td><%= f.date_field :join_day_from, value: @search_params[:join_day_from], class: "joinday-form" %> ~
-          <%= f.date_field :join_day_to, value: @search_params[:join_day_to], class: "joinday-form" %></td>
+          <td><%= f.label :start_time, "参加日" %></td>
+          <td><%= f.date_field :start_time_from, value: @search_params[:start_time_from], class: "start-time-form" %> ~
+          <%= f.date_field :start_time_to, value: @search_params[:start_time_to], class: "start-time-form" %></td>
           <td></td>
         </tr>
         <tr>
@@ -47,7 +46,7 @@
             <%= link_to(event.customer.name, customer_path(event.customer_id)) %>
           </td>
           <td class="result-td"><%= event.customer.gender_i18n %></td>
-          <td class="result-td"><%= event.join_day.strftime('%Y/%m/%-d(%a)') %></td>
+          <td class="result-td"><%= event.start_time.strftime('%Y/%m/%-d(%a)') %></td>
           <td class="result-td"><%= event.artist_name %></td>
           <td class="result-td"><%= event.message.truncate(15) %></td>
           <td class="result-td"><%= link_to"詳細を見る", event_path(event),class: 'btn btn-primary' %></td>

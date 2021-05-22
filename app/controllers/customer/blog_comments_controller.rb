@@ -13,8 +13,11 @@ class Customer::BlogCommentsController < ApplicationController
   end
 
   def destroy
-    BlogComment.find_by(id: params[:id], blog_id: params[:blog_id]).destroy
-    redirect_to blog_path(params[:blog_id])
+    @blog = Blog.find(params[:blog_id])
+    @blog_comment = BlogComment.find_by(id: params[:id], blog_id: params[:blog_id])
+    @blog_comment.destroy
+    #render :show
+    #redirect_to blog_path(params[:blog_id])
   end
 
   private

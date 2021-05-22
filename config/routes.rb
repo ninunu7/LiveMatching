@@ -39,6 +39,7 @@ Rails.application.routes.draw do
     resources :searches
     resources :blogs, only: [:new, :create, :index, :show, :destroy] do
       resources :blog_comments, only: [:create, :destroy]
+      resource :favorites, only: [:create, :destroy]
     end
     resources :blog_images, only: [:new, :create, :index, :show, :destroy]
     root to: 'homes#top'

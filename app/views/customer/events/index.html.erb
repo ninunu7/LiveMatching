@@ -1,7 +1,17 @@
 <div class="container">
   <div class="row">
-    <h3 class="my-5 px-4 rounded-circle", style="background:#EEEEEE;">今後の予定</h3>
+    <h3 class="my-5 px-4 rounded-circle", style="background:#EEEEEE;"><%= @customer.name %>の今後の予定</h3>
   </div>
+
+  <% if current_customer.id == @customer.id %>
+  <div class="row">
+    <%= link_to "コメント履歴",events_detail_path, class: "btn btn-primary" %>
+  </div>
+  <div class="row">
+    <%= link_to "参加するイベントを登録する",new_event_path, class: "btn btn-success" %>
+  </div>
+  <% end %>
+
     <%= month_calendar events: @events do |date, events| %>
       <%= date.day %>
       <% events.each do |event| %>
@@ -22,7 +32,9 @@
           <th style="background:#FAEBD7;" style="width: 25%">メッセージ</th>
           <th style="background:#FAEBD7;" style="width: 15%"></th>
           <th style="background:#FAEBD7;" style="width: 15%"></th>
-          <th style="background:#FAEBD7;"></th>
+          <% if current_customer.id == @customer.id %>
+            <th style="background:#FAEBD7;"></th>
+          <% end %>
         </tr>
       </thead>
       <tbody>
@@ -46,15 +58,7 @@
         <% end %>
       </tbody>
     </table>
+    <%= paginate @events %>
   </div>
-
-  <%# if current_customer.id == @customer.id %>
-  <div class="row">
-    <%= link_to "コメント履歴",events_detail_path, class: "btn btn-primary" %>
-  </div>
-  <div class="row">
-    <%= link_to "参加するイベントを登録する",new_event_path, class: "btn btn-success" %>
-  </div>
-  <%# end %>
 
 </div>

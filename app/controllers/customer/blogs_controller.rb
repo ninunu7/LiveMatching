@@ -28,6 +28,10 @@ class Customer::BlogsController < ApplicationController
     end
   end
 
+  def detail
+    @blogs = Blog.where(id: BlogComment.where(customer_id: current_customer.id).pluck(:blog_id))
+  end
+
   def show
     @blogs = Blog.where(customer_id: params[:customer_id])
     @blog_new = Blog.new

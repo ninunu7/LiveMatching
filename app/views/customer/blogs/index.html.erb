@@ -1,13 +1,14 @@
 <div class="index-body">
   <%= flash[:notice] %>
   <div class="top-title">
-    <span class="top-title">これまでの投稿</span>
+    <span class="top-title"><%= @customer.name %>のブログ</span>
   </div>
-
   <% if current_customer.id == @customer.id %>
-    <div><%= link_to"ブログを投稿する", new_blog_path, class: "btn btn-orange btn-shadow" %></div>
-<% end %>
 
+    <%= link_to "コメント履歴",blogs_detail_path, class: "btn btn-primary" %>
+
+    <div><%= link_to"ブログを投稿する", new_blog_path, class: "btn btn-orange btn-shadow" %></div>
+  <% end %>
     <div class="blog-count">全<%= @blogs.total_count %>件(<%= @blogs.count %>件表示)</div>
       <table class="table table-hover text-center">
         <thead>
@@ -18,7 +19,9 @@
             <th></th>
             <th></th>
             <th></th>
+            <% if current_customer.id == @customer.id %>
             <th></th>
+            <% end %>
           </tr>
         </thead>
         <tbody>
@@ -38,7 +41,9 @@
               </td>
               <td><%= "#{blog.blog_comments.count}コメント" %></td>
               <td><%= link_to '詳細を見る', blog_path(blog), class: "btn btn-sm btn-primary",data: {"turbolinks"=>false} %></td>
-              <td><%= link_to '削除する', blog_path(blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{blog.id}", data: {confirm: '本当にブログを削除しますか？'} %></td>
+                <% if current_customer.id == @customer.id %>
+                  <td><%= link_to '削除する', blog_path(blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{blog.id}", data: {confirm: '本当にブログを削除しますか？'} %></td>
+                <% end %>
             </tr>
           <% end %>
 

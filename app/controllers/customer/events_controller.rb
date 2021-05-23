@@ -15,11 +15,14 @@ class Customer::EventsController < ApplicationController
 
   def index
     @events = Event.where(customer_id: params[:customer_id]).order(start_time: :asc)
-    #@customer = @events.customer_id
+    @events = Kaminari.paginate_array(@events).page(params[:page]).per(10)
+    @customer = Customer.find(params[:customer_id])
   end
 
   def detail
     @events = Event.where(id: Comment.where(customer_id: current_customer.id).pluck(:event_id))
+    #@customer = Customer.find(params[:customer_id])
+
   end
 
   def search

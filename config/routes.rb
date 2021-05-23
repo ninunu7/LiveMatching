@@ -21,6 +21,7 @@ Rails.application.routes.draw do
     get 'homes/about'
     get 'events/detail'
     get 'events/search'
+    get 'blogs/detail'
     resources :customers do
       resource :relationships, only: [:create, :destroy]
       get 'followings' => 'relationships#followings', as: 'followings'

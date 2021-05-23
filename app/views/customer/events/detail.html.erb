@@ -2,6 +2,8 @@
   <tbody>
     <% @events.each do |event| %>
       <tr>
+        <td><%= event.customer.name %></td>
+        <td><%= image_tag event.customer.profile_image.to_s, :size =>'35x35' %></td>
         <td><%= event.artist_name %></td>
         <td><%= event.message.truncate(15) %></td>
         <td><%= "#{event.comments.count}コメント" %></td>

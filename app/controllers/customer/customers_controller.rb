@@ -4,6 +4,10 @@ class Customer::CustomersController < ApplicationController
     @blogs = Blog.where(customer_id: params[:customer_id])
   end
 
+  def detail
+    @events = Event.where(id: Comment.where(customer_id: current_customer.id).pluck(:event_id))
+  end
+
   def edit
     @customer = current_customer
     if @customer.save

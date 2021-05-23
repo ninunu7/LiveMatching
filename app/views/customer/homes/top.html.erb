@@ -8,6 +8,36 @@
         <div class="top-button">
           <%= link_to "ログアウト",destroy_customer_session_path, method: :delete, class: "btn btn-orange btn-orange-shadow" %>
         </div>
+
+<% if @blogs.exists? %>
+  <thead>
+    <tr>
+      <th></th>
+      <th>名前</th>
+      <th>タイトル</th>
+      <th>本文</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @blogs.each do |blog| %>
+      <tr>
+        <td><%= image_tag blog.customer.profile_image.to_s, :size =>'50x50' %></td>
+        <td><%= link_to(blog.customer.name, customer_path(blog.customer)) %></td>
+        <td><%= blog.blog_title %></td>
+        <td><%= blog.blog_text.truncate(15) %></td>
+        <td><%= link_to '詳細を見る', blog_path(blog), class: "btn btn-sm btn-primary" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% else %>
+  <p>新着ブログはありません</p>
+<% end %>
+
+
+
+
       <% else %>
         <div class="top-button">
           <%= link_to "検索する",events_search_path, class: "btn btn-orange btn-orange-shadow" %>

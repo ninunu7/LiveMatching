@@ -17,6 +17,10 @@ class Customer::EventsController < ApplicationController
     @events = Event.where(customer_id: params[:customer_id]).order(start_time: :asc)
   end
 
+  def detail
+    @events = Event.where(id: Comment.where(customer_id: current_customer.id).pluck(:event_id))
+  end
+
   def search
     @search_params = event_search_params
     #検索結果の画面で、フォームに検索した値を表示するために、paramsの値をビューで使えるようにする

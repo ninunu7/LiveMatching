@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   scope module: :customer do
     get 'homes/top'
     get 'homes/about'
+    get 'events/detail'
     get 'events/search'
     resources :customers do
       resource :relationships, only: [:create, :destroy]

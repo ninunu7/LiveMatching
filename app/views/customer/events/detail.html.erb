@@ -1,0 +1,12 @@
+<table>
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.artist_name %></td>
+        <td><%= event.message.truncate(15) %></td>
+        <td><%= "#{event.comments.count}コメント" %></td>
+        <td><%= link_to "詳細を見る",event_path(event), class: "btn btn-sm btn-info" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

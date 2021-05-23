@@ -13,7 +13,6 @@
         <td><%= image_tag customer.profile_image.to_s, :size =>'50x50' %></td>
         <td><%= link_to(customer.name, customer_path(customer)) %></td>
         <td><%= customer.introduction %></td>
-
       </tr>
     <% end %>
   </tbody>

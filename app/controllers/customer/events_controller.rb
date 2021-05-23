@@ -21,8 +21,6 @@ class Customer::EventsController < ApplicationController
 
   def detail
     @events = Event.where(id: Comment.where(customer_id: current_customer.id).pluck(:event_id))
-    #@customer = Customer.find(params[:customer_id])
-
   end
 
   def search

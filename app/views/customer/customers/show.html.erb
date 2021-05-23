@@ -4,17 +4,8 @@
   </div>
     <div class="profile-top">
       <div><%= image_tag @customer.profile_image.to_s, :size =>'120x120', class: "profile-image" %></div>
-
-      <div id="follow">
+      <div id="follow-action">
         <%= render partial: 'customer/relationships/follow_button', locals: { customer: @customer } %>
-      </div>
-      <div class="blog-event">
-        <div class="blog-event-button">
-          <%= link_to "ブログ",blogs_path(customer_id: @customer.id), class: "btn btn-orange btn-shadow" %>
-        </div>
-        <div class="blog-event-button">
-          <%= link_to "イベント",events_path(customer_id: @customer.id), class: "btn btn-orange btn-shadow" %>
-        </div>
       </div>
     </div>
       <table class="table table-bordered table-condensed">

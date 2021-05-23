@@ -1,19 +1,20 @@
 ja:
   activerecord:
     models:
-      event: イベント
-    attributes:
-      event:
-        artist_name: アーティスト名
-        join_day: 参加日
-        message: メッセージ
-    models:
       bolg: ブログ
       blog_comment: コメント
+      event: イベント
     attributes:
       blog:
         blog_title: タイトル
         blog_text: 本文
       blog_comment:
         comment: コメント
-
+      event:
+        artist_name: アーティスト名
+        message: メッセージ
+        start_time: 参加日
+  time:
+    formats:
+      default: "%Y/%m/%d(%a) %H:%M"
+      short: "%Y/%m/%d(%a)"

@@ -14,7 +14,7 @@ class Customer::EventsController < ApplicationController
   end
 
   def index
-    @events = Event.where(customer_id: params[:customer_id])
+    @events = Event.where(customer_id: params[:customer_id]).order(start_time: :asc)
   end
 
   def search

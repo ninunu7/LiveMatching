@@ -32,7 +32,10 @@
       <tbody>
         <% @events.each do |event| %>
           <tr>
-            <td><%= event.start_time.strftime('%Y/%m/%-d(%a)') %></td>
+            <td>
+              <%#= I18n.event.start_time,format: :date %><%#= I18n.event.start_time,format: :date %><%= event.start_time.strftime('%Y/%m/%d(%a)') %>
+              <%= l event.start_time, format: :short %>
+            </td>
             <td><%= event.artist_name %></td>
             <td><%= event.message.truncate(15) %></td>
             <td><%= "#{event.comments.count}コメント" %></td>

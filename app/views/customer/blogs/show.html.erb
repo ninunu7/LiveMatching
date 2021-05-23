@@ -4,7 +4,7 @@
       <div class="display"><%= image_tag @blog.customer.profile_image.to_s, :size =>'50x50',class: "profile-image" %>
         <div class="title"><%= @blog.blog_title %></div>
       </div>
-      <div class="blog-time"><%= @blog.created_at.strftime('%Y/%m/%-d(%a) %-H:%M') %></div>
+      <div class="blog-time"><%= l @blog.created_at, format: :default %></div>
       <div class="blog-text"><%= @blog.blog_text %></div>
       <div class="blog-images">
         <% if @blog.blog_images.present? %>

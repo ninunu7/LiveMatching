@@ -46,7 +46,9 @@
             <%= link_to(event.customer.name, customer_path(event.customer_id)) %>
           </td>
           <td class="result-td"><%= event.customer.gender_i18n %></td>
-          <td class="result-td"><%= event.start_time.strftime('%Y/%m/%-d(%a)') %></td>
+          <td class="result-td">
+            <%= l event.start_time, format: :short %>
+          </td>
           <td class="result-td"><%= event.artist_name %></td>
           <td class="result-td"><%= event.message.truncate(15) %></td>
           <td class="result-td"><%= link_to"詳細を見る", event_path(event),class: 'btn btn-primary' %></td>

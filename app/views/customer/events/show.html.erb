@@ -5,7 +5,7 @@
         <%= image_tag @event.customer.profile_image.to_s, :size =>'50x50',class: "profile-image" %>
       </div>
       <div>
-        参加日:<%= @event.start_time.strftime('%Y/%m/%-d(%a)') %>
+        参加日:<%= l @event.start_time, format: :short %>
       </div>
       <div>
         アーティスト名:<%= @event.artist_name %>

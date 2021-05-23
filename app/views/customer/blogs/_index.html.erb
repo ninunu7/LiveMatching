@@ -10,7 +10,7 @@
       </div>
     </div>
     <div class="comment-time">
-      <%= blog_comment.created_at.strftime('%Y/%m/%-d(%a) %-H:%M') %>
+      <%= l blog_comment.created_at,format: :default %>
     </div>
     <div class="comment">
       <%= blog_comment.comment %>

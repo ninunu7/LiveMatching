@@ -13,8 +13,10 @@
       <div><%= @event.message %></div>
       <div class="link">
         <%= link_to '一覧に戻る', events_path(customer_id: @customer.id), class: "btn btn-sm btn-success" %>
-        <%= link_to '削除する', event_path(@event), method: :delete, class: "btn btn-sm btn-danger destroy_event_#{@event.id}", data: {confirm: '本当にイベントを削除しますか？' }%>
-      </div>
+        <% if current_customer.id == @customer.id %>
+          <%= link_to '削除する', event_path(@event), method: :delete, class: "btn btn-sm btn-danger destroy_event_#{@event.id}", data: {confirm: '本当にイベントを削除しますか？' }%>
+        <% end %>
+        </div>
     </div>
   </div>
 

@@ -18,3 +18,9 @@ ja:
     formats:
       default: "%Y/%m/%d(%a) %H:%M"
       short: "%Y/%m/%d(%a)"
+  enums:
+    customer:
+      gender:
+        default: 未設定
+        man: 男性
+        woman: 女性

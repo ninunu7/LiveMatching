@@ -3,7 +3,11 @@
   <div class="top-title">
     <span class="top-title">これまでの投稿</span>
   </div>
+
+  <% if current_customer.id == @customer.id %>
     <div><%= link_to"ブログを投稿する", new_blog_path, class: "btn btn-orange btn-shadow" %></div>
+<% end %>
+
     <div class="blog-count">全<%= @blogs.total_count %>件(<%= @blogs.count %>件表示)</div>
       <table class="table table-hover text-center">
         <thead>

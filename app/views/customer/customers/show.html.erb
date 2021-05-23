@@ -13,12 +13,10 @@
           <%= link_to "ブログ",blogs_path(customer_id: @customer.id), class: "btn btn-orange btn-shadow" %>
         </div>
         <div class="blog-event-button">
-          <%= link_to "参加するイベント",events_path(customer_id: @customer.id), class: "btn btn-orange btn-shadow" %>
+          <%= link_to "イベント",events_path(customer_id: @customer.id), class: "btn btn-orange btn-shadow" %>
         </div>
       </div>
     </div>
-
-    	<%#= render '/relationships/follow_button', customers: @customers %>
       <table class="table table-bordered table-condensed">
         <tbody>
           <tr>

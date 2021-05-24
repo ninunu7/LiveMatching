@@ -22,7 +22,7 @@
 
 <div class="split-item split-right">
   <div class="split-right__inner">
-    <h1>コメント一覧</h1>
+    <h2>コメント一覧</h2>
     <div>
       <% if @comment.errors.any? %>
         <% @comment.errors.full_messages.each do |message| %>
@@ -32,7 +32,7 @@
     </div>
       <div class="new-comment">
         <%= form_with(model:[@event,@comment]) do |f| %>
-        <%= f.text_area :comment, :size =>'45x7',placeholder: "コメントを入力" %>
+        <%= f.text_area :comment,placeholder: "コメントを入力", class: 'comment-area' %>
         <%= f.submit "送信する", class: "btn btn-sm btn-primary" %>
         <% end %>
       </div>

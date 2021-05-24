@@ -2,40 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.split{
-  display: table;
-  width: 100%;
-}
-
-.split-item{
-  display: table-cell;
-  padding: 50px;
-  width: 50%;
-}
-
-.split-left{
-  position: relative;
-  margin-right: 30px;
-
-}
-
-.profile-image {
-  border-radius: 10px;
-}
-
-
-.split-left__inner{
-  height: 100%;
-  width: 95%;
-}
-
 
 //以下sesrch画面レイアウト
 
 #search-main{
 	width: 100%;
 }
-
 
 .search-body {
   width: 90%;
@@ -50,10 +22,10 @@
   border-spacing: 0px 8px;
 }
 
-
 .search-top {
   width: 90%;
-  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
   letter-spacing: 3px;
 }
 
@@ -73,13 +45,13 @@
 }
 
 .artistname-form {
-  width: 400px;
+  width: 450px;
   height: 35px;
 }
 
 .message-form {
-  width: 400px;
-  height: 60px;
+  width: 450px;
+  height: 80px;
 }
 
 .result {
@@ -117,11 +89,10 @@
     height: 30px;
   }
 
-.message-form {
+  .message-form {
     width: 200px;
     height: 40px;
   }
-
 
   .result-table th,
   .result-table td {
@@ -132,6 +103,39 @@
 }
 
 //↑↑↑search画面レイアウト
+//以下show画面レイアウト
+
+.split{
+  display: table;
+  width: 100%;
+}
+
+.split-item{
+  display: table-cell;
+  padding: 50px;
+  width: 50%;
+}
+
+.split-left{
+  position: relative;
+  margin-right: 30px;
+
+}
+
+.profile-image {
+  border-radius: 10px;
+}
+
+
+.split-left__inner{
+  height: 100%;
+  width: 95%;
+}
+
+.comment-area {
+  width: 430px;
+  height: 250px;
+}
 
 .comments {
   width: 450px;
@@ -160,6 +164,7 @@
 @media screen and (max-width:1024px) {
     .split{
         display: block;
+        width: 100%;
     }
     .split-item{
         display: block;
@@ -169,6 +174,17 @@
         position: inherit;
         width: auto;
     }
+
+    .comment-area {
+      width: 250px;
+      height: 250px;
+    }
+
+    .comments {
+      width: 250px;
+    }
 }
+
+//↑↑↑show画面レイアウト
 
 

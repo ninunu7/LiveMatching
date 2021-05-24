@@ -88,3 +88,52 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+
+//以下ログイン画面レイアウト
+#form-main{
+	width: 100%;
+	float: left;
+	padding-top: 0px;
+}
+
+#signin-form {
+  text-align: center;
+	background-color: #BBBBBB;
+	opacity: 0.8;
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:35px;
+	padding-bottom:50px;
+	width: 450px;
+	float: left;
+	left: 50%;
+	position: absolute;
+  margin-top:30px;
+	margin-left: -260px;
+  border-radius: 7px;
+}
+
+.signin-field {
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.signin-actions {
+  margin-top: 30px;
+  font-size: 20px;
+  width: 150px;
+  height: 45px;
+}
+
+@media only screen and (max-width: 580px) {
+	#signin-form{
+	  width: 90%;
+		left: 3%;
+		margin-right: 3%;
+		margin-left: 2%;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
+//----↑ログイン画面レイアウト----

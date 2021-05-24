@@ -1,39 +1,32 @@
-<h2>新規登録</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :'名前(20文字以内)' %><br>
-    <%= f.text_field :name,autofocus: true %>
+<div id="form-main">
+  <div id="signup-form">
+    <h2>新規登録</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+        <table class="signup-table">
+          <tbody>
+            <tr>
+              <td><%= f.label :'名前(20字以内)' %></td>
+              <td><%= f.text_field :name,autofocus: true, class: 'signup-box' %></td>
+            </tr>
+            <tr>
+              <td><%= f.label :'メールアドレス' %></td>
+              <td><%= f.email_field :email, autocomplete: 'off', class: 'signup-box' %></td>
+            </tr>
+            <tr>
+              <td><%= f.label :'パスワード(6字以上)' %></td>
+              <td><%= f.password_field :password, autocomplete: 'off', class: 'signup-box' %></td>
+            </tr>
+            <tr>
+              <td><%= f.label :'パスワード(確認)' %></td>
+              <td><%= f.password_field :password_confirmation, class: 'signup-box' %></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="actions">
+          <%= f.submit "新規登録", class: 'signup-actions' %>
+        </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
   </div>
-
-  <div class="field">
-    <%= f.label :'性別'%><br>
-    <%= f.radio_button :gender, :man %>
-    <%= f.label :'男性' %>
-    <%= f.radio_button :gender, :woman %>
-    <%= f.label :'女性' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'メールアドレス' %><br>
-    <%= f.email_field :email, autocomplete: 'off' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'パスワード(6文字以上)' %><br>
-    <%= f.password_field :password, autocomplete: 'off' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'パスワード(確認)' %><br>
-    <%= f.password_field :password_confirmation %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "新規登録" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

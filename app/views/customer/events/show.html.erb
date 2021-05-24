@@ -33,7 +33,7 @@
       <div class="new-comment">
         <%= form_with(model:[@event,@comment]) do |f| %>
         <%= f.text_area :comment,placeholder: "コメントを入力", class: 'comment-area' %>
-        <%= f.submit "送信する", class: "btn btn-sm btn-primary" %>
+        <span class="sending"><%= f.submit "送信する", class: "btn btn-sm btn-primary" %></span>
         <% end %>
       </div>
       <div id="comments-view">

@@ -1,7 +1,6 @@
 class Customer::BlogsController < ApplicationController
   before_action :authenticate_customer!
-  before_action :set_page_name, only: [:index]
-  
+
   def new
     @blog_new = Blog.new
   end
@@ -52,7 +51,7 @@ class Customer::BlogsController < ApplicationController
   def blog_params
     params.require(:blog).permit(:blog_title, :blog_text, blog_images_images: [])
   end
-  
+
   def set_page_name
     @page_name = 'blog'
   end

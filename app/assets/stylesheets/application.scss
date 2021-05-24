@@ -24,10 +24,16 @@
   box-sizing: border-box;
 }
 
+ body {
+  div.background {
+  background-color: #fffaf0;
+  }
+}
+
 //ヘッダーレイアウト
 
 .header {
-  background-color: #bc8f8f;
+  background-color: #e9967a	;
   height: 70px;
   line-height: 70px;
 }
@@ -40,13 +46,16 @@
 
 .headertitle {
   text-decoration: none;
-  color: #4b4b4b;
+  color: white;
   font-size: 30px;
   margin-left: 30px;
 }
 
+.headertitle:hover {
+  color: white;
+}
+
 .nav {
-  //background-color: #bc8f8f;
   list-style: none;
   float: right;
 }
@@ -84,7 +93,8 @@
 footer {
   width: 100%;
   padding: 10px 0;
-  background-color: #faf0e6;
+  background-color: #e9967a	;
+  opacity: 0.8;
   position: absolute;
   bottom: 0;
 }
@@ -93,6 +103,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 //↑↑↑フッターレイアウト

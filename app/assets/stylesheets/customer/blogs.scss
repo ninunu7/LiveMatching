@@ -2,11 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
-  div.blog {
-   background-color: #FFDBC9;
-  }
-}
+// body {
+//   div.blog {
+//   background-color: #FFDBC9;
+//   }
+// }
 
 a.btn-orange {
   color: white;
@@ -27,7 +27,7 @@ a.btn-orange-shadow {
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
 }
 
-
+//indexレイアウト
 .index-body {
   width: 90%;
   margin: 0 auto;
@@ -45,12 +45,10 @@ span.top-title {
   margin-top: 10px;
 }
 
-
 .top {
   display: flex;
   margin-top: 40px;
   margin-left: 30px;
-
 }
 
 .blog {
@@ -70,6 +68,9 @@ span.top-title {
   width: 140px;
   height: 40px;
 }
+
+//↑↑↑index
+//show
 
 .show {
   width: 100%;
@@ -105,6 +106,18 @@ span.top-title {
 .display {
   font-size: 30px;
   display: flex;
+}
+
+.favorites {
+  font-size: 25px;
+}
+
+.favorite-button {
+  color: red;
+}
+
+.favorite-button:hover {
+  color: red;
 }
 
 .title {

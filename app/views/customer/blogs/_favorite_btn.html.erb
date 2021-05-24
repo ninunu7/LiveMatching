@@ -1,14 +1,14 @@
 <div class="favorites">
   <% if blog.favorited_by?(current_customer) %>
   <p>
-    <%= link_to blog_favorites_path(blog), method: :delete, remote: true do %>
-      ♥<%= blog.favorites.count %> いいね
+    <%= link_to blog_favorites_path(blog), method: :delete, class: 'favorite-button', remote: true do %>
+      ♥<%= blog.favorites.count %>
     <% end %>
   </p>
   <% else %>
   <p>
-    <%= link_to blog_favorites_path(blog), method: :post, remote: true do %>
-      ♡<%= blog.favorites.count %> いいね
+    <%= link_to blog_favorites_path(blog), method: :post, class: 'favorite-button', remote: true do %>
+      ♡<%= blog.favorites.count %>
     <% end %>
   </p>
   <% end %>

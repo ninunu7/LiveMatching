@@ -14,12 +14,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body class="app-body">
-    <%# if @page_name == 'blog' %>
-    <% if controller.controller_name == 'blogs' && controller.action_name == 'index' %>
-      <div class="wrapper blog" >
-    <% else %>
-      <div class="wrapper" >
-    <% end %>
+    <!--<%# if controller.controller_name == 'blogs' %>-->
+    <%# if controller.controller_name == 'blogs' && controller.action_name == 'index' %>
+    <!--  <div class="wrapper blog">-->
+    <!--<%# elsif controller.controller_name == 'events'  %>-->
+    <!--<div class="wrapper event">-->
+    <!--  <%# else %>-->
+    <!--  <div class="wrapper">-->
+    <!--<%# end %>-->
+   <div class="wrapper background">
 
       <header class="header">
           <a href="/" class="headertitle">LiveMatching</a>

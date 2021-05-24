@@ -44,3 +44,15 @@
 .admin {
   padding-top: 70px;
 }
+
+.new-blog {
+  margin-top: 60px;
+}
+
+@media only screen and (max-width: 580px) {
+  .top-none {
+    display: none;
+  }
+}
+
+//↑topページレイアウト↑//

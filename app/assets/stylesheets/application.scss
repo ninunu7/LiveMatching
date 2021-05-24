@@ -24,6 +24,8 @@
   box-sizing: border-box;
 }
 
+//ヘッダーレイアウト
+
 .header {
   background-color: #bc8f8f;
   height: 70px;
@@ -67,6 +69,9 @@
   text-decoration: none;
 }
 
+//↑↑↑ヘッダーレイアウト
+//以下フッター
+
 .wrapper{
     min-height: 100vh;
     position: relative;
@@ -89,8 +94,9 @@ footer {
   align-items: center;
 }
 
-
+//↑↑↑フッターレイアウト
 //以下ログイン画面レイアウト
+
 #form-main{
 	width: 100%;
 	float: left;
@@ -137,8 +143,8 @@ footer {
 	}
 }
 //----↑ログイン画面レイアウト----
-
 //以下新規登録画面レイアウト
+
 #signup-form {
   text-align: center;
 	background-color: #BBBBBB;
@@ -189,4 +195,73 @@ footer {
     display: block;
     width: 100%;
 	}
+}
+
+//↑↑↑新規登録画面レイアウト
+//以下マイページ編集画面レイアウト
+
+div.mypage-edit-title {
+  margin-top: 30px;
+  margin-left: 60px;
+  margin-bottom: 35px;
+}
+
+span.mypage-edit-title {
+  font-size: 40px;
+  padding: 5px 30px;
+  background-color: #EEEEEE;
+  border-radius: 10px;
+  letter-spacing: 3px;
+}
+
+.mypage-edit-image {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.mypage-edit-table {
+  width: 75%;
+  margin: 20px auto;
+}
+
+.edit-actions {
+  text-align: center;
+}
+
+.mypage-edit-actions {
+  margin-top: 30px;
+  font-size: 20px;
+  width: 170px;
+  height: 50px;
+}
+
+.back-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.edit-introduction {
+  width: 550px;
+  height: 300px;
+}
+
+
+@media only screen and (max-width: 580px) {
+  span.mypage-edit-title {
+    font-size: 30px;
+    padding: 3px 20px;
+    background-color: #EEEEEE;
+    border-radius: 8px;
+    letter-spacing: 2px;
+  }
+
+	.mypage-edit-table td {
+    display: block;
+    width: 100%;
+	}
+
+	.edit-introduction {
+  width: 300px;
+  height: 250px;
+  }
 }

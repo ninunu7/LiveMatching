@@ -2,16 +2,12 @@
   <div class="row">
     <h3 class="my-5 px-4 rounded-circle", style="background:#EEEEEE;"><%= @customer.name %>の今後の予定</h3>
   </div>
-
   <% if current_customer.id == @customer.id %>
-  <div class="row">
+  <div class="row mb-3">
+    <%= link_to "参加するイベントを登録する",new_event_path, class: "btn btn-success mr-4" %>
     <%= link_to "コメント履歴",events_detail_path, class: "btn btn-primary" %>
   </div>
-  <div class="row">
-    <%= link_to "参加するイベントを登録する",new_event_path, class: "btn btn-success" %>
-  </div>
   <% end %>
-
     <%= month_calendar events: @events do |date, events| %>
       <%= date.day %>
       <% events.each do |event| %>
@@ -43,9 +39,9 @@
             <td>
               <%= l event.start_time, format: :short %>
             </td>
-            <td><%= event.artist_name %></td>
+            <td><%= event.artist_name.truncate(15) %></td>
             <td><%= event.message.truncate(15) %></td>
-            <td><%= "#{event.comments.count}コメント" %></td>
+            <td><i class="far fa-comment"></i><%= event.comments.count %></td>
             <td><%= link_to "詳細を見る",event_path(event), class: "btn btn-sm btn-info" %></td>
             <% if current_customer.id == event.customer.id %>
               <td>

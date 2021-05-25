@@ -1,14 +1,18 @@
 <table>
   <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.customer.name %></td>
-        <td><%= image_tag blog.customer.profile_image.to_s, :size =>'35x35' %></td>
-        <td><%= blog.blog_title %></td>
-        <td><%= blog.blog_text.truncate(15) %></td>
-        <td><%= "#{blog.blog_comments.count}コメント" %></td>
-        <td><%= link_to "詳細を見る",blog_path(blog), class: "btn btn-sm btn-info" %></td>
-      </tr>
+    <% if @blogs.present? %>
+      <% @blogs.each do |blog| %>
+        <tr>
+          <td><%= blog.customer.name %></td>
+          <td><%= image_tag blog.customer.profile_image.to_s, :size =>'35x35' %></td>
+          <td><%= blog.blog_title %></td>
+          <td><%= blog.blog_text.truncate(15) %></td>
+          <td><%= "#{blog.blog_comments.count}コメント" %></td>
+          <td><%= link_to "詳細を見る",blog_path(blog), class: "btn btn-sm btn-info" %></td>
+        </tr>
+      <% end %>
+    <% else %>
+      コメント履歴はありません。
     <% end %>
   </tbody>
 </table>

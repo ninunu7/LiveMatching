@@ -1,49 +1,50 @@
+<div class="admin-layout">
 <h2><%= @customer.name %>さんの会員情報編集</h2>
-<%= form_with model:@customer, url:admin_customer_path, local:true ,method: :patch  do |f| %>
-
-  <div class="field">
-    <%= f.label :'ユーザー名' %><br>
-    <%= f.text_field :name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'メールアドレス' %><br>
-    <%= f.email_field :email %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'性別'%><br>
-    <%= f.radio_button :gender, :man %>
-    <%= f.label :'男性' %>
-    <%= f.radio_button :gender, :woman %>
-    <%= f.label :'女性' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'生年月日' %>
-    <%= f.date_select(
-        :birth_date,
-        start_year: 1930,
-        end_year: (Time.now.year - 18),
-        default: Date.new(1989, 1, 1)) %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'自己紹介' %><br>
-    <%= f.text_area :introduction, :size =>'80x15' %>
-  </div>
-
-  <div class="field">
-    <%= f.label :'会員ステータス'%><br>
-    <%= f.radio_button :user_status, :true %>
-    <%= f.label :'有効' %>
-    <%= f.radio_button :user_status, :false %>
-    <%= f.label :'退会' %>
-  </div>
-
-
-  <div class="actions">
-    <%= f.submit "編集" %>
-  </div>
-<% end %>
-<%= link_to "戻る", :back %>
+  <%= form_with model:@customer, url:admin_customer_path, local:true ,method: :patch  do |f| %>
+    <table class="table table-borderless text-center admin-customer-table">
+      <tbody>
+        <tr>
+          <th><%= f.label :'ユーザー名' %></th>
+          <td><%= f.text_field :name, autofocus: true %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :'メールアドレス' %></th>
+          <td><%= f.email_field :email %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :'性別'%></th>
+          <td><%= f.radio_button :gender, :man %>
+              <%= f.label :'男性' %>
+              <%= f.radio_button :gender, :woman %>
+              <%= f.label :'女性' %>
+          </td>
+        </tr>
+        <tr>
+          <th><%= f.label :'生年月日' %></th>
+          <td><%= f.date_select(
+              :birth_date,
+              start_year: 1930,
+              end_year: (Time.now.year - 18),
+              default: Date.new(1989, 1, 1)) %>
+          </td>
+        </tr>
+        <tr>
+          <th><%= f.label :'自己紹介' %></th>
+          <td><%= f.text_area :introduction, class:'admin-edit-introduction' %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :'会員ステータス'%></th>
+          <td><%= f.radio_button :user_status, :true %>
+              <%= f.label :'有効' %>
+              <%= f.radio_button :user_status, :false %>
+              <%= f.label :'退会' %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="actions">
+      <%= f.submit "編集", class: 'admin-edit-actions' %>
+    </div>
+  <% end %>
+  <%= link_to "戻る", :back, class: 'btn btn-sm btn-secondary' %>
+</div>

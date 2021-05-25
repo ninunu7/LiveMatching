@@ -45,6 +45,29 @@ span.top-title {
   margin-top: 10px;
 }
 
+.paginate {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width:1024px) {
+  .blog_index-none {
+    display: none;
+  }
+
+  .index-body {
+  width: 100%;
+  margin: 0 auto;
+  }
+
+  .top-title {
+  text-align: center;
+  }
+}
+
+//↑↑↑index
+//↓↓↓new
+
 .top {
   display: flex;
   margin-top: 40px;
@@ -69,7 +92,7 @@ span.top-title {
   height: 40px;
 }
 
-//↑↑↑index
+
 //show
 
 .show {

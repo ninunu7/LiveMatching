@@ -1,14 +1,18 @@
 <table>
   <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.customer.name %></td>
-        <td><%= image_tag event.customer.profile_image.to_s, :size =>'35x35' %></td>
-        <td><%= event.artist_name %></td>
-        <td><%= event.message.truncate(15) %></td>
-        <td><%= "#{event.comments.count}コメント" %></td>
-        <td><%= link_to "詳細を見る",event_path(event), class: "btn btn-sm btn-info" %></td>
-      </tr>
+    <% if @events.present? %>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= event.customer.name %></td>
+          <td><%= image_tag event.customer.profile_image.to_s, :size =>'35x35' %></td>
+          <td><%= event.artist_name %></td>
+          <td><%= event.message.truncate(15) %></td>
+          <td><%= "#{event.comments.count}コメント" %></td>
+          <td><%= link_to "詳細を見る",event_path(event), class: "btn btn-sm btn-info" %></td>
+        </tr>
+      <% end %>
+    <% else %>
+      コメント履歴はありません。
     <% end %>
   </tbody>
 </table>

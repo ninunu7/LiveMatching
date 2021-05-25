@@ -1,3 +1,27 @@
 // Place all the styles related to the admin::customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.admin-layout {
+  color: black;
+  text-align: center;
+  font-weight: normal;
+}
+
+.admin-customer-table {
+
+}
+
+//↓↓↓edit
+.admin-edit-introduction {
+  width: 400px;
+  height: 350px;
+}
+
+.admin-edit-actions {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-size: 20px;
+  width: 150px;
+  height: 45px;
+}

@@ -1,51 +1,49 @@
+<div class="admin-layout">
 <h1>会員詳細</h1>
-<table>
-  <tbody>
-      <tr>
-        <td>会員ID</td>
-        <td>
-          <%= @customer.id %>
-        </td>
-      </tr>
-      <tr>
-        <td>名前</td>
-        <td>
-          <%= @customer.name %>
-        </td>
-      </tr>
-      <tr>
-        <td>メールアドレス</td>
-        <td><%= @customer.email %></td>
-      </tr>
-      <tr>
-      <td>性別</td>
-      <td>
-        <%= @customer.gender_i18n %>
-      </td>
-    </tr>
-      <tr>
-        <td>生年月日</td>
-        <td><%= @customer.birth_date %></td>
-      </tr>
-      <tr>
-        <td>自己紹介</td>
-        <td><%= @customer.introduction %></td>
-      </tr>
-      <tr>
-        <td>会員ステータス</td>
-        <td>
-          <% if @customer.user_status == true %>
-            <span>有効</span>
-          <% else %>
-            <span>退会</span>
-          <% end %>
-        </td>
-      </tr>
-  </tbody>
-</table>
-<button>
-  <%= link_to "編集する",edit_admin_customer_path(@customer) %>
-</button>
-<button>
-  <%= link_to "戻る",admin_customers_path %>
-</button>
+    <table class="table table-hover text-center admin-customer-table">
+      <tbody>
+          <tr>
+            <td>会員ID</td>
+            <td>
+              <%= @customer.id %>
+            </td>
+          </tr>
+          <tr>
+            <td>名前</td>
+            <td>
+              <%= @customer.name %>
+            </td>
+          </tr>
+          <tr>
+            <td>メールアドレス</td>
+            <td><%= @customer.email %></td>
+          </tr>
+          <tr>
+          <td>性別</td>
+          <td>
+            <%= @customer.gender_i18n %>
+          </td>
+        </tr>
+          <tr>
+            <td>生年月日</td>
+            <td><%= @customer.birth_date %></td>
+          </tr>
+          <tr>
+            <td>自己紹介</td>
+            <td><%= @customer.introduction %></td>
+          </tr>
+          <tr>
+            <td>会員ステータス</td>
+            <td>
+              <% if @customer.user_status == true %>
+                <span>有効</span>
+              <% else %>
+                <span>退会</span>
+              <% end %>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+  <%= link_to "編集する",edit_admin_customer_path(@customer), class: 'btn btn-info' %>
+  <%= link_to "戻る",admin_customers_path, class: 'btn btn-success' %>
+</div>

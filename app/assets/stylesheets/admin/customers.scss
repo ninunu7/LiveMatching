@@ -2,17 +2,34 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+//↓↓↓index
+
 .admin-layout {
-  color: black;
   text-align: center;
-  font-weight: normal;
+  width: 90%;
+  margin: 0 auto;
 }
 
-.admin-customer-table {
-
+.admin-customer-top {
+  margin: 25px 0;
 }
 
+.admin-paginate {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 580px) {
+  .admin-layout {
+  width: 100%;
+  }
+}
+
+//↑↑↑index
 //↓↓↓edit
+
 .admin-edit-introduction {
   width: 400px;
   height: 350px;

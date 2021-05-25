@@ -25,15 +25,6 @@
    <div class="wrapper background">
       <header class="header">
           <a href="/" class="headertitle">LiveMatching</a>
-
-        <!--  <span class="nav_toggle">-->
-        <!--  <i></i>-->
-        <!--  <i></i>-->
-        <!--  <i></i>-->
-        <!--</span>-->
-
-
-
         <ul class="nav">
         <% if customer_signed_in? %>
           <li>
@@ -50,7 +41,7 @@
           </li>
         <% elsif admin_signed_in? %>
           <li>
-            <i class="fas fa-sign-out-alt header-font"><%= link_to "管理者ログアウト",destroy_admin_session_path, method: :delete, class: 'headericon' %>
+            <%= link_to "管理者ログアウト",destroy_admin_session_path, method: :delete, class: 'headericon' %>
           </li>
         <% else %>
           <li>

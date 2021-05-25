@@ -23,15 +23,19 @@
     <!--  <div class="wrapper">-->
     <!--<%# end %>-->
    <div class="wrapper background">
-
       <header class="header">
           <a href="/" class="headertitle">LiveMatching</a>
+
+        <!--  <span class="nav_toggle">-->
+        <!--  <i></i>-->
+        <!--  <i></i>-->
+        <!--  <i></i>-->
+        <!--</span>-->
 
 
 
         <ul class="nav">
         <% if customer_signed_in? %>
-          <span class="welcome">ようこそ、<%= current_customer.name %>さん！</span>
           <li>
             <i class="far fa-calendar-alt header-font"></i><%= link_to "今後の予定",events_path(customer_id: current_customer.id), class: 'headericon' %>
           </li>
@@ -63,6 +67,8 @@
           </li>
         <% end %>
         </ul>
+
+
       </header>
       <main>
         <%= yield %>

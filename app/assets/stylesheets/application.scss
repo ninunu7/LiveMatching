@@ -38,21 +38,18 @@
   line-height: 70px;
 }
 
-.headertitle:hover {
-  color: #4b4b4b;
-  text-decoration: none;
-}
-
-
 .headertitle {
+  font-family: 'Chalkboard SE','Palatino Linotype','Arial Rounded MT Bold',sans-serif;
   text-decoration: none;
   color: white;
   font-size: 30px;
   margin-left: 30px;
+  letter-spacing: 2px;
 }
 
 .headertitle:hover {
   color: white;
+  text-decoration: none;
 }
 
 .nav {
@@ -63,6 +60,11 @@
 .welcome {
   font-size: 20px;
   margin-right: 100px;
+  color: white;
+}
+
+.header-font {
+  font-size: 20px;
   color: white;
 }
 

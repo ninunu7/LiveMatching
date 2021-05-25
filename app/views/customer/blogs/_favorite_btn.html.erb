@@ -2,13 +2,13 @@
   <% if blog.favorited_by?(current_customer) %>
   <p>
     <%= link_to blog_favorites_path(blog), method: :delete, class: 'favorite-button', remote: true do %>
-      ♥<%= blog.favorites.count %>
+      <i class="fas fa-heart"></i><%= blog.favorites.count %>
     <% end %>
   </p>
   <% else %>
   <p>
     <%= link_to blog_favorites_path(blog), method: :post, class: 'favorite-button', remote: true do %>
-      ♡<%= blog.favorites.count %>
+      <i class="far fa-heart"></i><%= blog.favorites.count %>
     <% end %>
   </p>
   <% end %>

@@ -58,10 +58,52 @@
 //↑topページレイアウト↑//
 //↓↓↓aboutページレイアウト
 
-span.about-main {
-  font-size: 40px;
+.about-form {
+    padding: 0.5em 1em 3em;
+    margin: 2em 0;
+    font-weight: bold;
+    background: #FFF;
+    border: solid 3px #6091d3;
+    border-radius: 10px;
+    width: 80%;
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.about-text {
+  line-height: 200%;
+}
+
+h1.about-top {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+span.about-top {
+  font-size: 50px;
+  text-shadow: 1px 1px 1px #808080;
   padding: 5px 30px;
   background-color: #EEEEEE;
   border-radius: 10px;
   letter-spacing: 3px;
+}
+
+.about-explanation {
+  color: #6091d3;
+  font-size: 35px;
+  text-shadow: 1px 1px 1px #808080;
+  margin-top: 20px;
+}
+
+
+
+@media only screen and (max-width: 580px) {
+	.about-form{
+	  width: 95%;
+		left: 3%;
+		margin-right: 3%;
+		margin-left: 2%;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
 }

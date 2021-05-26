@@ -1,18 +1,34 @@
-<table>
-  <tbody>
-    <% if @events.present? %>
-      <% @events.each do |event| %>
+<div id="comment-index-main">
+  <div id="comment-index-form">
+  <h2>コメント履歴</h2>
+    <table class="table table-hover text-center comment-index-table">
+      <thead>
         <tr>
-          <td><%= event.customer.name %></td>
-          <td><%= image_tag event.customer.profile_image.to_s, :size =>'35x35' %></td>
-          <td><%= event.artist_name %></td>
-          <td><%= event.message.truncate(15) %></td>
-          <td><%= "#{event.comments.count}コメント" %></td>
-          <td><%= link_to "詳細を見る",event_path(event), class: "btn btn-sm btn-info" %></td>
+          <th>投稿者</th>
+          <th>アーティスト名</th>
+          <th>メッセージ</th>
+          <th></th>
+          <th></th>
         </tr>
-      <% end %>
-    <% else %>
-      コメント履歴はありません。
-    <% end %>
-  </tbody>
-</table>
+      </thead>
+      <tbody>
+        <% if @events.present? %>
+          <% @events.each do |event| %>
+            <tr>
+              <td>
+                <%= image_tag event.customer.profile_image.to_s, :size =>'35x35', class: 'comment-profile-image' %>
+                <%= event.customer.name %>
+              </td>
+              <td><%= event.artist_name %></td>
+              <td><%= event.message.truncate(15) %></td>
+              <td><i class="far fa-comment"></i><%= event.comments.count %></td>
+              <td><%= link_to "詳細を見る",event_path(event), class: "btn btn-sm btn-info" %></td>
+            </tr>
+          <% end %>
+        <% else %>
+          <p class="no-comment-history">コメント履歴はありません。</p>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

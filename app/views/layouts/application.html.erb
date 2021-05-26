@@ -25,6 +25,13 @@
    <div class="wrapper background">
       <header class="header">
           <a href="/" class="headertitle">LiveMatching</a>
+
+
+        <div id="navArea">
+        <nav>
+        <div class="inner">
+
+
         <ul class="nav">
         <% if customer_signed_in? %>
           <li>
@@ -59,6 +66,17 @@
         <% end %>
         </ul>
 
+
+        </div>
+      </nav>
+      <div class="toggle_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    <div id="mask"></div>
+  </div>
+
       </header>
       <main>
         <%= yield %>
@@ -67,5 +85,28 @@
         <p>© All rights reserved by LiveMatching.</p>
       </footer>
     </div>
+
+
+    <script>
+          (function($) {
+      var $nav   = $('#navArea');
+      var $btn   = $('.toggle_btn');
+      var $mask  = $('#mask');
+      var open   = 'open';
+
+      $btn.on( 'click', function() {
+        if ( ! $nav.hasClass( open ) ) {
+          $nav.addClass( open );
+        } else {
+          $nav.removeClass( open );
+        }
+      });
+
+      $mask.on('click', function() {
+        $nav.removeClass( open );
+      });
+    } )(jQuery);
+    </script>
+
   </body>
 </html>

@@ -1,5 +1,5 @@
 class Customer::RelationshipsController < ApplicationController
-
+before_action :authenticate_customer!
   def create
     @customer = Customer.find(params[:customer_id])
     current_customer.follow(params[:customer_id])

@@ -111,17 +111,21 @@ nav .inner ul li:hover {
 
 .toggle_btn span:nth-child(1) {
   top: 4px;
+  background-color: white;
 }
 
 .toggle_btn span:nth-child(2) {
   top: 14px;
+  background-color: white;
 }
 
 .toggle_btn span:nth-child(3) {
   bottom: 4px;
+  background-color: white;
 }
+
 .open .toggle_btn span {
-  background-color: #fff;
+  background-color: white;
 }
 
 .open .toggle_btn span:nth-child(1) {

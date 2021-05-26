@@ -1,4 +1,5 @@
 class Customer::CommentsController < ApplicationController
+  before_action :authenticate_customer!
   def create
     @event = Event.find(params[:event_id])
     @comment = current_customer.comments.new(comment_params)

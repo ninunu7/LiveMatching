@@ -1,4 +1,5 @@
 class Customer::EventsController < ApplicationController
+  before_action :authenticate_customer!
   def new
     @event = Event.new
   end

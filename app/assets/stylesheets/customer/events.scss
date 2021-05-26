@@ -50,6 +50,9 @@
   width: 95%;
   height: 40px;
 }
+.new-event {
+  font-size: 25px;
+}
 }
 
 //↑↑↑new
@@ -59,17 +62,21 @@
 	width: 100%;
 }
 
-.search-body {
+// .search-body {
+//   width: 90%;
+//   margin: 0 auto;
+//   text-align: center;
+// }
+
+.condition {
   width: 90%;
   margin: 0 auto;
   text-align: center;
 }
 
-.search-table {
-  width: 45%;
-  margin: 0 auto;
-  border-collapse: separate;
-  border-spacing: 0px 8px;
+.search-list {
+  font-size: 20px;
+  margin-top: 20px;
 }
 
 .search-top {
@@ -84,9 +91,10 @@
 }
 
 .search-button {
-  width: 140px;
-  height: 45px;
+  width: 160px;
+  height: 50px;
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .start-time-form {
@@ -121,27 +129,27 @@
   text-align: center;
 }
 
+
 @media only screen and (max-width: 580px) {
   .search-top {
     text-align: center;
   }
 
-  .search-table td {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
+  .condition {
+  width: 100%;
   }
 
+  .start-time-form {
+  width: 140px;
+  }
 
   .artistname-form {
-    width: 200px;
+    width: 90%;
     height: 30px;
   }
 
   .message-form {
-    width: 200px;
-    height: 40px;
+    width: 90%;
   }
 
   .result-table th,

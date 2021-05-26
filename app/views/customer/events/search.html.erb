@@ -20,38 +20,23 @@
     </div>
   <% end %>
 </div>
+
+
 <div class="result">
-  <table class="table result-table">
-    <thead class="result-th">
-      <tr>
-        <th style="background:#FAEBD7;">ユーザー</th>
-        <th style="background:#FAEBD7;" >性別</th>
-        <th style="background:#FAEBD7;">参加日</th>
-        <th style="background:#FAEBD7;" style="width: 15%">アーティスト名</th>
-        <th style="background:#FAEBD7;" style="width: 35%">メッセージ</th>
-        <th style="background:#FAEBD7;"></th>
-      </tr>
-    </thead>
-    <tbody>
     <% unless @search_params.blank? %>
-    (全<%= @events.count %>件)
+    <div>(全<%= @events.count %>件)</div>
       <% @events.each do |event| %>
-        <tr class="result-tr">
-          <td class="result-td">
+        <div class="result-customer">
             <%= image_tag event.customer.profile_image.to_s, :size =>'50x50' %>
             <%= link_to(event.customer.name, customer_path(event.customer_id)) %>
-          </td>
-          <td class="result-td"><%= event.customer.gender_i18n %></td>
-          <td class="result-td">
-            <%= l event.start_time, format: :short %>
-          </td>
-          <td class="result-td"><%= event.artist_name %></td>
-          <td class="result-td"><%= event.message.truncate(15) %></td>
-          <td class="result-td"><%= link_to"詳細を見る", event_path(event),class: 'btn btn-primary' %></td>
-        </tr>
+
+            <div>性別：<%= event.customer.gender_i18n %></div>
+            <div>参加日：<%= l event.start_time, format: :short %></div>
+            <div><%= event.artist_name %></div>
+            <div><%= event.message.truncate(15) %></div>
+            <div><%= link_to"詳細を見る", event_path(event),class: 'btn btn-primary result-detail-button' %></div>
+          </div>
       <% end %>
     <% end %>
-    </tbody>
-  </table>
   </div>
 </div>

@@ -2,9 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.container {
-  text-align: center;
-}
 
 .btn-orange {
   color: white;
@@ -58,7 +55,7 @@
 //↑topページレイアウト↑//
 //↓↓↓aboutページレイアウト
 
-.about-form {
+.form {
     padding: 0.5em 1em 3em;
     margin: 2em 0;
     font-weight: bold;
@@ -68,6 +65,7 @@
     width: 80%;
     margin: 40px auto 0;
     text-align: center;
+    background-color: #fffaf0;
 }
 
 .about-text {
@@ -95,15 +93,13 @@ span.about-top {
   margin-top: 20px;
 }
 
-
-
 @media only screen and (max-width: 580px) {
-	.about-form{
-	  width: 95%;
-		left: 3%;
-		margin-right: 3%;
-		margin-left: 2%;
-		padding-left: 3%;
-		padding-right: 3%;
+	.form{
+	  width: 98%;
+		left: 1%;
+		margin-right: 1%;
+		margin-left: 1%;
+		padding-left: 1%;
+		padding-right: 1%;
 	}
 }

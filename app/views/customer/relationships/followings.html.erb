@@ -1,23 +1,22 @@
-<h2>フォロー一覧</h2>
-<% if @customers.exists? %>
-  <thead>
-    <tr>
-      <th>name</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @customers.each do |customer| %>
-      <tr>
-        <td><%= image_tag customer.profile_image.to_s, :size =>'50x50' %></td>
-        <td><%= link_to(customer.name, customer_path(customer)) %></td>
-        <td><%= customer.introduction %></td>
-
-      </tr>
+<div id="follow-index-main">
+  <div id="follow-index-form">
+    <h2>フォロー一覧</h2>
+    <% if @customers.exists? %>
+    <table class="follow-index-table">
+      <tbody>
+        <% @customers.each do |customer| %>
+          <tr>
+            <td>
+              <%= image_tag customer.profile_image.to_s, :size =>'50x50' %>
+              <%= link_to(customer.name, customer_path(customer)) %>
+            </td>
+            <td><%= customer.introduction.truncate(15) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <% else %>
+      <p class="follow-no-user">ユーザーはいません</p>
     <% end %>
-  </tbody>
-</table>
-<% else %>
-  <p>ユーザーはいません</p>
-<% end %>
+  </div>
+</div>

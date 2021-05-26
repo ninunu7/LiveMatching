@@ -8,6 +8,51 @@
 //   }
 //   }
 
+
+//↓↓↓new
+
+.new-body {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.new-date-form {
+  width: 180px;
+  height: 40px;
+}
+
+.new-form {
+  width: 70%;
+  height: 40px;
+}
+
+.registration-button {
+  font-size: 30px;
+  width: 140px;
+  height: 50px;
+}
+
+.new-message-form {
+  width: 95%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 700px) {
+.new-body {
+  width: 95%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.new-form {
+  width: 95%;
+  height: 40px;
+}
+}
+
+//↑↑↑new
 //以下sesrch画面レイアウト
 
 #search-main{

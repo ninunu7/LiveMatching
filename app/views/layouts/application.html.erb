@@ -26,56 +26,52 @@
       <header class="header">
           <a href="/" class="headertitle">LiveMatching</a>
 
-
-        <div id="navArea">
+      <div id="navArea">
         <nav>
-        <div class="inner">
+          <div class="inner">
 
-
-        <ul class="nav">
-        <% if customer_signed_in? %>
-          <li>
-            <i class="far fa-calendar-alt header-font"></i><%= link_to "今後の予定",events_path(customer_id: current_customer.id), class: 'headericon' %>
-          </li>
-          <li>
-            <i class="fas fa-search header-font"></i><%= link_to "検索する",events_search_path, class: 'headericon' %>
-          </li>
-          <li>
-            <i class="fas fa-user header-font"></i><%= link_to "マイページ",customer_path(current_customer.id), class: 'headericon' %>
-          </li>
-          <li>
-            <i class="fas fa-sign-out-alt header-font"></i><%= link_to "ログアウト",destroy_customer_session_path, method: :delete, class: 'headericon' %>
-          </li>
-        <% elsif admin_signed_in? %>
-          <li>
-            <%= link_to "管理者ログアウト",destroy_admin_session_path, method: :delete, class: 'headericon' %>
-          </li>
-        <% else %>
-          <li>
-            <i class="fas fa-search header-font"></i><%= link_to "検索する",searches_path, class: 'headericon' %>
-          </li>
-          <li>
-            <i class="fas fa-chalkboard header-font"></i><%= link_to "About",homes_about_path, class: 'headericon' %>
-          </li>
-          <li>
-            <i class="fas fa-plus header-font"></i><%= link_to "新規登録",new_customer_registration_path, class: 'headericon' %>
-          </li>
-          <li>
-            <i class="fas fa-sign-in-alt header-font"></i><%= link_to "ログイン",new_customer_session_path, class: 'headericon' %>
-          </li>
-        <% end %>
-        </ul>
-
-
+            <ul class="header-list">
+            <% if customer_signed_in? %>
+              <li>
+                <i class="far fa-calendar-alt header-font"></i><%= link_to "今後の予定",events_path(customer_id: current_customer.id), class: 'headericon' %>
+              </li>
+              <li>
+                <i class="fas fa-search header-font"></i><%= link_to "検索する",events_search_path, class: 'headericon' %>
+              </li>
+              <li>
+                <i class="fas fa-user header-font"></i><%= link_to "マイページ",customer_path(current_customer.id), class: 'headericon' %>
+              </li>
+              <li>
+                <i class="fas fa-sign-out-alt header-font"></i><%= link_to "ログアウト",destroy_customer_session_path, method: :delete, class: 'headericon' %>
+              </li>
+            <% elsif admin_signed_in? %>
+              <li>
+                <%= link_to "管理者ログアウト",destroy_admin_session_path, method: :delete, class: 'headericon' %>
+              </li>
+            <% else %>
+              <li>
+                <i class="fas fa-search header-font"></i><%= link_to "検索する",searches_path, class: 'headericon' %>
+              </li>
+              <li>
+                <i class="fas fa-chalkboard header-font"></i><%= link_to "About",homes_about_path, class: 'headericon' %>
+              </li>
+              <li>
+                <i class="fas fa-plus header-font"></i><%= link_to "新規登録",new_customer_registration_path, class: 'headericon' %>
+              </li>
+              <li>
+                <i class="fas fa-sign-in-alt header-font"></i><%= link_to "ログイン",new_customer_session_path, class: 'headericon' %>
+              </li>
+            <% end %>
+            </ul>
+          </div>
+        </nav>
+        <div class="toggle_btn">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-      </nav>
-      <div class="toggle_btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    <div id="mask"></div>
-  </div>
+      <div id="mask"></div>
+    </div>
 
       </header>
       <main>

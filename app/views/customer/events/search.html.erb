@@ -37,7 +37,8 @@
             <div><%= link_to"詳細を見る", event_path(event),class: 'btn btn-primary result-detail-button' %></div>
           </div>
       <% end %>
+      <div class="paginate"><%= paginate @events %></div>
     <% end %>
-    <div class="paginate"><%= paginate @events %></div>
+
   </div>
 </div>

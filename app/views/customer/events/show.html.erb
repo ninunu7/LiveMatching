@@ -3,16 +3,22 @@
     <div class="split-left__inner">
       <div class="display">
         <%= image_tag @event.customer.profile_image.to_s, :size =>'50x50',class: "profile-image" %>
+        <%= link_to(@event.customer.name, customer_path(@event.customer_id)) %>
       </div>
-      <div>
-        参加日:<%= l @event.start_time, format: :short %>
+      <div class="event-show-detail">
+        参加日<br>
+        <%= l @event.start_time, format: :short %>
       </div>
-      <div>
-        アーティスト名:<%= @event.artist_name %>
+      <div class="event-show-detail">
+        アーティスト名<br>
+        <%= @event.artist_name %>
       </div>
-      <div><%= @event.message %></div>
+      <div class="event-show-detail">
+        メッセージ<br>
+        <%= @event.message %>
+      </div>
       <div class="link">
-        <%= link_to '一覧に戻る', events_path(customer_id: @customer.id), class: "btn btn-sm btn-success" %>
+        <%= link_to '一覧に戻る', events_path(customer_id: @customer.id), class: "btn btn-success" %>
         <% if current_customer.id == @customer.id %>
           <%= link_to '削除する', event_path(@event), method: :delete, class: "btn btn-sm btn-danger destroy_event_#{@event.id}", data: {confirm: '本当にイベントを削除しますか？' }%>
         <% end %>

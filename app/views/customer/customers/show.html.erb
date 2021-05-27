@@ -3,10 +3,10 @@
     <span class="top-title"><%= @customer.name %>のプロフィール</span>
   </div>
     <div class="profile-top">
-      <div><%= image_tag @customer.profile_image.to_s, :size =>'120x120', class: "profile-image" %></div>
-      <div id="follow-action">
+      <div class="profile-image-div"><%= image_tag @customer.profile_image.to_s, :size =>'120x120', class: "profile-image" %></div>
+      <!--<div id="follow-action">-->
         <%= render partial: 'customer/relationships/follow_button', locals: { customer: @customer } %>
-      </div>
+      <!--</div>-->
     </div>
       <table class="table table-bordered table-condensed">
         <tbody>
@@ -17,7 +17,6 @@
           <tr>
             <td>生年月日</td>
             <td><%= @customer.birth_date %>
-
             </td>
           </tr>
           <tr>

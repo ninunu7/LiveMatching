@@ -40,20 +40,34 @@ span.top-title {
   letter-spacing: 3px;
 }
 
+.profile-image-div {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .profile-image {
   border-radius: 20px;
-  margin-right: 50px;
+  text-align: center;
 }
 
 .profile-top {
-  width: 80%;
+  width: 70%;
   margin: 0 auto 20px;
   display: flex
 }
 
 #follow {
   display: block;
-  margin: 25px;
+  width: 300px;
+  text-align: center;
+  margin: 15px auto;
+}
+
+.blog-event {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .follow-count {
@@ -62,7 +76,7 @@ span.top-title {
 
 .blog-event {
   display: block;
-  margin: 25px;
+  text-align: center;
 }
 
 .blog-event-button {
@@ -71,4 +85,27 @@ span.top-title {
 
 .profile-bottom {
   text-align:  center;
+}
+
+@media screen and (max-width: 900px) {
+  span.top-title {
+  font-size: 25px;
+  padding: 5px 15px;
+  }
+
+.profile {
+  width: 98%;
+  margin: 0 auto;
+}
+
+.profile-top {
+  width: 98%;
+  display: block
+}
+
+.blog-event {
+display: block;
+}
+
+
 }

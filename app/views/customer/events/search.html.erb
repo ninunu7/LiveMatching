@@ -4,12 +4,13 @@
     <%= form_with(scope: :search, url: search_events_path, method: :get, local: true) do |f| %>
       <div>
         <div class="search-list"><%= f.label :start_time, "参加日" %></div>
+        <div>(片方の入力で1日のみ検索)</div>
         <%= f.date_field :start_time_from, value: @search_params[:start_time_from], class: "start-time-form" %> ~
         <%= f.date_field :start_time_to, value: @search_params[:start_time_to], class: "start-time-form" %>
       </div>
       <div>
         <div class="search-list"><%= f.label :artist_name, "アーティスト名" %></div>
-        <%= f.text_field :artist_name, placeholder: 'アーティスト名', value: @search_params[:artist_name], class: "artistname-form" %>
+        <%= f.text_field :artist_name, value: @search_params[:artist_name], class: "artistname-form" %>
       </div>
       <div>
         <div class="search-list"><%= f.label :message, "メッセージ" %></div>
@@ -21,10 +22,9 @@
   <% end %>
 </div>
 
-
 <div class="result">
     <% unless @search_params.blank? %>
-    <div>(全<%= @events.count %>件)</div>
+    <div>全<%= @events.total_count %>件(<%= @events.count %>件表示)</div>
       <% @events.each do |event| %>
         <div class="result-customer">
             <%= image_tag event.customer.profile_image.to_s, :size =>'50x50' %>
@@ -38,5 +38,6 @@
           </div>
       <% end %>
     <% end %>
+    <div class="paginate"><%= paginate @events %></div>
   </div>
 </div>

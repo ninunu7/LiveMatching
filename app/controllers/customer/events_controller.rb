@@ -28,6 +28,7 @@ class Customer::EventsController < ApplicationController
     @search_params = event_search_params
     #検索結果の画面で、フォームに検索した値を表示するために、paramsの値をビューで使えるようにする
     @events = Event.search(@search_params)
+    @events = Kaminari.paginate_array(@events).page(params[:page]).per(12)
   end
 
   def show

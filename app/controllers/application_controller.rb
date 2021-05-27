@@ -10,16 +10,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  # def authenticate_customer
-  #   if current_customer == nil
-  #     redirect_to new_customer_session_path
-  #   end
-  # end
-
   def authenticate_customer
     if session[:customer_id] == nil #ログインしていない場合
-      # flash[:notice] = "ログインが必要です" #フラッシュを表示
-      redirect_to new_customer_session_path #ログイン画面にリダイレクト
+      # flash[:notice] = "ログインが必要です"
+      redirect_to new_customer_session_path
     end
   end
 

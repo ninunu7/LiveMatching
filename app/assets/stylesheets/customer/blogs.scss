@@ -68,31 +68,49 @@ span.top-title {
 //↑↑↑index
 //↓↓↓new
 
-.top {
-  display: flex;
-  margin-top: 40px;
-  margin-left: 30px;
+.new-body {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.blog {
-  margin-right: 80px;
-}
-
-.field {
+.blog-new-form {
   font-size: 20px;
+  margin-top: 30px;
 }
 
-.form {
-  margin-left: 40px;
-  margin-bottom: 40px;
-}
-
-.btn-submit {
-  width: 140px;
+.new-blog-title {
+  width: 70%;
   height: 40px;
 }
 
+.new-blog-text {
+  width: 90%;
+  height: 500px;
+  margin: 0 auto;
+}
 
+.new-blog-button {
+  width: 180px;
+  height: 50px;
+  margin-top: 30px;
+}
+
+
+@media screen and (max-width: 700px) {
+.new-body {
+  width: 98%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.new-blog-title {
+  width: 95%;
+  height: 40px;
+}
+}
+
+//↑↑↑new
 //show
 
 .show {

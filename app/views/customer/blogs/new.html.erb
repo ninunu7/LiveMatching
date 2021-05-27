@@ -1,7 +1,5 @@
-<div class="index-body">
+<div class="new-body">
 <div class="error">
-
-  <%= flash[:notice] %>
   <% if @blog_new.errors.any? %>
     <% @blog_new.errors.full_messages.each do |message| %>
       <li class="text-danger"><%= message %></li>
@@ -9,29 +7,27 @@
   <% end %>
 </div>
 
-<div class="top">
-    <h1 class="blog">ブログ</h1>
-</div>
+  <h1 class="blog mt-3">ブログ</h1>
 <div>
     <%= form_with model:@blog_new, local:true do |f| %>
-      <div class="field">
+      <div class="blog-new-form">
         <%= f.label :'タイトル' %>
       </div>
-      <div class="form">
-        <%= f.text_field :blog_title, autofocus: true, :size =>'50' %>
+      <div>
+        <%= f.text_field :blog_title, autofocus: true, placeholder: "50字以内", class: 'new-blog-title' %>
       </div>
-      <div class="field">
+      <div class="blog-new-form">
         <%= f.label :'本文' %>
       </div>
-      <div class="form">
-        <%= f.text_area :blog_text, :size =>'70x20' %>
+      <div>
+        <%= f.text_area :blog_text, class: 'new-blog-text' %>
       </div>
-      <div>画像(8枚まで)</div>
-      <div class="form">
+      <div class="blog-new-form">画像(8枚まで)</div>
+      <div>
         <%= f.attachment_field :blog_images_images, multiple: true %>
       </div>
       <div class="submit">
-        <%= f.submit "投稿する", class: "btn btn-submit btn-success" %>
+        <%= f.submit "投稿する", class: "btn btn-success new-blog-button" %>
       </div>
       <% end %>
 

@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_customer
     if session[:customer_id] == nil #ログインしていない場合
-      flash[:notice] = "ログインが必要です" #フラッシュを表示
+      # flash[:notice] = "ログインが必要です" #フラッシュを表示
       redirect_to new_customer_session_path #ログイン画面にリダイレクト
     end
   end

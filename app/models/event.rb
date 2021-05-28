@@ -27,7 +27,7 @@ class Event < ApplicationRecord
     end
 
   }
-  #scope :join_day_from, -> (from) { where('? <= join_day', from) if from.present? }にすると検索フォームに値がない場合実行されない
+  #scope :start_time_from, -> (from) { where('? <= start_time', from) if from.present? }にした場合検索フォームに値がない時実行されない
   #if 引数.present?
   scope :start_time_to, -> (to, from) {
     if to != ""

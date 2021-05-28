@@ -3,7 +3,7 @@
 ## サイト概要
 #### アーティストのコンサート・ライブに一緒に行く人を探すサイト
 1. ユーザーが参加イベントの予定を追加する
-1. 他のユーザーが参加日・アーティスト名・ユーザーの性別・年齢などで検索
+1. 他のユーザーが参加日・アーティスト名などで検索
 1. メッセージを送り、やりとりを行う事が出来る
 * また、ユーザーをフォローするとブログの閲覧・コメント等が出来る
 * カレンダー機能により、参加するイベントのスケジュールを確認する事が出来る
@@ -43,4 +43,4 @@ https://docs.google.com/spreadsheets/d/1eGhI3HBideuCybgW1rKg8_RKIYBy6qsG1dp22I7r
 - IDE：Cloud9
 
 ## 使用素材
-当サイトでの使用画像は、<a href="https://www.photo-ac.com/">photo.ac</a>様・<a href="https://icooon-mono.com/">icooon mono</a>様より引用致しました。
+当サイトでの使用画像は、<a href="https://unsplash.com/">Unsplash</a>様より引用致しました。

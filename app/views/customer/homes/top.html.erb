@@ -4,6 +4,9 @@
       <p class="top-text">Make the event more enjoyable</p>
       <% if customer_signed_in? %>
         <div class="top-button">
+          <%= link_to "LiveMatchingとは",homes_about_path, class: "btn btn-orange btn-orange-shadow" %>
+        </div>
+        <div class="top-button">
           <%= link_to "検索する",events_search_path, class: "btn btn-orange btn-orange-shadow" %>
         </div>
         <div class="top-button">

@@ -1,7 +1,7 @@
 <div id="about-container">
-  <div class="form">
-     <h1 class="top-title">ようこそ、LiveMatchingへ！</h1>
-      <p class="top-text">このサイトは、一緒にアーティストのライブ・コンサートに参加する人を探したり<br>交流したりする事ができます！</p>
+<div class="top-container">
+     <h1 class="top-title">LiveMatching</h1>
+      <p class="top-text">Make the event more enjoyable</p>
       <% if customer_signed_in? %>
         <div class="top-button">
           <%= link_to "検索する",events_search_path, class: "btn btn-orange btn-orange-shadow" %>
@@ -9,7 +9,26 @@
         <div class="top-button">
           <%= link_to "ログアウト",destroy_customer_session_path, method: :delete, class: "btn btn-orange btn-orange-shadow" %>
         </div>
-        <h2 class="new-blog">新着のブログ</h2>
+      <% else %>
+        <div class="top-button">
+          <%= link_to "新規登録",new_customer_registration_path, class: "btn btn-orange btn-orange-shadow" %>
+        </div>
+        <div class="top-button">
+          <%= link_to "ログイン",new_customer_session_path, class: "btn btn-orange btn-orange-shadow" %>
+        </div>
+        <div class="top-button">
+          <%= link_to "LiveMatchingとは",homes_about_path, class: "btn btn-orange btn-orange-shadow" %>
+        </div>
+        <div class="top-button admin">
+          <%= link_to "管理者ログイン",new_admin_session_path, class: "btn btn-orange btn-orange-shadow" %>
+        </div>
+      <% end %>
+
+  </div>
+
+    <% if customer_signed_in? %>
+      <div class="top-form">
+        <h2 class="new-blog">New Blog</h2>
           <% if @blogs.exists? %>
             <table class="table table-hover text-center">
               <thead>
@@ -37,21 +56,8 @@
           <% else %>
               <p>新着ブログはありません</p>
           <% end %>
-
-      <% else %>
-        <div class="top-button">
-          <%= link_to "新規登録",new_customer_registration_path, class: "btn btn-orange btn-orange-shadow" %>
         </div>
-        <div class="top-button">
-          <%= link_to "ログイン",new_customer_session_path, class: "btn btn-orange btn-orange-shadow" %>
-        </div>
-        <div class="top-button">
-          <%= link_to "LiveMatchingとは",homes_about_path, class: "btn btn-orange btn-orange-shadow" %>
-        </div>
-        <div class="admin">管理者の方はこちら</div>
-          <div class="top-button">
-            <%= link_to "管理者ログイン",new_admin_session_path, class: "btn btn-orange btn-orange-shadow" %>
-          </div>
       <% end %>
-  </div>
+
+
 </div>

@@ -23,9 +23,21 @@
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
 }
 
+.top-container {
+  background-image: image-url("background.jpg");
+  margin: 40px auto 0;
+  text-align: center;
+  background-size: 100% 100%;
+  width: 80%;
+  height: 600px;
+  border-radius: 10px;
+}
+
 .top-title {
   font-size: 50px;
-  padding-top: 30px;
+  padding-top: 100px;
+  text-shadow: 1px 1px 2px black;
+  letter-spacing: 2px;
 }
 
 .top-text {
@@ -47,10 +59,40 @@
   margin-bottom: 10px;
 }
 
+.top-form {
+    padding: 0.5em 1em 3em;
+    margin: 2em auto 0;
+    font-weight: bold;
+    background: #FFF;
+    border: solid 3px #6091d3;
+    border-radius: 10px;
+    width: 80%;
+    //margin: 40px  0;
+    text-align: center;
+    background-color: #fffaf0;
+}
+
 @media only screen and (max-width: 580px) {
   .top-none {
     display: none;
   }
+
+  .top-title {
+  font-size: 40px;
+  }
+
+  .top-container {
+    width: 100%
+  }
+
+  .top-form{
+	  width: 98%;
+		left: 1%;
+		margin-right: 1%;
+		margin-left: 1%;
+		padding-left: 1%;
+		padding-right: 1%;
+	}
 }
 
 //↑topページレイアウト↑//

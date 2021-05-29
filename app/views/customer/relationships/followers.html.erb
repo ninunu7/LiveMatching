@@ -10,7 +10,7 @@
               <%= image_tag customer.profile_image.to_s, :size =>'50x50',class: 'follow-profile-image' %>
               <%= link_to(customer.name.truncate(10), customer_path(customer)) %>
             </td>
-            <td><%= customer.introduction.truncate(15) %></td>
+            <td><%= customer.introduction&.truncate(15) %></td>
           </tr>
         <% end %>
       </tbody>

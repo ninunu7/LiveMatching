@@ -15,7 +15,7 @@
       </div>
       <div class="event-show-detail">
         メッセージ<br>
-        <%= @event.message %>
+        <%= simple_format(@event.message) %>
       </div>
       <div class="link">
         <%= link_to '一覧に戻る', events_path(customer_id: @customer.id), class: "btn btn-success" %>

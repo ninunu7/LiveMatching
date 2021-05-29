@@ -5,7 +5,7 @@
         <div class="title"><%= @blog.blog_title %></div>
       </div>
       <div class="blog-time"><%= l @blog.created_at, format: :default %></div>
-      <div class="blog-text"><%= @blog.blog_text %></div>
+      <div class="blog-text"><%= simple_format(@blog.blog_text) %></div>
       <div class="blog-images">
         <% if @blog.blog_images.present? %>
           <% @blog.blog_images.each do |image| %>

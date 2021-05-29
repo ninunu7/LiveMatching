@@ -3,6 +3,7 @@
 class Customers::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
+  before_action :ensure_normal_customer, only: [:update, :destroy]
 
   # GET /resource/sign_up
   # def new
@@ -28,6 +29,12 @@ class Customers::RegistrationsController < Devise::RegistrationsController
   # def destroy
   #   super
   # end
+
+  def ensure_normal_customer
+    if resource.email == 'guest@example.com'
+      redirect_to root_path, alert: 'ゲストユーザーは更新・削除できません。'
+    end
+  end
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign

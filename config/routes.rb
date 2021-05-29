@@ -12,11 +12,18 @@ Rails.application.routes.draw do
     registrations: 'customers/registrations' #パスワード無しで編集可能にする・編集後の遷移先指定の為
   }
 
+
+  devise_scope :customer do
+    post 'customers/guest_sign_in', to: 'customers/sessions#guest_sign_in'
+  end
+
+
   namespace :admin do
     resources :customers, only: [:index, :show, :edit, :update]
   end
 
   scope module: :customer do
+    # post '/homes/guest_sign_in', to: 'homes#guest_sign_in'
     get 'homes/top'
     get 'homes/about'
     get 'events/detail'

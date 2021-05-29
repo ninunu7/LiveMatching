@@ -13,6 +13,9 @@
           <%= link_to "ログアウト",destroy_customer_session_path, method: :delete, class: "btn btn-orange btn-orange-shadow" %>
         </div>
       <% else %>
+      <div class="top-button">
+      <%= link_to 'ゲストログイン（閲覧用）', customers_guest_sign_in_path, method: :post, class: "btn btn-orange btn-orange-shadow" %>
+      </div>
         <div class="top-button">
           <%= link_to "新規登録",new_customer_registration_path, class: "btn btn-orange btn-orange-shadow" %>
         </div>

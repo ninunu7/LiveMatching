@@ -33,6 +33,14 @@ class Customer < ApplicationRecord
     super && (self.user_status == true)
   end
 
+
+  def self.guest
+    find_or_create_by!(name: "GuestCustomer", email: 'guest@example.com') do |customer|
+      customer.password = SecureRandom.urlsafe_base64
+    end
+  end
+
+
   #パスワード入力無しでマイページ編集する為
   def update_without_current_password(params,*options)
     params.delete(:current_password)

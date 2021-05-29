@@ -4,7 +4,9 @@
   </div>
     <div class="profile-top">
       <div class="profile-image-div"><%= image_tag @customer.profile_image.to_s, :size =>'120x120', class: "profile-image" %></div>
+      <span id="follow-action">
         <%= render partial: 'customer/relationships/follow_button', locals: { customer: @customer } %>
+      </span>
     </div>
       <table class="table table-bordered table-condensed">
         <tbody>

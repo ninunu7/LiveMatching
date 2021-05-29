@@ -36,7 +36,10 @@
                 <i class="far fa-calendar-alt header-font"></i><%= link_to "今後の予定",events_path(customer_id: current_customer.id), class: 'headericon' %>
               </li>
               <li>
-                <i class="fas fa-search header-font"></i><%= link_to "検索する",events_search_path, class: 'headericon' %>
+                <i class="far fa-clipboard header-font"></i><%= link_to "ブログ",blogs_path(customer_id: current_customer.id), class: 'headericon' %>
+              </li>
+              <li>
+                <i class="fas fa-search header-font"></i><%= link_to "ユーザーを探す",events_search_path, class: 'headericon' %>
               </li>
               <li>
                 <i class="fas fa-user header-font"></i><%= link_to "マイページ",customer_path(current_customer.id), class: 'headericon' %>
@@ -50,7 +53,7 @@
               </li>
             <% else %>
               <!--<li class="header-icon-left">-->
-              <!--  <i class="fas fa-search header-font"></i><%= link_to "検索する",events_search_path, class: 'headericon' %>-->
+              <!--  <i class="fas fa-search header-font"></i><%= link_to "ユーザーを探す",events_search_path, class: 'headericon' %>-->
               <!--</li>-->
               <li class="header-icon-left">
                 <i class="fas fa-link header-font"></i><%= link_to "About",homes_about_path, class: 'headericon' %>

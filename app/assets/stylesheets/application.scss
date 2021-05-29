@@ -62,7 +62,7 @@
 }
 
 .header-icon-left {
-  margin-left: 250px;
+  margin-left: 150px;
 }
 
 .header-font {
@@ -88,7 +88,11 @@
 
 //↓↓↓ハンバーガーメニュー
 
- @media screen and (max-width: 1100px) {
+ @media screen and (max-width: 1200px) {
+
+  .header-list {
+    display: block;
+  }
 
 nav {
   display: block;
@@ -216,10 +220,10 @@ nav .inner ul li:hover {
 }
 }
 
-@media screen and (min-width: 1101px) {
+@media screen and (min-width: 1201px) {
   .toggle_btn {
-        display: none;
-    }
+    display: none;
+  }
 }
 //↑↑↑ハンバーガーメニュー
 

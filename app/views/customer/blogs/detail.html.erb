@@ -16,7 +16,7 @@
             <tr>
               <td>
                 <%= image_tag blog.customer.profile_image.to_s, :size =>'35x35',class:'comment-profile-image' %>
-                <%= blog.customer.name %>
+                <%= link_to(blog.customer.name,customer_path(blog.customer)) %>
               </td>
               <td><%= blog.blog_title.truncate(15) %></td>
               <td><i class="far fa-comment"></i><%= blog.blog_comments.count %></td>

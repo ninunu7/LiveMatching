@@ -29,12 +29,14 @@
           </tr>
         </tbody>
       </table>
-
     <div class="profile-bottom">
       <% if customer_signed_in? && @customer.id == current_customer.id %>
-        <%= link_to "編集する",edit_customer_registration_path, class: "btn btn-orange btn-shadow" %>
-        <%= link_to "退会する",quit_customer_path, class: "btn btn-sm btn-secondary" %>
+        <% if current_customer.email == 'guest@example.com' %>
+          <p>ゲストはプロフィールの更新・削除は出来ません</p>
+        <% else %>
+          <%= link_to "編集する",edit_customer_registration_path, class: "btn btn-orange btn-shadow" %>
+          <%= link_to "退会する",quit_customer_path, class: "btn btn-sm btn-secondary" %>
+        <% end %>
       <% end %>
     </div>
-
 </div>

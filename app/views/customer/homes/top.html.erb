@@ -54,7 +54,7 @@
                     </td>
                     <td><%= blog.blog_title.truncate(15) %></td>
                     <td class="top-none"><%= blog.blog_text.truncate(15) %></td>
-                    <td><%= link_to '詳細を見る', blog_path(blog), class: "btn btn-primary" %></td>
+                    <td><%= link_to '詳細を見る', blog_path(blog), class: "btn btn-primary",data: {"turbolinks"=>false} %></td>
                   </tr>
                 <% end %>
               </tbody>

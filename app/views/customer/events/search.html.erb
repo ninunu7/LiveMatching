@@ -29,7 +29,6 @@
         <div class="result-customer">
             <%= image_tag event.customer.profile_image.to_s, :size =>'50x50' %>
             <%= link_to(event.customer.name, customer_path(event.customer_id)) %>
-
             <div>性別：<%= event.customer.gender_i18n %></div>
             <div>参加日：<%= l event.start_time, format: :short %></div>
             <div><%= event.artist_name %></div>

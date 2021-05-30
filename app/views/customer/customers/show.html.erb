@@ -31,7 +31,7 @@
       </table>
     <div class="profile-bottom">
       <% if customer_signed_in? && @customer.id == current_customer.id %>
-        <% if current_customer.email == 'guest@example.com' %>
+        <% if current_customer.email == 'guest@guest.com' %>
           <p>ゲストはプロフィールの更新・削除は出来ません</p>
         <% else %>
           <%= link_to "編集する",edit_customer_registration_path, class: "btn btn-orange btn-shadow" %>

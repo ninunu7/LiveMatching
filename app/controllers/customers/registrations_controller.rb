@@ -31,7 +31,7 @@ class Customers::RegistrationsController < Devise::RegistrationsController
   # end
 
   def ensure_normal_customer
-    if resource.email == 'guest@example.com'
+    if resource.email == 'guest@example.com' || resource.email == 'guest@guest.com'
       redirect_to root_path, alert: 'ゲストユーザーは更新・削除できません。'
     end
   end

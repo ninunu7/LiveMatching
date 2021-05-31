@@ -1,6 +1,8 @@
 <div id="follow">
-  <div class="follow-count">フォロー数：<%= link_to(customer.followings.count,customer_followings_path(customer.id)) %></div>
-  <div class="follow-count">フォロワー数：<%= link_to(customer.followers.count,customer_followers_path(customer.id)) %></div>
+  <!--フォロー数：<%= link_to(customer.followings.count,customer_followings_path(customer.id)) %>-->
+<!--フォロワー数：<%= link_to(customer.followers.count,customer_followers_path(customer.id)) %>-->
+  <div class="follow-count"><%= link_to"フォロー：#{customer.followings.count}人",customer_followings_path(customer.id), class: "btn btn-light" %></div>
+  <div class="follow-count"><%= link_to"フォロワー：#{customer.followers.count}人",customer_followers_path(customer.id), class: "btn btn-light" %></div>
   <% if current_customer.id != customer.id %>
     <% if current_customer.following?(customer) %>
       <%= link_to "フォロー外す", customer_relationships_path(customer.id), method: :delete, remote: true, class: "btn btn-success" %>

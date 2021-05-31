@@ -5,7 +5,7 @@
     <span class="around-month ml-3"><%= link_to t('simple_calendar.next', default: '次の月'), calendar.url_for_next_view %></span>
   </div>
 
-  <table class="table table-bordered">
+  <table class="table table-bordered calender-table">
     <thead>
       <tr>
         <% date_range.slice(0, 7).each do |day| %>

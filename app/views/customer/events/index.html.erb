@@ -8,6 +8,7 @@
     <%= link_to "コメント履歴",events_detail_path, class: "btn btn-primary" %>
   </div>
   <% end %>
+
     <%= month_calendar events: @events do |date, events| %>
       <%= date.day %>
       <% events.each do |event| %>
@@ -16,21 +17,16 @@
         </div>
       <% end %>
     <% end %>
-
   <div>登録数:<%= @events.count %></div>
   <div class="row">
     <table>
-      <table class="table table-hover">
+      <table class="table table-hover text-center">
       <thead>
         <tr class="info">
           <th style="background:#FAEBD7;">参加日</th>
           <th style="background:#FAEBD7;" style="width: 15%">アーティスト名</th>
-          <th style="background:#FAEBD7;" style="width: 25%">メッセージ</th>
           <th style="background:#FAEBD7;" style="width: 15%"></th>
           <th style="background:#FAEBD7;" style="width: 15%"></th>
-          <% if current_customer.id == @customer.id %>
-            <th style="background:#FAEBD7;"></th>
-          <% end %>
         </tr>
       </thead>
       <tbody>
@@ -40,16 +36,15 @@
               <%= l event.start_time, format: :short %>
             </td>
             <td><%= event.artist_name.truncate(15) %></td>
-            <td><%= event.message.truncate(15) %></td>
             <td><i class="far fa-comment"></i><%= event.comments.count %></td>
-            <td><%= link_to "詳細を見る",event_path(event), class: "btn btn-sm btn-info" %></td>
+            <td><%= link_to "詳細を見る",event_path(event), class: "btn btn-sm btn-info" %>
             <% if current_customer.id == event.customer.id %>
-              <td>
-                <div class="event-destroy">
-                  <%= link_to '削除する', event_path(event), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{event.id}", data: {confirm: '本当にイベントを削除しますか？'} %>
-                </div>
-              </td>
+              <span class="ml-2">
+                <%= link_to '削除する', event_path(event), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{event.id}", data: {confirm: '本当にイベントを削除しますか？'} %>
+              </span>
             <% end %>
+            </td>
+
           </tr>
         <% end %>
       </tbody>

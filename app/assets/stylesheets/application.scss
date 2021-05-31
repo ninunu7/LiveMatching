@@ -30,6 +30,37 @@
   }
 }
 
+//events#indexカレンダーレイアウト
+.calendar-heading {
+  text-align: center;
+  font-size: 20px;
+}
+
+.around-month {
+  font-size: 20px;
+}
+
+.calendar-title {
+  font-size: 34px;
+}
+
+.calender-week {
+  background-color: white;
+}
+
+.calender-week:nth-child(6) {
+  color: blue;
+  background-color: #F0F8FF;
+}
+
+.calender-week:nth-child(7) {
+  color: red;
+  background-color: #FFF0F5;
+}
+
+.calender-day {
+  background-color: white;
+}
 
 //ヘッダーレイアウト
 

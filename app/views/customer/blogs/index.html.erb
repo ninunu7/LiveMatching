@@ -7,6 +7,8 @@
     <%= link_to"ブログを投稿する", new_blog_path, class: "btn btn-orange btn-shadow" %>
     <%= link_to "コメント履歴",blogs_detail_path, class: "btn btn-primary" %>
   <% end %>
+
+  <% if @blogs.present? %>
     <div class="blog-count">全<%= @blogs.total_count %>件(<%= @blogs.count %>件表示)</div>
       <table class="table table-hover text-center blog-index-table">
         <thead>
@@ -47,6 +49,10 @@
         </tbody>
       </table>
       <div class="paginate"><%= paginate @blogs %></div>
+    <% else %>
+    　<p>ブログの投稿はありません</p>
+    <% end %>
+
 </div>
 
 

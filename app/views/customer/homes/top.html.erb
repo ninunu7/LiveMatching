@@ -35,10 +35,9 @@
       <% end %>
     </div>
 
-
     <% if customer_signed_in? %>
+    <h2 class="new-blog">New Blog</h2>
       <div class="top-sidebar">
-        <h2 class="new-blog">New Blog</h2>
           <% if @blogs.exists? %>
             <% @blogs.each do |blog| %>
               <div class="top-blog-article">

@@ -2,28 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-// .btn-orange {
-//   color: white;
-//   background-color: #eb6100;
-//   border-bottom: 4px solid #b84c00;
-//   height: 50px;
-//   width: 240px;
-// }
-
-// .btn-orange:hover {
-//   height: 47px;
-//   margin-top: 3px;
-//   color: white;
-//   background: #f56500;
-//   border-bottom: 3px solid #b84c00;
-
-// }
-// .btn-orange-shadow {
-//   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-//   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-// }
-
 .top-button {
   margin: 10px;
   border-radius: 5px;
@@ -49,7 +27,6 @@
   color: white;
 }
 
-
 .top-container {
   text-align: center;
   width: 100%;
@@ -61,7 +38,7 @@
 .top-container-left {
   display: block;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 75px;
   background-image: image-url("background.jpg");
   background-size: 100% 100%;
 }
@@ -89,7 +66,6 @@
   padding-bottom: 25px;
 }
 
-
 .new-blog {
   margin-top: 40px;
   margin-bottom: 10px;
@@ -98,7 +74,7 @@
 }
 
 .top-blog-article {
-  width: 90%;
+  width: 500px;
   margin: 15px auto;
   padding: 10px;
   border: solid 0.5px #fffaf0;
@@ -116,8 +92,12 @@
   font-size: 18px;
   }
 
-  .top-container {
-    width: 100%
+  .top-button-list {
+  display: block;
+  }
+
+  .top-button {
+    margin: 10px auto;
   }
 
 	.top-blog-article {

@@ -1,42 +1,22 @@
 <div class="profile">
-  <div class="top-title">
-    <span class="top-title"><%= @customer.name %>のプロフィール</span>
+  <div class="profile-top">
+    <div class="profile-image-div"><%= image_tag @customer.profile_image.to_s, :size =>'200x200', class: "profile-image" %></div>
+      <div class="profile-name"><%= @customer.name %></div>
+    <span id="follow-action">
+      <%= render partial: 'customer/relationships/follow_button', locals: { customer: @customer } %>
+    </span>
   </div>
-    <div class="profile-top">
-      <div class="profile-image-div"><%= image_tag @customer.profile_image.to_s, :size =>'120x120', class: "profile-image" %></div>
-      <span id="follow-action">
-        <%= render partial: 'customer/relationships/follow_button', locals: { customer: @customer } %>
-      </span>
-    </div>
-      <table class="table table-bordered table-condensed">
-        <tbody>
-          <tr>
-            <td style="width: 25%">名前</td>
-            <td style="width: 45%"><%= @customer.name %></td>
-          </tr>
-          <tr>
-            <td>生年月日</td>
-            <td><%= @customer.birth_date %>
-            </td>
-          </tr>
-          <tr>
-            <td>性別</td>
-            <td><%= @customer.gender_i18n %></td>
-          </tr>
-          <tr>
-            <td>自己紹介</td>
-            <td><%= simple_format(@customer.introduction) %></td>
-          </tr>
-        </tbody>
-      </table>
-    <div class="profile-bottom">
-      <% if customer_signed_in? && @customer.id == current_customer.id %>
-        <% if current_customer.email == 'guest@guest.com' %>
-          <p>ゲストはプロフィールの更新・削除は出来ません</p>
-        <% else %>
-          <%= link_to "編集する",edit_customer_registration_path, class: "btn btn-orange btn-shadow" %>
-          <%= link_to "退会する",quit_customer_path, class: "btn btn-sm btn-secondary" %>
-        <% end %>
+  <div class="profile-buttom">
+      <div class="profile-gender">性別：<%= @customer.gender_i18n %></div>
+      <div class="profile-birth">生年月日：<%= @customer.birth_date %></div>
+      <div class="profile-introduction"><%= simple_format(@customer.introduction) %></div>
+    <% if customer_signed_in? && @customer.id == current_customer.id %>
+      <% if current_customer.email == 'guest@guest.com' %>
+        <p>ゲストはプロフィールの更新・削除は出来ません</p>
+      <% else %>
+        <%= link_to "編集する",edit_customer_registration_path, class: "btn btn-orange btn-shadow" %>
+        <%= link_to "退会する",quit_customer_path, class: "btn btn-sm btn-secondary" %>
       <% end %>
-    </div>
+    <% end %>
+  </div>
 </div>

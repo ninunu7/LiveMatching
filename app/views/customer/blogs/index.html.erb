@@ -1,58 +1,37 @@
 <div class="index-body">
-  <%#= flash[:notice] %>
-  <div class="top-title">
-    <span class="top-title"><%= @customer.name %>のブログ</span>
+  <div class="blog-index-top">
+    <%= @customer.name %>のブログ
+    <% if current_customer.id == @customer.id %>
+      <div>
+        <%= link_to"ブログを投稿する", new_blog_path, class: "btn btn-orange btn-shadow" %>
+        <%= link_to "コメント履歴",blogs_detail_path, class: "btn btn-primary" %>
+      </div>
+    <% end %>
   </div>
-  <% if current_customer.id == @customer.id %>
-    <%= link_to"ブログを投稿する", new_blog_path, class: "btn btn-orange btn-shadow" %>
-    <%= link_to "コメント履歴",blogs_detail_path, class: "btn btn-primary" %>
-  <% end %>
-
   <% if @blogs.present? %>
     <div class="blog-count">全<%= @blogs.total_count %>件(<%= @blogs.count %>件表示)</div>
-      <table class="table table-hover text-center blog-index-table">
-        <thead>
-          <tr>
-            <th>投稿日</th>
-            <th>タイトル</th>
-            <th style="width: 25%" class="blog_index-none">本文</th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <% if current_customer.id == @customer.id %>
-            <th class="blog_index-none"></th>
-            <% end %>
-          </tr>
-        </thead>
-        <tbody>
           <% @blogs.each do |blog| %>
-            <tr>
-              <td><%= l blog.created_at, format: :short %></td>
-              <td><%= blog.blog_title.truncate(15) %></td>
-              <td class="blog_index-none"><%= blog.blog_text.truncate(20) %></td>
-              <td>
+            <div class="blog-article">
+              <div class="blog-index-title"><%= blog.blog_title.truncate(15) %></div>
+              <span class="blog-time"><%= l blog.created_at, format: :short %></span>
+
                 <% if blog.blog_images.present? %>
-                <i class="far fa-image"></i><%= blog.blog_images.count %>
+                  <span class="mx-2"><i class="far fa-image"></i><%= blog.blog_images.count %></span>
                 <% end %>
-              </td>
-              <td><i class="far fa-heart"></i><%= blog.favorites.count %></td>
+                  <span class="mx-2"><i class="far fa-heart"></i><%= blog.favorites.count %></span>
+                  <span class="mx-2"><i class="far fa-comment"></i><%= blog.blog_comments.count %></span>
 
-              <td><%#= "#{blog.blog_comments.count}コメント" %><i class="far fa-comment"></i><%= blog.blog_comments.count %></td>
-              <td><%= link_to '詳細を見る', blog_path(blog), class: "btn btn-sm btn-primary",data: {"turbolinks"=>false} %></td>
+                <%= link_to '詳細を見る', blog_path(blog), class: "btn btn-primary",data: {"turbolinks"=>false} %>
+
                 <% if current_customer.id == @customer.id %>
-                  <td class="blog_index-none"><%= link_to '削除する', blog_path(blog), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{blog.id}", data: {confirm: '本当にブログを削除しますか？'} %></td>
+                  <%= link_to '削除', blog_path(blog), method: :delete, class: "blog-destroy-link destroy_blog_#{blog.id}", data: {confirm: '本当にブログを削除しますか？'} %>
                 <% end %>
-            </tr>
+            </div>
           <% end %>
-
-        </tbody>
-      </table>
       <div class="paginate"><%= paginate @blogs %></div>
     <% else %>
     　<p>ブログの投稿はありません</p>
     <% end %>
-
 </div>
 
 

@@ -1,69 +1,56 @@
-<div id="about-container">
-<div class="top-container">
-     <h1 class="top-title">LiveMatching</h1>
-      <p class="top-text">ライブ・コンサートに参加する仲間を<br>探すことが出来るサイトです</p>
+<!--<div id="top-main">-->
+  <div class="top-container">
+    <div class="top-container-left">
+      <h1 class="top-title">LiveMatching</h1>
+      <div class="top-text">ライブ・コンサートに参加する仲間を<br>探すことが出来るサイトです</div>
+    </div>
+  </div>
+    <div class="top-button-list">
       <% if customer_signed_in? %>
         <div class="top-button">
-          <%= link_to "LiveMatchingとは",homes_about_path, class: "btn btn-orange btn-orange-shadow" %>
+          <%= link_to "LiveMatchingとは",homes_about_path, class: "btn btn-top" %>
         </div>
         <div class="top-button">
-          <%= link_to "ユーザーを探す",events_search_path, class: "btn btn-orange btn-orange-shadow" %>
+          <%= link_to "ユーザーを探す",events_search_path, class: "btn btn-top" %>
         </div>
         <div class="top-button">
-          <%= link_to "ログアウト",destroy_customer_session_path, method: :delete, class: "btn btn-orange btn-orange-shadow" %>
+          <%= link_to "ログアウト",destroy_customer_session_path, method: :delete, class: "btn btn-top" %>
         </div>
       <% else %>
       <div class="top-button">
-      <%= link_to 'ゲストログイン（閲覧用）', customers_guest_sign_in_path, method: :post, class: "btn btn-orange btn-orange-shadow" %>
+      <%= link_to 'ゲストログイン（閲覧用）', customers_guest_sign_in_path, method: :post, class: "btn btn-top" %>
       </div>
         <div class="top-button">
-          <%= link_to "新規登録",new_customer_registration_path, class: "btn btn-orange btn-orange-shadow" %>
+          <%= link_to "新規登録",new_customer_registration_path, class: "btn btn-top" %>
         </div>
         <div class="top-button">
-          <%= link_to "ログイン",new_customer_session_path, class: "btn btn-orange btn-orange-shadow" %>
+          <%= link_to "ログイン",new_customer_session_path, class: "btn btn-top" %>
         </div>
         <div class="top-button">
-          <%= link_to "LiveMatchingとは",homes_about_path, class: "btn btn-orange btn-orange-shadow" %>
+          <%= link_to "LiveMatchingとは",homes_about_path, class: "btn btn-top" %>
         </div>
         <div class="top-button admin">
-          <%= link_to "管理者ログイン",new_admin_session_path, class: "btn btn-orange btn-orange-shadow" %>
+          <%= link_to "管理者ログイン",new_admin_session_path, class: "btn btn-top" %>
         </div>
       <% end %>
+    </div>
 
-  </div>
 
     <% if customer_signed_in? %>
-      <div class="top-form">
+      <div class="top-sidebar">
         <h2 class="new-blog">New Blog</h2>
           <% if @blogs.exists? %>
-            <table class="table table-hover text-center">
-              <thead>
-                <tr>
-                  <th>ユーザー</th>
-                  <th>タイトル</th>
-                  <th class="top-none">本文</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <% @blogs.each do |blog| %>
-                  <tr>
-                    <td>
-                      <%= image_tag blog.customer.profile_image.to_s, :size =>'50x50' %>
-                      <%= link_to(blog.customer.name, customer_path(blog.customer)) %>
-                    </td>
-                    <td><%= blog.blog_title.truncate(15) %></td>
-                    <td class="top-none"><%= blog.blog_text.truncate(15) %></td>
-                    <td><%= link_to '詳細を見る', blog_path(blog), class: "btn btn-primary",data: {"turbolinks"=>false} %></td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
+            <% @blogs.each do |blog| %>
+              <div class="top-blog-article">
+                  <%= image_tag blog.customer.profile_image.to_s, :size =>'50x50' %>
+                  <%= link_to(blog.customer.name, customer_path(blog.customer)) %>
+                  <%= blog.blog_title.truncate(15) %>
+                  <%= link_to '詳細を見る', blog_path(blog), class: "btn btn-primary",data: {"turbolinks"=>false} %>
+              </div>
+            <% end %>
           <% else %>
               <p>新着ブログはありません</p>
           <% end %>
         </div>
       <% end %>
-
-
-</div>
+<!--</div>-->

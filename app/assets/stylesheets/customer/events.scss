@@ -230,6 +230,14 @@
   font-size: 13px;
 }
 
+.destroy-link {
+  color: gray;
+}
+
+.destroy-link:hover {
+  color: gray;
+}
+
 @media screen and (max-width: 1024px) {
     .split{
         display: block;

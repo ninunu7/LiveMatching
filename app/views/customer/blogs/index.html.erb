@@ -24,7 +24,7 @@
                 <%= link_to '詳細を見る', blog_path(blog), class: "btn btn-primary",data: {"turbolinks"=>false} %>
 
                 <% if current_customer.id == @customer.id %>
-                  <%= link_to '削除', blog_path(blog), method: :delete, class: "blog-destroy-link destroy_blog_#{blog.id}", data: {confirm: '本当にブログを削除しますか？'} %>
+                  <%= link_to '削除', blog_path(blog), method: :delete, class: "destroy-link destroy_blog_#{blog.id}", data: {confirm: '本当にブログを削除しますか？'} %>
                 <% end %>
             </div>
           <% end %>

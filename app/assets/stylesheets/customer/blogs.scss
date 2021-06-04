@@ -61,7 +61,11 @@ a.btn-orange-shadow {
 }
 
 
-.blog-destroy-link {
+.destroy-link {
+  color: gray;
+}
+
+.destroy-link:hover {
   color: gray;
 }
 

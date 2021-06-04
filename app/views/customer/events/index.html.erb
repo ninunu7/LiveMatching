@@ -37,10 +37,10 @@
             </td>
             <td><%= event.artist_name.truncate(15) %></td>
             <td><i class="far fa-comment"></i><%= event.comments.count %></td>
-            <td><%= link_to "詳細を見る",event_path(event), class: "btn btn-sm btn-info" %>
+            <td><%= link_to "詳細を見る",event_path(event), class: "btn btn-info" %>
             <% if current_customer.id == event.customer.id %>
               <span class="ml-2">
-                <%= link_to '削除する', event_path(event), method: :delete, class: "btn btn-sm btn-danger destroy_blog_#{event.id}", data: {confirm: '本当にイベントを削除しますか？'} %>
+                <%= link_to '削除', event_path(event), method: :delete, class: "destroy-link destroy_blog_#{event.id}", data: {confirm: '本当にイベントを削除しますか？'} %>
               </span>
             <% end %>
             </td>

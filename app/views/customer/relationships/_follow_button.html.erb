@@ -1,4 +1,5 @@
 <div id="follow">
+
   <!--フォロー数：<%= link_to(customer.followings.count,customer_followings_path(customer.id)) %>-->
 <!--フォロワー数：<%= link_to(customer.followers.count,customer_followers_path(customer.id)) %>-->
   <span class="follow-count"><%= link_to"フォロー：#{customer.followings.count}人",customer_followings_path(customer.id), class: "btn btn-light" %></span>

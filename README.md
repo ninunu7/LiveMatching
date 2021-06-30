@@ -1,4 +1,5 @@
-# LiveMatching(livematching.work)
+# LiveMatching
+(<a href="livematching.work">livematching.work</a>)
 
 ## サイト概要
 #### アーティストのコンサート・ライブに一緒に行く人を探すサイト

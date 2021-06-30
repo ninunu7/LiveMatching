@@ -1,13 +1,12 @@
 # LiveMatching
 
 ## URL
-<a href="http://livematching.work/">http://livematching.work/</a>
+http://livematching.work/
 
 
 ## サイト概要
 LiveMatchingは、アーティストのライブやコンサートへ一緒に参加する仲間を探す・同じアーティストが好きな人とコミュニケーションを楽しむことが出来るSNSサイトです。<br>
 
-<!--#### アーティストのコンサート・ライブに一緒に行く人を探すサイト-->
 <!--1. ユーザーが参加イベントの予定を追加する-->
 <!--1. 他のユーザーが参加日・アーティスト名などで検索-->
 <!--1. メッセージを送り、やりとりを行う事が出来る-->
@@ -19,8 +18,7 @@ LiveMatchingは、アーティストのライブやコンサートへ一緒に�
 
 ### テーマを選んだ理由
 私は昔から、ライブやコンサートに参加することが好きでしたが、周りに同じアーティストが好きな人がおらず、一人で参加する事もありました。<br>
-一人でも充分楽しいですが、やはり同じアーティストが好きな方と友達になり、<br>
-語り合うことが出来れば、楽しさが倍増するかと思います。<br>
+一人でも充分楽しいですが、やはり同じアーティストが好きな方と友達になり、語り合うことが出来れば、楽しさが倍増するかと思います。<br>
 そこで、同じような想いの人達が集まり、よりライブやコンサートを楽しむことが出来ればと考え、本サイトの製作に至りました。<br>
 
 ### ターゲットユーザ
@@ -31,10 +29,20 @@ LiveMatchingは、アーティストのライブやコンサートへ一緒に�
 同じアーティストが好きな仲間と語りたいとき<br>
 自分のスケジュールを確認したいとき<br>
 
-## 設計書
+<!--## 設計書-->
 
 
 ## 機能一覧
+* ユーザー登録・ログイン
+* 検索(キーワード検索・日付検索)
+* 画像アップロード
+* フォロー
+* いいね
+* コメント
+* 非同期通信
+* ページネーション
+
+詳細は以下のリンク先よりご確認下さい。
 https://docs.google.com/spreadsheets/d/1eGhI3HBideuCybgW1rKg8_RKIYBy6qsG1dp22I7r-FU/edit#gid=0
 
 ## 開発環境
@@ -45,7 +53,6 @@ https://docs.google.com/spreadsheets/d/1eGhI3HBideuCybgW1rKg8_RKIYBy6qsG1dp22I7r
 - IDE：Cloud9
 
 ## 使用素材
-* いらすとや
-https://www.irasutoya.com/
-*
-<!--当サイトでの使用画像は、<a href="https://unsplash.com/">Unsplash</a>様・<a href="https://www.irasutoya.com/">いらすとや</a>様より引用致しました。-->
+* いらすとや(https://www.irasutoya.com/)
+* Unsplash(https://unsplash.com/)
+* お名前.com(https://www.onamae.com/)

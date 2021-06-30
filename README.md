@@ -1,4 +1,4 @@
-# LiveMatching
+# LiveMatching(livematching.work)
 
 ## サイト概要
 #### アーティストのコンサート・ライブに一緒に行く人を探すサイト
@@ -43,4 +43,4 @@ https://docs.google.com/spreadsheets/d/1eGhI3HBideuCybgW1rKg8_RKIYBy6qsG1dp22I7r
 - IDE：Cloud9
 
 ## 使用素材
-当サイトでの使用画像は、<a href="https://unsplash.com/">Unsplash</a>様より引用致しました。
+当サイトでの使用画像は、<a href="https://unsplash.com/">Unsplash</a>様・<a href="https://www.irasutoya.com/">いらすとや</a>様より引用致しました。

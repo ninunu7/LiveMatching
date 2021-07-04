@@ -31,11 +31,20 @@ LiveMatchingは、アーティストのライブやコンサートへ一緒に�
 
 また、名前をクリックするとユーザーのプロフィールを見たり、フォローすることが出来ます。
 フォローするとブログの閲覧・コメントが出来ます。
+
 <img width="49%" alt="スクリーンショット 2021-07-04 14 24 15" src="https://user-images.githubusercontent.com/78466325/124374133-a5a20100-dcd3-11eb-951f-03908849041e.png"> <img width="49%" alt="スクリーンショット 2021-07-04 14 10 25" src="https://user-images.githubusercontent.com/78466325/124374056-f6652a00-dcd2-11eb-98cb-688f2eedcd4c.png">
 
 
 
-<!--## 設計書-->
+## 設計書
+* ER図
+
+<img width="49%" alt="スクリーンショット 2021-07-04 16 19 08" src="https://user-images.githubusercontent.com/78466325/124376788-a347a300-dce3-11eb-9c84-250edda3f1b7.png">
+
+* テーブル定義書
+
+https://docs.google.com/spreadsheets/d/1m1CZPVYwdJhBHFICkMYiZ545K3rSvWWMID3AORlWHM0/edit#gid=661173035
+
 
 
 ## 機能・導入技術一覧

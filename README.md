@@ -22,7 +22,7 @@ LiveMatchingは、アーティストのライブやコンサートへ一緒に�
 ### 利用方法
 * ライブ・コンサートを一緒に楽しむ仲間を探したいとき<br>
   TOPページ(ログイン時のみ)・ヘッダーの『ユーザーを探す』をクリックし、検索画面から参加日・キーワードを入力し探すことが出来ます。
-<img width="1421" alt="スクリーンショット 2021-07-04 13 43 11" src="https://user-images.githubusercontent.com/78466325/124373646-02e78380-dccf-11eb-8061-ef4f00bb06fb.png" width="45">
+<img width="1421" alt="スクリーンショット 2021-07-04 13 43 11" src="https://user-images.githubusercontent.com/78466325/124373646-02e78380-dccf-11eb-8061-ef4f00bb06fb.png" width="320px">
 <img width="1425" alt="スクリーンショット 2021-07-04 13 44 12" src="https://user-images.githubusercontent.com/78466325/124373648-067b0a80-dccf-11eb-8705-ada964618cbf.png" width="45">
   また、ヘッダーの『今後の予定』から自分の予定を登録しておくと、他のユーザーが検索することが出来ます。
   予定を登録するとカレンダーにも書き込まれ、後からスケジュールを確認することが出来ます。<br>

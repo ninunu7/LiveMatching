@@ -1,4 +1,5 @@
 require 'rails_helper'
+
   RSpec.describe Blog, "Blogモデルに関するテスト", type: :model do
     describe 'バリデーションのテスト' do
        it "titleが空欄でないか" do

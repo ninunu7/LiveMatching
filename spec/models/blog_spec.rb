@@ -2,10 +2,12 @@ require 'rails_helper'
 
   RSpec.describe "Blogモデルのテスト", type: :model do
     describe 'バリデーションのテスト' do
-      subject { blog.valid? }
 
       let(:customer) { create(:customer) }
       let!(:blog) { build(:blog, customer_id: customer.id) }
+
+      subject { blog.valid? }
+      let(:blog) { blog }
 
     describe '保存テスト' do
       it "有効な投稿内容の場合は保存されるか" do

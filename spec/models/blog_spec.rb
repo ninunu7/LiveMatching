@@ -18,6 +18,14 @@ require 'rails_helper'
 	      blog.blog_title = ''
         is_expected.to eq false
       end
+      it '50文字以下であること' do
+        blog.blog_title = Faker::Lorem.characters(number: 50)
+        is_expected.to eq true
+      end
+      it '50文字以下であること' do
+        blog.blog_title = Faker::Lorem.characters(number: 51)
+        is_expected.to eq false
+      end
     end
 
     context 'textカラム' do
